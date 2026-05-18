@@ -1,0 +1,199 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_11/mitigating_AI_new_risk_frontier
+
+## Transcript: mitigating_AI_new_risk_frontier.txt
+____Header data____
+This talk occured on 2026_05_11 from 2:40PM - 3:00PM
+____/Header data____
+
+Speaker 1  0:00  
+So Well, here we are. ISU Verma, Senior Principal Technical Marketing Manager, mini Florencio, principal product security engineer working on AI security in this talk, what we are going to share, we are going to see an agenda next, but we want to talk about the talk so quickly. About AI security and approach different standards references to take into account when deciding but when deciding what security controls to apply, and also the relation with safety. How do we see this difference? When we started with AI. Everyone was talking about, what we define, the finance safety, the problem with AI generating harmful responses for example, or the AI generating, for example, code that is vulnerable. We have interest in today, but we see a difference between that and security and how we need to tackle that, to apply correctly security controls. Well, this is the agenda. This difference, AI security, AI safety, also overlaps, because they both overlap in some parts, how to manage, in general, safety risks, and then with security, how to map them, or possibilities of mapping them with a traditional, let's say, security, or the security we have before AI, because at the end, there is a foundation that is very important today for AI enterprise security and Red Hat and the AI work We are doing the approach we are doing to the security of air.
+
+Speaker 2  1:47  
+So you all are here, so you understand it's important to learn about a safety and security and these are some of the incidents. These are not hypothetical. These are some of the incidents from last year. There is essentially internet prompt injection. There is model getting painted by a by a corrupted Wi Fi package. There is a agent, kind of deleting company's database. So and pretty much, I think you hear every day there is a story about some AI safety and security incident. So these are real, and especially now, with the agentic AI being the approach lot of companies are taking, I think the impact of this will be magnified many times over. So, so let's talk about why it matters, right? Why it matters is because, first of all, you know that AI deployments are getting accelerated, right? Your you know customers are asking for AI features, your competitors adopting AI, and your management is probably asking you, hey, what type of AI studies? And because of this exploration and adoption. Now this opens up to this attack surface you have your private data, critical business systems and even models that can become targets and successful. AI deployments, of course, needs to be both secure, compliant and trustworthy, because if you have AI, you know safety or security incident, first of all, it does away the years of investment you have an AI. And secondly, it can be a huge damage to your reputation. I mean, ask the companies you know that has here. It's a long road to recovery. All right, so before we go further, just want to, because I know safety and security kind of get lumped together, so we want to make sure that we are clear about what the differentiation is. So AI security is, is more about protecting confidentiality, integrity and availability of a system. So these are we, I think people in the security business are supposed to be given this right? This is, you know, you can have broken authentication. You can have indirect prompt injection. And, of course, the risk here is you could have data breach, right? That can expose confidential company data, or, you know, post source code on the publicly, which is confidential the company. And there a lot of testers recently where this happened. So these risks are real. Is safety. And this is like, traditionally, the wheelhouse of like the security person, they should be looking at this instead of starting a new, you know, AI security, the traditional security people should be looking at AI's security as well. Now AICT, on the other hand, is new, right? It's want here. We want to make sure that AI is behaving as intended, you know, comply with your governance policy, complies with your you know, whatever ethical constraints have, and also with you know it is trustworthy. So you want to make sure that it's real bias. It doesn't do hallucinations, where it's providing incorrect data with great confidence. And here the risks are, you know, loss of trust, ethical damage to your company. All right, so how do we manage some of these takeaways? First of all, you know, it has to start with, essentially where the models are being trained, right from making sure the data is is not tinted. You know, it has to continue through pre training, fine tuning and alignment, and especially following it through the model lifecycle, right? Because we know that the models can actually deviate from what they how they're behaving in training versus production, right? We want to make sure that this doesn't happen. You need to continuously evaluate and benchmark the models. And then we also like, for example, LLM evaluation harness helps you measure the impactful, the impact of output, right? So if there's safety outcomes, it can benchmark against, you know, industry best practices. It can help you specify to your, you know, industry or use cases. So LLM evaluation harness can help there and now, kind of switching into where Red Hat plays into it. If you were in the last session, Roman talked about a lot of resources, community resources that Red Hat has, in terms of helping you add skills to your you know whether, whenever using AI to have those some of these skills, but then, in terms of product side, Red Hat, OpenShift, include trustee AI. So trustee AI integrates your evaluation with valuation harness, again, as we talked about it, helps you evaluate and kind of benchmark against some of these standard practices, right? Is it? Is the response truthfulness? Is the context? Is it in the context, and and some of these practices, and how accurate is it? And after So, and that's not all so precise evaluation, you also need guardrails. So this is the last, last line of defense. So even if you have trained your model Well, if you have evaluated, evaluated it well, and it gives you good benchmark in the end, at production time, you want to still make sure that no harmful outputs are reaching the user. So the guardrails are kind of runtime version before any output reaches the user, it kind of looks at it. Does it fit that criteria? And only if it does, then it goes to user and vice versa. If there is a hacker trying to exploit your model, God will also protect your models from these harmful inputs, handing off to Sure.
+
+Speaker 1  8:05  
+One important difference between and now we are starting to talk more about the security part. One important difference between safety and security is that safety issues, I mean security, we know that we always can fix one vulnerability, and maybe there will be another right we will find another. But with safety, it's a bit different. If we even know a safety issue with a model, it is difficult to fix directly on the model, maybe the model needs to be retrained, which is very costly, and maybe we don't control that part because it's a model that we are using from from a third party. Or even if we find in a model to solve, try to solve a specific safety issue, the training may generate another safety issue. We cannot control the deterministically, the changes on how a model behaves, and that's the difference with security. With security, when we know there is an when we know there is an issue, we can fix it, but the safety part is more difficult. It is managed more from a statistical point of view, right? That's why we have these measurements, those evaluations, right? How much is the model generating? Harmful response, and we write for sure we have models that are more safe than others so easily. It's not that determinism doesn't mean that we don't know how well models are. No we can measure how safe models are, but we don't even if we know a security a safety issue, we cannot fix it. That's also why, at least by now, we don't know in the future, but this discussion happened, if safety issues should have CBEs, should we assign a CVE for a model? Because it is explaining how to build a BOM, and it's a model that should not be able to explain that. How? What is the CV? How can it be fixed? All the models have these issues some more, higher amount, some smaller amount. So safety issues are different in nature. Cannot be fixed right away, even if we know they exist, but we can manage that. That is the immediate similarity with security. We can reduce the risk. We can improve the safety of our system as a whole, even we can work with a model that is not deterministic, but we the importance of the platform is what I want to talk right? What is around the model, not only the hardness, but the platform. The garbage that is already mentioned is what gives the value in total, and the security and safety of the system as a whole, not only the model, when we talk about this part, about the model security, we also face. Wanted to include this diagram to show that we have different scenarios, right? We talk about the develop someone that is developing or working with models on an AI system, use third party models, fine tune them or adapt them in a system, store them locally. Model registry is something we are starting to talk about, we store the models that are then used in production. Are they using in production in a scenario where they are run with an inference engine? I saw an architecture of a system. This is important, because the security controls of the developers scenario are different from the security controls of the user scenario. The security controls in production are related to the inference and guide, for example, and on the developers scenario, we are talking more about the security of the supply chain, right? How we track in the in the talk from your the first talk today in the community, day, they talked about the AI bonds, right? The AI bonds are this inventory of the composition of AI system, including, for example, models with models. What we are going to have is, okay, I downloaded this third party, I'm talking about local models right. Open local models. I downloaded this model and finding it for my task, and later we discovered that this original model use in appropriate data sets or inappropriate because licenses, because image is something right, think in a scale, right enterprise companies, in this vision, where enterprise companies use dozens of models, how do I know if I'm using this original model, which has inappropriate images in The training, I need to have this provenance, right, this lineage of the models. What I have done with a model that I downloaded from that is the part of the developer right, the supply chain security, having tracking the source of the models, how I evolve them, and where we are using them, that will be important in this vision, right? If this vision consolidates, where enterprise companies, instead of using few big models, use many small models, fine unit for the tasks, if this consolidates, this kind of supply chain, security will be critical. Okay, now, how do we think about all the different risks that can affect our our company? We have references in these. There are many of them, even AI is so recent, but there are many we so some of them miter Atlas, with a different different scenarios, areas and what can be done in each area. This matrix includes security threats. Ai, specific and generic. Ai, Denise. Ai, MF is another good resource. OWASP, 10. Roman mentioned the top 10 for agenting. There is another one for llms that is also very interesting, and we can apply in our systems. And there is one more about machine learning that also applies in the other lab. This is a kind of architecture with different components on an AI system. And just wanted to put these numbers to identify different places where security can be applied. What if we in this diagram, models are run basically in the inference box, the AI, the security of the model is only a small part of the security of a whole AI system. There are many security boundaries, many places where we can apply security, and from an enterprise point of view, many companies where we can centralize security to help the whole system right. Authentication, Authorization is a place gateways, MCP gateway, API gateway, garbage, are places where we can log in. Is also a critical component on an enterprise, AI system and different other areas from a platform point of view that we are changing to improve security, understand security and how they apply to security, authentication, authorization, workload isolation, especially for agenda, when agents generate their own workloads, how to secure that network security is still very important in the AI with agents, for example, to isolate different areas, continuous vulnerability scanning, immutable infrastructure, policy driven, configuration management, least privilege enforcement, traditional security areas that are very important for AI systems. We
+
+Speaker 3  17:00  
+you.
+
+Speaker 2  17:07  
+So we kind of covered a lot of areas, right? So here you want to make sure that you're adopting defense and defense, you are unifying essentially a security with enterprise and and you already have a security team, right? So make sure that a security is part of that enterprise security team, and having a holistic approach, you know, make sure that security governance, compliance and AI specific safety controls are part of the solution. Okay, so in terms of next steps to review your AI deployments for any security and safety gaps using some of the tools and frameworks that once you mentioned, integrate your AI risk into existing governance and security practices. So don't start a new AI security. It should be part of the existing security team, right? And then finally, partner with that hat, right? So Roman, in the previous session, talk about the community resources that are available to help you add your security AI security and safety profile, but then also at a consulting team, if you are a company looking for, you know, immediate help for safety and security discussions for your business. All right, thank you. Make sure that you finish the survey in the app. So help me feedback on what part we should improve on next time. And then, finally, sorry, this is actually the direct learning resources. So if you're interested, there are courses on training catalog about a safety and security as well as, you know, OpenShift AI, related to security and safety, and then finally, completely serving and I think you for being here and giving us your time and attention and wishing you all happy, secure and safety for.
+
+## PDF Text: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 1 ---
+Mitigating AI's New Risk Frontier: 
+A Practical Guide to Unifying 
+Enterprise AI Security and Safety
+Ishu Verma 
+Senior Principal Technical 
+Marketing Manager
+Florencio Cano Gabarda 
+Principal Product Security 
+Engineer
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 2 ---
+Agenda
+●Importance of AI Security and Safety
+●Security vs Safety
+●Managing Safety Risks
+●Mapping Security Risks
+●Enterprise Security
+●Red Hat AI Approach
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 3 ---
+Google AI ﬂaw allows indirect prompt 
+injection
+siliconANGLE Sep 30, 2025
+AgentForce AI prompt injection vulnerability 
+can expose sensitive CRM data
+OECD Incidents Sep 25, 2025
+ShadowLeak Zero-Click Flaw exﬁltrates gmail 
+data using ChatGPT Deep Research Agent
+radware Sep 18, 2025
+An AI-powered coding tool wiped out a 
+software company’s database
+Fortune July 23, 2025
+Ultralytics AI model Compromised: 
+Cryptocurrency Miner Found in PyPI packages
+TechTarget Dec 06, 2024
+GitLab Duo AI Vulnerability Exposes Source 
+Code and Conﬁdential Data
+OECD Incidents May 21, 2025
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 4 ---
+Why it matters?
+●Accelerating AI deployments across 
+enterprise
+●Increased attack surface: private data, 
+systems, and AI models become targets
+●Success requires AI deployments to  be 
+secure, compliant, and trustworthy
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 5 ---
+AI security vs. AI safety
+Protects conﬁdentiality, 
+integrity and availability of AI 
+systems
+Examples: 
+●
+Broken authentication
+●
+Prompt injection
+Risk: data breach 
+Ensures AI behaves as intended, 
+aligns with ethics, policies
+Examples: 
+●
+Bias
+●
+Hallucinations
+Risk: loss of trust, ethical damage
+AI Security
+AI Safety
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 6 ---
+Managing safety risks
+●Safety focus throughout pre-training, 
+ﬁne-tuning and alignment
+●Continuous evaluation & benchmarking 
+of safety outcomes
+●LLM evaluation harness to measure 
+likelihood of harmful outputs
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 7 ---
+Red Hat OpenShift AI includes 
+TrustyAI
+●Evaluation with lm-evaluation-harness
+●Guardrails
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 8 ---
+AI model scenarios
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 9 ---
+Mapping security risks
+●What can go wrong?
+●MITRE ATLAS™, NIST AI RMF, and OWASP Top 10 for LLMs 
+as sources of threats.
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 10 ---
+MITRE ATLAS
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 11 ---
+NIST AI RMF
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 12 ---
+OWASP Top 10 for LLMs
+●LLM01:2025 Prompt Injection
+●LLM02:2025 Sensitive Information Disclosure
+●LLM03:2025 Supply Chain
+●LLM04:2025 Data and Model Poisoning
+●LLM05:2025 Improper Output Handling
+●LLM06:2025 Excessive Agency
+●LLM07:2025 System Prompt Leakage
+●LLM08:2025 Vector and Embedding Weaknesses
+●LLM09:2025 Misinformation
+●LLM10:2025 Unbounded Consumption
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 13 ---
+AI application architecture
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 14 ---
+The need to have security at the 
+platform
+●
+Authentication and authorization
+●
+Workload isolation
+●
+Network security
+●
+Continuous vulnerability scanning and analysis (Red Hat Advanced Cluster Security 
+for Kubernetes)
+●
+Immutable infrastructure
+●
+Policy-driven conﬁguration management
+●
+Least privilege enforcement
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 15 ---
+Considerations for enterprises
+●Adopt defense-in-depth strategy
+●Unify AI security with enterprise 
+cybersecurity
+●Holistic approach by combining 
+security, governance, compliance & 
+AI-speciﬁc safety controls
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 16 ---
+Next steps
+Integrate AI risk into existing 
+governance and security practices
+Partner with Red Hat
+Integrate AI Risk
+Partner with Red Hat Consulting for 
+AI security & safety discussion for 
+your business
+Review AI Deployments
+Review for security & safety gaps
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 17 ---
+Thank you
+linkedin.com/company/red-hat
+instagram.com/red_hat
+facebook.com/redhat
+x.com/RedHatSummit
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 18 ---
+Sharpen your skills beyond the lab
+Learn virtually and practice anywhere. 
+Gain the technical skills and knowledge you 
+need to stay ahead of a growing, complex IT 
+landscape through access to our 
+comprehensive learning curriculum.
+
+--- PDF: AI Safety & Security - Summit 2026-1_1778220869372001tWY8.pdf | Page: 19 ---
+Please complete the post-session survey in the Red Hat 
+Events Guide mobile app
