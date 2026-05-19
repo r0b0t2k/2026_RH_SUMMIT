@@ -1,0 +1,289 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_12/eval_driven_development_AI_apps_that_dont_lie
+
+## Session Datetime
+this talk took place on 2026-05-12 at 11:15AM - to 11:35AM
+
+## PDF Text: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 1 ---
+CI is green. Your AI is wrong.
+EvalHub catches both — live.
+Evaluation-driven 
+development (EDD): 
+AI applications that don't lie
+William Caban
+Sr Principal Product Manager
+Red Hat AI
+*The unofﬁcial Fennec mascot :)
+DevZone
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 2 ---
+THE CHALLENGE
+2
+A Familiar Scenario
+Your tests pass. Your users ﬁnd what they don't.
+✓  Deploy AI assistant. 
+✓  Internal testing passes.
+✓  Pilot runs smoothly. 
+✓  Stakeholders approve.
+✗  Three weeks in — user gets the wrong 
+eligibility date.
+✗ No error. No alert. CI: still green.
+The mirror still shows green.
+But nobody tested whether it was right.
+AI in Production: The Hard Truth
+✗ 60-80% of AI projects never reach production
+✗ AI projects often fail silently
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 3 ---
+THE CHALLENGE
+3
+Why Traditional Testing Fails with AI?
+Why the Gap Exists? Three Broken Assumptions.
+Output
+TRADITIONAL QA
+Deterministic
+Standard TDD assumes the same 
+input always produces the same 
+output.
+Validation
+TRADITIONAL QA
+Binary Pass/Fail
+Unit tests are absolute. It either works 
+or it doesn't.
+Data
+TRADITIONAL QA
+Static Fixtures
+Hand-written mock data and 
+predictable test environments.
+1
+2
+3
+AI REALITY
+Non-determinism
+Same input. Different outputs. Answer 
+varies with every call.
+AI REALITY
+Spectrum Quality
+Answers are a metric of how much 
+better or worse. 
+Spectrum is a range (0-1)
+Pass is a threshold of "Good enough"
+AI REALITY
+Dynamic Knowledge
+Models don't know what they don't 
+know. Neither does your test suite.
+Ground truth must be generated. 
+Scale makes manual writing 
+impossible.
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 4 ---
+Introducing Evaluation-Driven Development (EDD)
+The EDD Cycle: Deﬁne → Measure → Iterate
+THE METHODOLOGY
+4
+Every change gets evaluated before it reaches production.
+Catches regressions before users do.
+ITERATE
+DEFINE
+MEASURE
+Thresholds
+Compare against baseline
+Scores-driven optimizations
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 5 ---
+EvalHub: Your Precision Evaluation Toolkit
+Introduction to EvalHub
+THE SOLUTION
+5
+FRAMEWORK-AGNOSTIC UNIFIED PLATFORM
+One place to orchestrate LM Evaluation Harness, LightEval, Garak, CLEAR, GuideLLM,
+ 
+and custom evaluators via bring-your-own-framework (BYOF)
+SIMULTANEOUS CAPABILITY + RISK ASSESSMENT
+Run capability benchmarks and Garak security/safety probes in the same collection run
+BOTTLENECK IDENTIFICATION
+Pinpoints exactly where your AI breaks down: model, context, retrieval, or prompts
+FULL CONTEXT TRACKING
+Captures hardware, software, and conﬁguration for every evaluation run via MLﬂow
+EDD-NATIVE
+Built for the Deﬁne → Measure → Iterate workﬂow from the ground up
+*The unofﬁcial Fennec mascot :)
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 6 ---
+EVALHUB
+6
+How EvalHub Fits Together
+Uniﬁed | Scalable | Auditable → From local laptop to OpenShift
+Your AI Application
+(RAG pipeline / chatbot / summariser)
+EvalHub SDK
+EvalHub Server
+job scheduler · scorer runner · result store
+MLﬂow
+results & history
+OpenShift
+Kubernetes jobs
+vLLM/RHOAI
+Model endpoints
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 7 ---
+The Three Scorers We'll Use
+Domain F1
+Do answers match the ground-truth facts? 
+Token F1 vs policy.md.
+Score: 0–1
+▪ 1.0 = answer perfectly matches ground 
+truth word-for-word
+▪ 0.0 = no overlap with ground truth
+▪ Threshold: ≥ 0.80
+Catches: wrong dates and missing info
+Start here. Add domain-speciﬁc scorers as you discover.
+What does EDD actually measure for our demo?
+Consistency (Jaccard)
+Do consecutive answers agree? 
+Same question, 5 runs.
+Score: 0–1
+▪ 1.0 = identical answers every run
+▪ 0.0 = no words in common between any 
+pair
+▪ Threshold: ≥ 0.50
+Catches: non-determinism
+SCORERS
+7
+Confabulation
+Does any answer invent facts not in the 
+source?
+Score: 0–1
+▪ 1.0 = zero answers contained hallucinated 
+facts (all clean)
+▪ 0.0 = every answer contained a 
+hallucinated date or number
+▪ Computed as: fraction of answers with 
+NO detected confabulation
+▪ Threshold: ≥ 0.90
+Catches: hallucinated dates and numbers
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 8 ---
+DEMO: EDD Workﬂow in Action –  Prerequisites
+Act 0 — The Setup
+# Requires: Python 3.12+, uv, podman
+$ git clone https://github.com/williamcaban/edd-demo
+$ cd edd-demo
+$ uv sync
+$ podman play kube pod.yaml
+8
+Prerequisites to follow along
+https://red.ht/edd-evalhub
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 9 ---
+DEMO: EDD Workﬂow in Action –  ACT 1
+Act 1 — The TDD illusion
+$ uv run python act1_green_ci.py
+9
+CI passes. The assistant returns the wrong answer — with complete conﬁdence. No test asked if it was right.
+tests/test_pipeline.py::test_returns_a_string              PASSED
+tests/test_pipeline.py::test_answer_is_not_empty           PASSED
+tests/test_pipeline.py::test_answer_is_not_a_copy_of_input PASSED
+3 passed in 0.01s   ✓  CI would mark this build GREEN
+Question: "When does open enrollment start and what is the FSA limit?"
+Call 1: "Open enrollment runs from November 1 through November 15..."   ✓ correct answer
+Call 2: "Employees can enroll from October 31 to November 15..."        ✗ hallucination
+Call 3: "Benefits enrollment opens November 1 and closes November 30..."✗ hallucination
+  CI: still green.   Not one test asked if the answer was right.
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 10 ---
+DEMO: EDD Workﬂow in Action –  ACT 2
+Act 2 — The reveal
+10
+Same question. Different wrong answers. Three scorers ﬁnd what the tests couldn't.
+$ uv run python act2_reveal.py
+  Consistency Jaccard:         ~0.31   CONCERN  (threshold ≥ 0.50)
+    → answers vary too much run-to-run
+  Domain F1 avg:               ~0.42   FAIL     (threshold ≥ 0.80)
+    → wrong dates, missing facts
+  Confabulation pass rate:     ~0.60   FAIL     (threshold ≥ 0.90)
+    → 2 of 5 answers contain hallucinated dates
+  Overall: FAILING — this pipeline should NOT be deployed
+$ uv run python act3_edd_collection.py
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 11 ---
+DEMO: EDD Workﬂow in Action –  ACT 3
+Act 3 — EDD replaces each broken assumption
+$ uv run python act3_edd_collection.py
+✓ Provider registered: hr-rag-byop
+✓ Collection created: hr-rag-eval-v1 (3 benchmarks, defined once)
+✓ Job submitted: id=702e5172...
+BLOCKED –  hr-consistency   0.32 < 0.50
+           hr-domain-f1     0.62 < 0.80
+           hr-confabulation 0.60 < 0.90
+11
+Bring your scorer. Register once. EvalHub runs it. Your pipeline gates on the result.
+Deploy BLOCKED — all three benchmarks below threshold.
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 12 ---
+DEMO: EDD Workﬂow in Action –  ACT 4
+Act 4 — EvalHub at production scale
+$ uv run python act4_production.py
+hr-consistency      0.32 FAIL ✗  (1,000 samples)
+hr-domain-f1        0.62 FAIL ✗  (1,000 samples)
+hr-confabulation    0.71 FAIL ✗  (1,000 samples)
+BLOCKED at production gate.
+Same “ evalhub.yaml”. Same collection. Same gate. 
+OpenShift scale.
+12
+Scale changes. The verdict doesn't.
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 13 ---
+KEY TAKEAWAYS
+13
+Takeaways
+1. The AI Gap
+Traditional QA is necessary but not sufﬁcient for 
+AI. The gap is structural, not ﬁxable with more 
+test cases.
+2. EDD Methodology
+Evals-Driven Development gives you a 
+methodology for measuring what matters: 
+faithfulness, relevance, and groundedness.
+3. BYOP + Collections
+Deﬁne your benchmark suite once. Every CI run 
+references it by ID. Thresholds and gate policy 
+travel with the collection, not guessed.
+Start Your EDD Journey Today
+https://red.ht/EvalHub
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 14 ---
+Thank you
+linkedin.com/company/red-hat
+instagram.com/red_hat
+facebook.com/redhat
+x.com/RedHatSummit
+EvalHub, because “Looks good to me” Isn’t a Benchmark.
+red.ht/uxfeedback
+Participate in Red Hat AI
+UX research opportunities!
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 15 ---
+EXTRA SLIDES
+(backup)
+
+--- PDF: WC - LT3001 (DevZone) Evaluation-driven development (EDD)_ AI applications that don't lie_1778463095278001ybf4.pdf | Page: 16 ---
+16
+Session ID
+LT3001
+Title
+Evaluation-driven development (EDD): AI applications that don't lie
+Abstract
+Your tests are green. Your retrieval-augmented generation (RAG) pipeline passed every query in your validation set. Two weeks 
+post-launch: hallucinations, stale answers, retrieval gaps, the demo never surfaced. 
+The problem is the assumption underlying your tests—that determinism means correctness. Language models don't work that 
+way. Neither do RAG pipelines.
+Evaluation-driven development (EDD) is the ﬁx. In this live-coding session, we'll break test-driven development (TDD) against 
+a real large language model (LLM), then rebuild a RAG pipeline with a structured evaluation loop using 2 open source tools: 
+SDG Hub, a synthetic data generation (SDG) toolkit, which produces domain-speciﬁc queries and ground-truth answers at 
+scale
+EvalHub, the open source uniﬁed AI evaluation platform, which benchmarks faithfulness and retrieval quality, surfaces 
+hallucinations and retrieval gaps, and runs the same evals at production scale on Kubernetes.
+Pull out your laptop. We're writing evals from scratch. You'll leave with an eval harness, an SDG Hub ﬂow, and a ﬁrst look at 
+EvalHub.

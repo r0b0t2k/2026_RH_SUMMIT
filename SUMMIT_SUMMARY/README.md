@@ -24,6 +24,7 @@ This folder contains cleaned, structured summaries generated from transcript exp
 | Time (EDT) | Title | Type | Summary |
 |---|---|---|---|
 | 8:30 AM - 10:00 AM | The Next Platform Is Choice | Keynote | [summary.md](20260512_0830_the-next-platform-is-choice/summary.md) |
+| 11:15 AM - 11:35 AM | Evaluation-Driven Development: AI Applications That Don't Lie | DevZone Session | [summary.md](20260512_1115_eval-driven-development-ai-apps/summary.md) |
 
 ### Day 3 - 2026-05-13
 
