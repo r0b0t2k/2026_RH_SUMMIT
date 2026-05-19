@@ -1,0 +1,7 @@
+I had to skip this talk to get lunch, however I have added the PDF presentation you can also use the following links to increase richness of the summary, remember to add a disclaimer up top that I did not physically attend this session and the summary is without a transcript highlighting the presenters perspective.
+
+AIOps overview: redhat.com/automation-aiops
+
+Market research paper: red.ht/futurum_redhat_aiops
+
+The State of AI security report(Cisco) https://www.cisco.com/c/en/us/products/security/state-of-ai-security.html

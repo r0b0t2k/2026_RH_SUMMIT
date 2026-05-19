@@ -1,0 +1,882 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_12/Beyond_MLOps_agentOps_for_enterpriseAI_RHOAI
+
+## Session Datetime
+This talk occured on 2026_05_12 between 1:00PM - 1:40PM
+
+## PDF Text: BeyonMLOps agentOps for enterprise IA_transcript.pdf
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 1 ---
+BeyonMLOps agentOps for enterprise IA
+Tue, May 12, 2026 12:00PM
+36:14
+SUMMARY KEYWORDS
+Agent Ops, Red Hat AI, agent identity, cryptographic identity, zero trust, observability, scalability,
+production readiness, AI governance, multi-agent architecture, inference spikes, agent execution,
+security, lifecycle management, AI gateway.
+SPEAKERS
+Speaker 2, Speaker 5, Speaker 3, Speaker 4, Speaker 1, Speaker 6, Speaker 7
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 2 ---
+Speaker 1 00:00
+Be talking to you guys about establishing agent ops, where your enterprise Red Red Hat AI.
+Let's go through the agenda real quick. So we'll talk real quick in terms of, how did we achieve
+agentic AI, how do we get here the production gap? Why are enterprises not deploying multi
+agents in production? What is stopping them, and how does Red Hat AI address that, to make it
+safer to deploy these agents. Then we'll move on to a demo. We'll wrap it up in terms of the
+summary of Red Hat AI advantages, some key takeaways, if you guys don't mind, we definitely
+left some time at the end for Q and A so if you get it on Monday to the end, and even if we
+don't have time, more than happy to meet you guys outside or at the booth. We'll continue
+conversation. All right, so from chat box to agents. So if you guys look at this timeline, it shows
+that the evolution of AI as a discipline has moved from broad AI concepts to machine learning
+to deep learning, and then generative AI, each step was building on the last one, but the Shift
+Agent is different, and can just agree. So generative AI, as we know, generates content, so
+think text, images and code. Agentic AI, on the other hand, acts so it creates autonomous
+systems that make decisions, plan multi step workflows and execute tasks. And that distinction
+from generating to acting is what actually makes this book transformative, but also challenging
+for the investors. So when your AI is just answering questions that blast radius, if you will, it's
+kind of limited, but when autonomous systems are executing actions against production
+systems, the stakes are fundamentally, as we see here, to try to make it a little bit more
+complete. On the left, you see where more organizations started. It is pretty much closed. So
+the model simple order receives the front and produces an output, and all the orchestration
+happens external. Externally, the autonomy here is low and the risk is manageable. In the
+middle, we have a gentle workforce, so the LLM Valve has decision making powers. You can
+choose which tool to call, how to route that task. And this is where we see where the autonomy
+is medium. And finally, on the right side is where the market is too much at full autonomous
+agents. It's given a high level objective, the agent defines its own tasks and plans it. Here is
+where the autonomy is high. So each step to the right delivers more business value, but also
+demands more from infrastructure in terms of security governance, but also observability. Most
+organizations today are somewhere between the first and second step, first and second stage,
+stage, and it's all happening right now at a normal scale. These are some numbers that we got
+from analyst reports, where we see that 80% of Fortune 500 companies have already adopted
+some form of AI agent capability. IVC projects that $632 billion in AI is by 2028 and 82% of
+executives intend to integrate AI agents into their operations. So we see that the adoption
+velocity is staggering. But here's the critical, authentic insight that we're all here and we want
+to learn about, is the adoption is not the same as Production Readiness. You can play around
+with all the open call, but no one's giving it their credit card. So most of these organizations are
+running pilots, proofs of concepts, or limited departmental deployments. And the gap between
+we're using agents and we're running agents of production. Full governance is very big, and
+that gap is, I think, where the real conversation is, and Peter will take us through.
+S
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 3 ---
+Speaker 2 03:55
+So let's just jump into this here. So you have a proof of concept the agent works in your lab, but
+when you actually try to take that to production, that's where you run into the same gaps that
+every enterprise faces the first agent identity, when your pilot, you hard code APIs, you give
+broad access, but In production, that's just a security nightmare waiting to happen. So what
+you need is every single agent needs its own individual cryptographic identity scoped with least
+S
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 4 ---
+privilege access the same kind of rigor that you would give to any human user. Second we have
+ungoverned autonomy agents. They execute code, call APIs, make decisions, and they're doing
+it quickly, without isolation and deep tracing of every action. You can't explain what happened
+when something goes wrong in a regulated industry, just saying the agent decided to do this
+isn't going to apply. Third up, we have scalability and performance one agent calling one
+model. That's easy, but when you have many agents calling many models concurrently, you're
+going to have inference spikes that maybe your infrastructure can't handle. You so then this is
+where agent ops really comes into this. And Red Hat AI is actually filling these gaps within
+agent identity and security. Every agent does get his own cryptographic identity. We use a
+spiffy spire solution, which is short lived. Keyless, auto rotated, rotating, sorry, auto rotating,
+auto rotated, sorry. Keys with ungovernment autonomy, we actually isolate the agent
+execution and zero trust sandboxes, container and micro VM boundaries, the constrain and
+what an entire agent can absolutely reach, really constraining that and keeping it so that way it
+doesn't get to information it shouldn't or try to enact any action that it should not. With each
+one of those actions traced, you have the ability to understand exactly what that agent has
+done, what it was thinking, any action that it has taken, and have deep logging and
+observability with that, on top of that, real time evaluation continuously scores against agent
+behavior so you can catch drift before that becomes a problem. Within scalability, vllm delivers
+high performance inference. LLMD dynamically routes inference requests across your entire
+fleet, and auto scaling responds to actual KV cash pressure, not just CPU. The infrastructure
+adapts to agentic workloads, not the other way around. Closing these gaps gets you to
+production, but staying in production takes even more. Here you'll see the larger picture. What
+we just talked about is just a piece of that puzzle. We have many other pieces, as you can see
+here, tracing, evaluation, identity, safety, security, observability, catalog, registry and Lifecycle
+Management, which we consider governance. This is for all of your AI assets, not just models,
+but looking through at MCPS, skills, agents, all of these pieces need to be completely governed.
+So you know what you're evaluating against, what you're what you're actually putting out
+there, versioning wise and lifecycle now this area kind of breaks down into three pillars. You
+have those, observe, trace, evaluate, making sure you can absolutely see what is happening
+second you're enforcing that identity that we just talked about before, and making sure that
+you have the security around these pieces, as well as proper access for each one of these
+ideas, one of these assets, third, develop and deploy reliably. This covers the whole governance
+area that I was mentioning, making sure you have what your AI, engineers and agents know
+that they can have access to catalogs, being able to actually see the storefronts and know what
+you've been given access to as an engineer, registries to contain all of that information and
+govern those different versions. Know what has been deployed, where it's been deployed, and
+how to access it, and also the ability to have safety and guardrails around these pieces red
+teaming, and also direct guardrails for the inference as well as for MCP and other areas that will
+have their own guardrails as well. The bottom line here is we're providing enterprises the
+optional on the operational rigor to reliably move agents from experimentation to production
+without locking you into a single framework. I think this gives a better look at the entire picture
+of the platform. Red Hat AI brings you all of the pieces you need to go from pilot to production,
+starting your metal, your hardware, choose the agent framework that your company wants. We
+don't lock you in. We are agnostic in that fact, though, we do provide actual quick starts and
+solutions on how to get started with your frameworks as well as bring your own. And we do
+have as part of the platform an opinionated framework on how to make that happen. Now you
+also get through that inference through models with bllm and LLMD, as well as external models.
+Through models as a service, you are able to contain and constrain what people have access
+to, but also access things like GPT, Gemini, Claude, as well as run your own models locally. But
+you know what you're using now because of models as a service, you know what your people
+are actually accessing, chargeback, cost management, all of that with self service API, to be
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 5 ---
+able to actually get API keys through self service and be able to know what you can have
+access to, as well as knowing what your people are actually looking to run and how much token
+users they have, knowledge, memory, being able to access different rag sources, different data
+sources, directly through an open responses, open open AI responses, along with safety
+through guardrailing and red teaming with Nemo Garrick and Trustee AI, we have an MCP
+gateway, which is through quadrant upstream, and it provides the ability to make sure that
+your agents only have access to the tools that they should have, and not only that, through this
+vivis Fire solution, making sure that they are secure with token exchange, so that way you
+know who's accessing What and that they have the rights to do. So also agent standard agent
+to agent API's, so that way your your agents can communicate with other agents across the
+platform, as well as outside of them. And then, of course, this all sits on top of agent ops, the
+observability to know exactly what is happening across your entire platform, but also making
+sure that you have that security and all of the different governance necessaries around these
+things. Then beneath you'll see your agents on OpenShift AI, the ability to deploy, maintain,
+manage all of that, observe all of your agents and know exactly what they're doing, and you
+can do this all without having to leave the confines of Red Hat. Now what we're going to get
+into now is a little bit of a demo to show through exactly how some of these pieces
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 6 ---
+Speaker 1 12:15
+work.
+Speaker 3 12:18
+So we won't see these in action with this agent ops demo, you can scan these and you will
+launch into the demo that we will show, essentially This demo, hopefully I can see them this
+demo, I and I can note right from here, you will see all right, this demo starts with this amazing
+Fedora capital mediator system that we built, but we have a problem because this system, and
+this application is only running on development, and we have our application that is running
+only in this developer laptop, and we wanted to go from the development to production. So we
+wanted to go from the inner loop into the outer loop. And we detected up a couple of things
+around gaps. And we detected that we have, for example, and we need to add security. We
+need to add also observability and the things that also Peter mentioned before. So the first
+thing that we want is to import our agent, and we have one piece that is fully open source, that
+is called caciente, and we have a principle that you can bring your own agent, so no matter
+how it's built, no matter how the agent framework that you're using, like, I don't know, Lang
+chain, crew, AI, or others, also things like open class, Well, you can import your agent, and you
+can enable certain things around security, also the agent to agent or the different MCPS
+protocols. So now we have all of these agents, but we need to be able of having this multi,
+multi agent architecture. So the agenda will also enable agent cards and Agent skills in order to
+discover the agent, from one agent to another agent. In order to start working now that we
+have our agent, we wanted to add, as Peter said, unique cryptographic identity. So instead of
+using static credentials, like if the agent gets hard, for example, or gets compromised, and we
+need to be able to have identity for every single agent out there. So we are using this agent
+deployment identity with spirit and spiffer, and using outreach, and just with one click, you can
+also enable the security and the workload identity across the entire site. Now we wanted to
+S
+S
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 7 ---
+also run the agents full secured in Sandbox. Sandboxing is trying to isolate and only allow our
+agent to talk to the different APIs or to the different tools that we want, and we are using the
+sandbox in order to prevent that. For example, the agent goes to places or calls to the API's
+that they are not supposed to. So we want to put these boundaries in order to control what
+they can access what they can also retrieve. Also we already mentioned the MCB gateway, so
+we inside of the banking application. We need some tools in order to receive some data actions
+against databases and so on, so forth. But we wanted to have control on the different MCP
+servers that we want. So instead of relying on this will not be harm. We wanted to maintain the
+control and the governance of the different MCP servers, and we are putting the MCP gateway
+in front of in order to have access control and also observability end to end, so we know exactly
+that we can allow our agent to access only certain tools as well. Then we have most as a
+service. An agent without a model is useful because you need to power the AI agent with
+modes as a service in order to have this flexibility. And we are using this in order to have this
+private AI in France, in order to power our AI engines, so we can have these different models
+that we see, and also we can import here once if, for example, we wanted to run or access to
+certain inputs of the models that are not running in the same cluster. So this is super flexible,
+and you can give this end to end observability as well. Then talking about observability, you
+need to know when things go wrong, what's happening. So I went that road. And when you are
+trying to debug a multi agent system, you don't know exactly when you start to look in. And
+this is giving you an end to end observability. So you will see in here all of the tool coding, all of
+the chat completion as well. So all of these AI model calls, and you will have an end to end
+traces that you can you can do things like audits and all type of things that are super helpful,
+not only for troubleshooting, also to do this end to end audit that, for example, our bank relies
+and needs. On the other hand, we need to ensure that the AI agent not produce things like very
+harmful or produces things that could be also bad. So we are providing guardrails and safety
+using Nemo guardrails and using also FMS orchestration in order to have these guardrails and
+put some safety in front of the agent. So you will see in here how we can prevent things that
+are harmful or, for example, biased or are not very good, so they will prevent it. And last month
+of this, we want to have this popular identity. So this is also one example around having, for
+example, splitted and having one identity per agent, so we can prevent, like the agent access
+all the things that they are not supposed to do, and also having this end to end worker identity,
+we can identify every single step in the End to End tracing, for example, and make this isolation
+for the different agents in order to keep the agents in their own scope, in order that you also
+prevent bad things happening. So all of these comes together, and we already explained this,
+but essentially, we are trying to have this philosophy of bring your own agent, and we will make
+a production ready, adding all of these layers that we already mentioned, capwelling, safety
+agent, life cycle and so on, so forth. So coming back again to, and I don't know, all right,
+coming back to the the couple of things around the rest of the AI advantage. We have these by
+taking control of the AI environment, the organization also can have this control. So that's
+exactly that we are getting with Western AI. Western AI is our enterprise platform. You already
+see this. So we have inference, we have data, and we have also the agent. And everything is
+running on a platform with these governance and security that we call from metal to agents,
+because you can run all the stack fully secure, and also you can run any model or any agent
+across any hardware and any cloud environment. So you already also see in the keynote this
+morning. And the good thing is that it's deployable everyone. So you can also deploy this in
+your premise. You can have this hybrid solution that our customers are doing as well. So
+having, for example, some Indian premise on the bare metal and going also to the cloud and
+rely on this, because always this is installing on top of OpenShift and also on top of Red Hat. So
+to this, we've organized our AI strategy in these four pillars, again, the imprints, the data, the
+agents, and running on top of the platform and that we already saw. We have this rest of the
+price. We have the different layers that starting, for example, from the bottom. We have the
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 8 ---
+principle of deploying anywhere, so you can deploy in any scenario, like bare metal or going to
+the happy cloud as well. You can run in any accelerator. So supports various hardware
+accelerators, as we already saw, you can find it in video, but also in Intel, AMD, Google and in
+other accelerators, we have this platform service layer that we have the confirmations, and
+then we have the resource management and the other things. And then on top of the AI
+services layer, that you can build, tune and manage all of the AI models and also agent
+workflows. And on top of that is like the enterprise AI application and agents that we can run.
+So with that, we have this portfolio that is designed to meet customers where they are, in the
+out and learning. We have Red Hat Enterprise, AI enterprise that is integrated AI platform for
+enterprises looking to deploy and scale AI models, agents and applications efficiently and
+anywhere, also resident AI in frame service that these are product for enterprises that they
+want to optimize their inference, and they want to also deploy these llms, this last year was
+models, and afterwards, we have open CPI that enables enterprise to extend the capabilities to
+OpenShift and also support AI. And last but not least, green AI provides out of the box platform
+to consistently running an LMS into a individual in several environments. And these final slides
+contains a set of links and materials that we have covered. You can check that out, and you can
+also have several interactive demos. You can access to this, and some of them will be
+published very soon. So all of these. You have it online and available, so take a look. We will
+also publish the PDFs on these slides, and I think that that's all for this session. Thanks for
+attending. And I don't know if you have any questions, but we will keep
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 9 ---
+Speaker 4 24:02
+this running. I forgive me if I seem confused. Is agent ops a separate thing, or is that a label on
+what we're calling all of this?
+S
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 10 ---
+Speaker 2 24:11
+So the agent ops itself is, if we go back you so agent ops itself is actually the pieces that help
+make the actual agents operationalized. It's not the actual prompting, it's not any of those
+pieces, but it is the governance of those things, it is actually observing them and making sure
+you have full tracing down the stack. It's the evaluation of them. It's the things that are going
+to make that work. But think of it as day two, and really making sure what you've built in the
+labs and what you build in your proof of concepts can actually be in production, and checking
+for drift, checking for any issues that may arise, remediation of those issues. That's the part of
+that is Agent ops itself. Everything else is actually, you know, just the actual AI pieces. And
+agent ops makes sure that keeps an eye on each one of those to know what your what you
+have in production. Where is it in production? How, who's using it, all of those pieces. So that
+way you can intelligently decide this is working, this is scaling properly, and the number of
+users around it, you know, who's using what? When you can deprecate things, when you can
+move things forward, and helping lifecycle, all those areas.
+Speaker 4 25:35
+Thank you
+S
+S
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 11 ---
+Speaker 2 25:35
+absolutely. Yes. So and those are continually being built out as well. So to be clear with
+everybody, on the roadmap at this time, MCP is really leading the way. It's not the shining star
+we all thought it was a year ago in terms of exactly an MCP everything situation, but it's leading
+the way in showing us what we need in terms of catalogs, registries, lifecycling, making sure
+that we can keep eyes on all of that. Skills and agents are really settling right now in terms of
+letting the dust settle, figuring out how we want to make sure that those pieces are
+implemented. So we're going to have skills registry. We're releasing three four this week. Three
+five is in August at this point, and in three five, skills will have a full registry, sorry, skills will
+have full catalog. Agent, catalog capabilities. We're working in if any of you have heard of ml
+flow, the ML flow upstream is actually in GA and three four, and we're working with data bricks
+directly in the upstream to actually bring a registry capability for those solutions. So that one is
+in the works right now, with data works, it's going to follow the exact same methods, though, as
+MCP. So we're going to have cattle registry, actual life cycle, actual lifecycle of those in three
+five though we also have are working with K gente upstream. K Gen T is for the agent part of
+that so deployment lifecycle, and being able to show deployments within within OpenShift, and
+making sure those are available as well. All of these are in development, and making sure that
+we're increasing those capabilities, but working directly with the upstream to make sure that
+we all land on something that will be more long lived, and not just trying to get something out
+the door as fast as possible. So that idea is going to keep expanding. Now, guardrails,
+knowledge, sources, pipelines, notebooks, there's so many agent or sorry, AI, assets and all of
+that needs to be governed. So that way, when you know something's gone wrong, you can
+actually check to know what version it was. Have Supply Chain Management around that. Make
+sure that you aren't just bringing in things, which I guarantee everybody in this room is dealing
+with that at the moment, in terms of AI engineers throwing up an MCP server, npm install,
+opening up some pretty crazy security gaps within your system. So this is all about you being
+able to have a trusted environment and making sure that you, if I could say anything, this is the
+gear of trust. You can't go to production without that trust. And yes, you can get something out
+there really quickly, but I wouldn't trust any of that, so I would be very careful with with that as
+well. Yes, sir. So right now we have two gateway solutions, and we are already looking at
+bringing them under one roof. Inference came out last year. You're all you know in terms of
+being able to run production workloads with inference. So we absolutely immediately made
+what people were calling the AI gateway, but it's really an inference gateway. Then the MCP
+gateway was there to make sure that we could have a proper security solution. That's where
+spiffy spire first got introduced to this, to make sure that we can handle zero trust. So make
+having that gateway in there. Now we're looking at what the best solution, and we're not just
+picking one and going with it. We're going to have an AI gateway that can cover all of your
+different workloads coming through it. But we want to have an AI native proxy. We want to
+make sure that when you're actually looking at the packets that is for AI and that it doesn't
+copy packets and move them so we are looking at what our solution is going to be that is
+actively being looked at and developed right now. And yes, everyone's got an AI gateway now.
+There's 100 of them out there. We don't just want to pick one, because it's the thing we're
+trying to make this a long term solution that will be there to actually have a rapid, efficient
+proxy with proper packet, well, packet analysis without having to copy that out, which is two of
+the main pieces. But yes, there will be a full AI gateway umbrella for all AI workloads, but the
+MCP gateway and inference gateway are two main that can help you get to production at this
+moment. Yes, sir. Can
+S
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 12 ---
+Speaker 5 29:55
+you talk more about the token exchange between two agents, like what kind of protocols are
+being used and how the security is
+Speaker 3 30:06
+handled? Yeah, that's a very good question. So when two agents, for example, every single
+agent, have their own cryptography, identity, so we are using things like spiritual prefer that we
+know that. It's not known, but it's giving specifically workload identity and workload name in
+order to identify specifically these, these and these. And when you are trying to also
+communicate to another agent, we have outreach that will inject one sidecar and will detect
+when this is valid or not. So if you are trying to hijack will be intercepted, will be validated and
+will be discarded, so will be automatically. And you don't need to do anything. It's like with Istio,
+with the different side cards. You don't need to change your agent code. It's just enabling out
+the outbreach, and it's just one click, automatically will inject this and will identify your agent
+that is communicating to another agent or to another tool as well. So all of these end to end will
+have these. And if you see, for example, into the demo, we will see these. So I'm switching
+back to the demo, and in this demo, you are seeing, for example, the fourth bridge. In here.
+Check this observability. You will see also the outbreach. And we can also see this into the
+traces. So you can have this end to end observability having inside of the own traces. So in this
+trace, for example, we will see, top right, you have this PFA, and this is identifying specifically
+that this workload is having this specific identity. Is
+Speaker 5 31:50
+there any kind of stress load testing happening here, or is there
+Speaker 3 31:58
+any queuing happening when multiple wants to connect to Yeah, it's, we did some testing, and
+it's super, super lean, so we are not adding a lot of like steps. The only thing that is happening
+is going to a sidecar that will have the exact same net namespace, so the latency will be
+minimal. And this is super like, not resource hungry. No will be happening one by one, and you
+have some certain queuing, but it's super fast, because the only thing that is doing is like one
+another another. So it's some sort of queuing, but inside of the outfit as
+Speaker 5 32:38
+well,
+S
+S
+S
+S
+S
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 13 ---
+Speaker 3 32:40
+correct? It's a sidecar. So we'll go throughout the sidecar automatically. We go to the endpoint,
+and we'll have this validation, yeah, so building on, like the resource
+Speaker 6 32:52
+question, so in some environments, like thinking about how we deploy, we may have limitations
+as to how many models we could have that models we could have any sort of paradigm for
+spinning out models dynamically
+Speaker 3 33:09
+on demand. We have a talk, in fact, tomorrow that is called dynamic dynamic workloads, in
+order to have, like, more models than GPUs, and in order, in order to load automatically, one
+thing though, that we need to take into consideration is that the model loads is usually taking a
+little bit because these models are very adjunct and sometimes you need to wait a little bit until
+this happens, you can have some warm up GPUs in order to scale up, and we have some
+dynamic auto scaling using Keta. And also another thing that we will I'm not doing any spoiler,
+because I want to you go to the session as well, but itself is like an interceptor analogy, scale
+up automatically, but yeah, it's sometimes a little bit tricky to manage. This earlier
+Speaker 7 34:08
+you mentioned trust, and I presume the AW can use the skills. So how can we make sure that
+those skills out of trust? So
+S
+S
+S
+S
+
+--- PDF: BeyonMLOps agentOps for enterprise IA_transcript.pdf | Page: 14 ---
+Speaker 2 34:24
+thank you. That's a wonderful question, and that is exactly why agent Ops is so important, is
+that it is creating pipelines in of these for your company to validate. We are getting all of the
+pieces in place for that governance. Part of the lifecycline as well, is going to be pipelines
+directly in to allow you to verify scan, make sure that these skills are coming from the trusted
+sources, and then making sure, then that you can keep them quarantined in a state, that they
+can be checked and make sure that they're okay once they've been checked, then you can
+publish them out to your catalog, make sure that they're going to be loaded into the registry
+correctly, and that is why that is exactly so important right. Now, many of you probably just
+have skills being transferred across your organization. Oh, you have a good skill. Send me that
+real quick internally. That's not so bad, but when you start pulling skills from outside, that's
+going to be a major problem, and there's a lot of skills that they look wonderful, and there's
+that one little code snippet that you missed that just opened up your entire network. So it is
+incredibly important that you have this governance solution. When you're first developing an
+agent, people don't see that importance, because they just want to get the agent up and
+running. They just want to make sure it's there. But when you want to go to production, you
+have to make sure your supply chain is checked. You have signing security, all of the different
+certification around those and as platform engineers, as the enterprise itself, you want to have
+a marketplace where trusted skills can be surfaced that aren't just GitHub or out there in the
+wild or sent through email to people, but yeah, that is the key there is that you want to make
+sure that you have a pipeline in place with approvals to say that these should go out and these
+are enterprise approved evaluation.
+S
+
+## PDF Text: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 1 ---
+Establishing AgentOps for 
+enterprise AI on Red Hat AI
+Roberto Carratalá
+Principal AI Architect - 
+AI Business Unit 
+Younes Ben Brahim
+Principal Product Marketing Manager
+AI Business Unit 
+Peter Double
+Principal Product Manager
+AI Business Unit
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 2 ---
+Agenda
+▸
+The agentic AI era:  Why agents are the next frontier
+▸
+The production gap: Why MLOps isn't enough — introducing AgentOps
+▸
+Red Hat AI:  The safest place for enterprise agents
+▸
+The pillars powering agentic AI on Red Hat AI
+▸
+Demo:  Agentic AI in action
+▸
+The Red Hat AI advantage  and key takeaways
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 3 ---
+From ChatBot 
+to Agents
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 4 ---
+The Dawn of AI Agents
+The beginning
+4
+Artiﬁcial Intelligence (AI)
+Machine Learning (ML)
+Deep Learning (DL)
+Generative AI
+Agentic AI
+Artiﬁcial Intelligence
+A multidisciplinary ﬁeld of Computer Science that aims to create 
+systems capable of emulating and surpassing human-level intelligence
+Machine Learning
+A subﬁeld for training computers to learn and make decisions from 
+data, without explicit programming
+Deep Learning
+A subset from ML involved neural networks enabling complex pattern 
+recognition and analysis from data
+Generative AI
+Subﬁeld focusing on generating new content such as text, images, 
+code and more
+Agentic AI
+Focus on creating autonomous systems that can make decisions, 
+plan, and perform tasks independently
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 5 ---
+5
+The evolution of enterprise AI
+Where it is going…
+How it started
+Where it is!
+Autonomous Agents
+LLM Workﬂow
+Agentic Workﬂow
+Given a high-level objective, 
+the agent deﬁnes the tasks 
+and plans. Autonomy is High.
+The LLM is a simple worker, 
+and autonomy is Low. 
+Orchestration is external.
+The LLM has decision 
+making power, and autonomy 
+is Medium.
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 6 ---
+Agentic AI is no longer experimental 
+it's operational, scaling fast, and redeﬁning how work gets done.
+80%
+Fortune 500 
+adoption
+of Fortune 500 
+companies already 
+use active AI agents.
+— Microsoft Cyber 
+Pulse, 2026
+$632B
+AI spending 
+by 2028
+Worldwide spending 
+on AI solutions will 
+surpass $632 billion 
+by 2028, growing at 
+29% CAGR.
+— IDC, 2025
+82%
+Executive intent
+Tech executives plan 
+to integrate AI 
+agents within 1–3 
+years, but <10% have 
+production-grade 
+deployments.
+— Capgemini, 
+2025
+The agentic AI explosion
+6
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 7 ---
+Production gap
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 8 ---
+Update conﬁdential designator here
+Version number here V00000
+The Gaps
+Three critical gaps: Pilot to production
+Ungoverned autonomy
+Unconstrained dynamic code execution creates security 
+risks, requiring isolated environments with deep execution 
+tracing to monitor autonomous actions
+Scalability and performance
+Multi-agent architectures generate unpredictable, 
+concurrent inference spikes that traditional infrastructure 
+cannot handle
+Agent identity
+Agents need secure, cryptographic identities to access 
+sensitive tools under least-privilege principles — 
+hardcoded keys are unacceptable in production
+Why 82% plan to deploy agents — but fewer than 10% have
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 9 ---
+Update conﬁdential designator here
+Version number here V00000
+AgentOps
+Safety & Observability
+Isolate, trace, evaluate 
+every action
+  Agent Sandbox: zero-trust 
+container, microVM isolation.
+  MLFlow Tracing: every LLM call, 
+tool use, and decision logged
+  EvalHub Real-time Evaluation: 
+continuous scoring, drift 
+detection
+Agent Identity & Security
+Every agent gets its 
+own identity
+▸Cryptographic Identity 
+(SPIFFE/SPIRE): Short-lived, 
+keyless
+▸MCP Gateway: per-tool 
+authorization & Audit
+▸Scoped OAuth2 token 
+exchange: least-privilege access
+Scalability & Performance
+Infrastructure that handles 
+agentic workloads
+  vLLM: high-throughput model 
+serving
+  Llm-d: dynamic inference 
+routing
+  Inference-aware autoscaling: 
+scales on KV cache pressure
+Red Hat AI - Closing the Gaps
+Getting you to production
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 10 ---
+CONFIDENTIAL designator
+10
+Observability
+Tracing
+Evaluation
+Safety/Security
+Registry
+Catalog
+Lifecycle Mgt
+Identity
+AgentOps with Red Hat AI
+Keeping you in production 
+What is it: 
+A uniﬁed approach for 
+managing the full 
+lifecycle, security, and 
+performance of AI agents 
+and their tools
+Why it matters: 
+Provides operational rigor to 
+reliably move agents from 
+experimentation to production 
+with platform-native lifecycle 
+management.
+AgentOps
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 11 ---
+CONFIDENTIAL Red Hat associates only
+11
+Agent Frameworks
+Tools
+Models
+Knowledge/Memory
+Other Agents
+Safety
+AI/Model Gateway
+OpenResponses / OpenAI’s Responses API 
+Agent to Agent APIs
+MCP Gateway 
+Metal to Agents
+Observability
+Tracing
+Evaluation
+Registry
+Lifecycle Mgt
+Identity
+Security
+Catalog
+     Red Hat AI  Platform
+Self-Hosted Models
+Model APIs
+RAG & Data Ingest
+Safety, Guardrails &
+Red teaming
+   Nemo/Garak
+Agents
+MCP Servers
+Agent Ops
+Metal
+Agent 1
+Agent 2
+Agent 3
+Agent 4
+The complete stack metal to agents
+Streamlined Agent Operationalization
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 12 ---
+AgentOps 
+Demo
+red.ht/agentops-demo
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 13 ---
+The
+Red Hat AI 
+Advantage
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 14 ---
+CONFIDENTIAL Red Hat associates only
+14
+Focus areas
+Accelerate the development and delivery of AI solutions across hybrid-cloud environments  
+Area of focus
+Increase efﬁciency with 
+fast, ﬂexible and 
+efﬁcient inferencing
+vLLM, Distributed inference with llm-d, 
+Optimized models & model compression 
+tools, Validated model repository
+Flexibility and consistency 
+when scaling AI across the 
+hybrid cloud
+Ingrate with MCP, OpenAI Compatible 
+API servers (OGX), Playgrounds, 
+AI Asset Hubs
+Accelerate  Agentic  AI delivery and 
+stay at the forefront of innovation
+Integrate with MCP, OpenAI Compatible API servers 
+(OGX), Playgrounds, AI Asset Hubs
+Simpliﬁed and consistent 
+experience for connecting 
+models to data
+Fine-tuning, Model Customization,  
+RAG, Private Data, etc
+Governance and security from metal to agents
+Run any model or agent across any hardware in any cloud environment
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 15 ---
+CONFIDENTIAL designator
+15
+Increase efﬁciency with fast, 
+ﬂexible and efﬁcient 
+inferencing
+Simpliﬁed experience for 
+connecting data to models and 
+agents
+Scale Agentic AI with 
+governance and control
+Governance and security from metal to agents
+Run any model or agent across any hardware in any cloud environment
+Inference
+Data
+Agents
+Platform
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 16 ---
+CONFIDENTIAL designator
+16
+Red Hat AI Enterprise
+An integrated AI platform for enterprise AI deployments
+AI services layer: build, tune, and manage all 
+AI models and agent workﬂows.
+Platform services layer: core foundation for 
+consistency, security, and scalable operations.
+Any hardware: support for various hardware 
+accelerators for optimized performance and cost.
+Physical
+Virtual
+Private cloud
+Public cloud
+Edge
+Sovereign 
+cloud
+Deploy anywhere: choose where to train, tune, 
+deploy and run AI models, agents and applications.
+Enterprise AI Applications and Agents 
+AI application 
+development
+AI Gateway
+Security &
+Governance
+Model and agent 
+catalog
+Inference 
+at scale
+Observability
+Container, kubernetes and 
+platform services
+Resource Management
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 17 ---
+17
+Red Hat AI overview
+The products that power Red Hat AI
+Red Hat AI meets customers where they 
+are in their adoption journey providing 
+choice of models, hardware, and 
+location—whether on premise, in the 
+cloud, or at the edge. 
+For optimized inference 
+of large language models
+For enterprise AI, deploy and 
+scale efﬁciently, anywhere
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 18 ---
+Key Takeaways
+What to remember from 
+this session
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 19 ---
+Subscribe to the 
+Red Hat AI blog
+red.ht/rhai-blog
+Follow us on X and YouTube
+x.com/RedHat_AI
+youtube.com/@RedHat
+Learn more, and try out, Red Hat AI
+Interactive demos
+●
+red.ht/InferenceBenchmark
+●
+red.ht/intro-inference
+●
+red.ht/model-optimization
+●
+red.ht/model-customization
+●
+red.ht/intro-llm-d
+●
+red.ht/MaaS
+Accelerate your AI journey 
+with the Red Hat 
+AI quickstarts
+red.ht/blog-ai-quickstarts
+  AI quickstarts home page: 
+red.ht/ai-quickstarts
+60-day trial of Red Hat AI Inference 
+red.ht/ai-inference-server-trial
+60-day trial of Red Hat Enterprise Linux AI 
+red.ht/RHELAI-trial
+60-day trial of Red Hat OpenShift AI 
+red.ht/RHOAI-trial
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 20 ---
+The Red Hat AI team 
+wants to hear from you!
+Scan the QR code or go to: 
+red.ht/uxfeedback
+Let us know your thoughts on Red Hat AI by 
+signing up to participate in research opportunities!
+Have additional questions about AgenticOps?
+Visit us at the Red Hat AI Booth
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 21 ---
+21
+AI quickstarts
+Explore a variety of innovative AI use cases 
+from our community. These simple, focused 
+examples have been designed for fast and 
+easy deployment on the Red Hat AI platform.
+This content is authored by Red Hat experts, but has 
+not yet been tested on every supported conﬁguration.
+Audit AI apps to meet 
+compliance goals
+Deploy a ﬁnancial audit system with 
+insights into the performance, cost, and 
+usage of your large language models in 
+real time.
+→
+Build an AI-powered 
+virtual agent
+Build and deploy a conversational AI 
+virtual agent on Red Hat OpenShift AI to 
+automate customer interactions and 
+provide instant support.
+→
+Centralize company knowledge 
+with an Enterprise RAG Chatbot
+Use retrieval-augmented generation 
+(RAG) to enhance large language models 
+with specialized data sources for more 
+accurate and context-aware responses.
+→
+red.ht/AI_quickstarts
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 22 ---
+22
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 23 ---
+Thank you
+linkedin.com/company/red-hat
+youtube.com/user/RedHatVideos
+@redhat
+@redhatsummit
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 24 ---
+Update conﬁdential designator here
+Version number here V00000
+AgentOps
+Ungoverned Autonomy
+Isolate, trace, evaluate every 
+action
+  Agent Sandbox: zero-trust 
+container, microVM isolation.
+  MLFlow Tracing: every LLM 
+call, tool use, and decision 
+logged
+  EvalHub Real-time Evaluation: 
+continuous scoring, drift 
+detection
+Agent Identity & Security
+Every agent gets its own 
+identity
+▸Cryptographic Identity 
+(SPIFFE/SPIRE): Short-lived, 
+keyless
+▸MCP Gateway: per-tool 
+authorization & Audit
+▸Scoped OAuth2 token 
+exchange: least-privilege access
+Scalability & Performance
+Infrastructure that handles 
+agentic workloads
+  vLLM: high-throughput model 
+serving
+  Llm-d: dynamic inference 
+routing
+  Inference-aware autoscaling: 
+scales on KV cache pressure
+Red Hat AI - Closing the Gaps
+Getting you to production
+
+--- PDF: Red Hat Summit Session 2026 _BO2847_ Establishing AgentOps for enterprise AI on Red Hat AI_1778394186109001jXXn.pdf | Page: 25 ---
+25
+red.ht/AI_quickstarts

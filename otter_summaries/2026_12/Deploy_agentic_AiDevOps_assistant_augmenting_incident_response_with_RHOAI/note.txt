@@ -1,0 +1,1 @@
+This was a lab so the transcript was not very long. feel free to use the lab documentation posted here https://rhpds.github.io/agentic-aiops-showroom/modules/index.html to add richness to this summary. I went through the lab in person.

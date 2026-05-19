@@ -1,0 +1,652 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_14/container_hardening_from_zero_to_hero_with_redhat_hardend_images
+
+## Session Datetime
+this talk was on 2026-05-14 from 1:00PM EDT to 2:30PM EDT additionally this was the very last session of the Red Hat summit 2026 to close things out.
+
+## PDF Text: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 1 ---
+From zero to hero with Red Hat Hardened 
+Images
+LB 2865
+Container hardening
+1
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 2 ---
+2
+The Security Squeeze
+Source:
+1: Forum of Incident Response and Security Teams (FIRST) - 2026 Vulnerability Report 
+Red Hat Hardened Images
+"The goal of cybersecurity is not to eliminate all risks, but to intelligently manage risks to an acceptable 
+level." — Michael Coates, former CISO of Twitter
+●
+CVE Volume: AI-driven discovery and automated scanning 
+pushed CVE counts past ~60k annually1. Traditional triage 
+processes struggle to keep pace and discern the noise.
+●
+Compliance Pressure: Regulatory pressures and risk proﬁles 
+push towards to near-zero tolerance of vulnerabilities of any 
+kind.
+●
+Innovation Tax: Engineering teams are burning cycles on 
+vulnerability maintenance and reporting instead of building 
+features.
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 3 ---
+3
+Foundational set of open source languages, runtimes, 
+databases, web, & utilities aiming to reduce toil around 
+CVEs.
+●
+Built on a minimal, hardened Linux userspace 
+optimized for containerized environments. 
+●
+Available at no cost. Support is included with Red Hat 
+Enterprise Linux & OpenShift Container Platform
+●
+Delivered through Red Hat’s SLSA 3 trusted supply 
+chain.
+Red Hat Hardened Images
+Modern software, delivered as hardened, veriﬁable container images
+Red Hat Hardened Images
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 4 ---
+Minimalism
+Images contain only the absolute bare essentials and follow distroless principles to reduce the attack surface.
+Hardened by Default
+Packages are compiled with a full suite of modern security ﬂags, with NIST 800-53 baseline controls applied 
+where applicable.
+Familiar Developer Experience
+Images are designed for seamless integration with existing CI/CD pipelines and developer workﬂows.
+Upstream Proximity
+Security ﬁxes are delivered directly from the latest upstream releases, targeting a time to remediate as soon 
+as the ﬁx is available, which typically is less than 24 hours for critical vulnerabilities.
+Veriﬁable
+Every image is delivered with a comprehensive Software Bill of Materials (SBOM) for transparency.
+4
+Foundation for Secure Cloud-Native Applications
+Guiding Principles
+Red Hat Hardened Images
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 5 ---
+Source - Ever-fresh remediations
+SLSA 3 provenance, continuous upstream tracking, 7-day crit SLA
+5
+Hardened Images
+at every level
+Red Hat Hardened Images
+Packages - Hardened compiler options
+PIE/RELRO, stack canaries, dep minimization
+Images
+Distroless, non-root, reproducible
+Benchmarks & scanning
+CIS, STIG, OpenSCAP proﬁles
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 6 ---
+The core of Hardened Images is Project Hummingbird
+6
+Let’s take a closer look
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 7 ---
+Hummingbird RPMs
+7
+Fast. Minimal. Hardened packaging
+A container-native packages - always up-to-date
+●
+A rolling release model focused on the latest stable upstream
+●
+Not a general-purpose distribution.
+●
+Slimmed dependencies - drop features that are irrelevant for 
+containers
+●
+Stats: 
+Red Hat Hardened Images
+Package Count:
+85% reduction
+Image Size:
+60% smaller
+CVE Count:
+Near-zero target
+Update Frequency: 
+<24hrs typical
+Build Time:
+Hermetic, reproducible
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 8 ---
+CVE Remediation
+8
+RHHI aims for 24hr resolution for CVEs
+●
+Deep expertise from maintainers meets 
+broad coverage w/ dedicated prod sec 
+team
+●
+Backed by industry standard SLAs 
+(7-day crit)
+●
+Speed meets quality - robust functional 
+& regression testing per component and 
+image.
+8
+Vulnerability 
+identiﬁed in 
+upstream 
+communities
+Product Security 
+analyzes impact to 
+products
+Package(s) are built 
+& tested
+Images are built 
+and tested
+Packages, images, & 
+SBOMs are released
+Customers 
+consume ﬁxes 
+via registry
+Notiﬁcations of 
+vulnerability
+Update security 
+feed
+Advisories are published 
+Major Incidents
+& embargos
+Expedited Workﬂow 
+and coordination
+Security 
+bulletins
+Known exploits elevate 
+the importance and 
+urgency of vulnerabilities 
+in existing workﬂows
+Red Hat Hardened Images
+Hummingbird 
+automation
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 9 ---
+Red Hat Hardened Images
+9
+Lock-down supporting pods
+Adopt RHHI where it helps & anywhere it’s needed
+Primary App
+Supporting services/pods
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 10 ---
+What you’ll 
+explore in 
+today’s lab
+New web presence
+Available images
+Usage practices
+Security workﬂows
+10
+Update patterns
+Build automation
+Secured pipelines
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 11 ---
+11
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 12 ---
+Example lab login page
+12
+Make sure you remember the (unique) e-mail address you use!
+It will allow you to come back to your lab if you lose connection.
+The email you registered with
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 13 ---
+Today’s password is:
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 14 ---
+14
+Or red.ht/hi in your browser
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 15 ---
+Where’s the Info? 
+15
+CATALOG OF HARDENED IMAGES PRE-LAB ACTIVITY
+Finding secure 
+images shouldn't be 
+a scavenger hunt. If 
+you have to "hunt" 
+for the right bits in a 
+crowd of noise, 
+you're already losing 
+time.
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 16 ---
+Scan & Spot Challenge
+CATALOG OF HARDENED IMAGES PRE-LAB ACTIVITY
+16
+ TARGET IMAGE
+Locate these 4 items at images.redhat.com
+Pull Command
+Exact CVE Count
+Variant Count
+SBOM & Verify Proof
+MariaDB
+INSTRUCTIONS
+latest
+What is the number of CVEs + Variants?
+FIRST 5 HANDS UP WITH CORRECT ANSWER WILL GET A HUMMINGBIRD GIFT
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 17 ---
+17
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 18 ---
+Scan & Spot Challenge
+CATALOG OF HARDENED IMAGES PRE-LAB ACTIVITY
+18
+ TARGET IMAGE
+Locate these 4 items at images.redhat.com
+Pull Command
+Exact CVE Count
+Variant Count
+SBOM & Verify Proof
+core-runtime
+INSTRUCTIONS
+FIPS 2.42
+What is the number of CVEs + Variants?
+FIRST 5 HANDS UP WITH CORRECT ANSWER WILL GET A HUMMINGBIRD GIFT
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 19 ---
+19
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 20 ---
+Scan & Spot Challenge
+CATALOG OF HARDENED IMAGES PRE-LAB ACTIVITY
+20
+ TARGET IMAGE
+Locate these 4 items at images.redhat.com
+Pull Command
+Exact CVE Count
+Stream Count
+SBOM & Verify Proof
+OpenJDK 21
+INSTRUCTIONS
+Runtime
+What is the number of CVEs + Streams?
+FIRST 5 HANDS UP WITH CORRECT ANSWER WILL GET A HUMMINGBIRD GIFT
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 21 ---
+21
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 22 ---
+22
+CATALOG OF HARDENED IMAGES PRE-LAB ACTIVITY
+"Security and provenance shouldn't be a scavenger hunt. It should be Ready-to-Use."
+Zero-Auth Pulls
+Podman/Docker pull commands 
+available without login gates. 
+Immediate access to bits.
+Shift-Left Visibility
+See the health index and CVE count 
+before pulling. No more manual 
+scan cycles.
+Provenance Proof
+Signed SBOMs ready for immediate 
+piping into your internal security 
+scanners.
+Reducing Veriﬁcation Toil
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 23 ---
+So where’s the Info? 
+23
+CATALOG OF HARDENED IMAGES PRE-LAB ACTIVITY
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 24 ---
+24
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 25 ---
+Example lab login page
+25
+Make sure you remember the (unique) e-mail address you use!
+It will allow you to come back to your lab if you lose connection.
+The email you registered with
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 26 ---
+26
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 27 ---
+The Red Hat Hardened Images team 
+wants to hear from you!
+Scan the QR code or go to: 
+red.ht/userfeedback
+Help shape what comes next. 
+Share your pain points, experiences, and ideas.
+Visit the UX team at the RHEL booth
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 28 ---
+Sharpen your skills beyond the lab
+Learn virtually and practice anywhere. 
+Gain the technical skills and knowledge you 
+need to stay ahead of a growing, complex IT 
+landscape through access to our 
+comprehensive learning curriculum.
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 29 ---
+Visit red.ht/hi to explore
+Give Red Hat Hardened 
+Images a try today
+
+--- PDF: LB2865 Zero to Hero slides_1778248483988001sE7Q.pdf | Page: 30 ---
+Update conﬁdential designator here
+Version number here V00000
+linkedin.com/company/red-hat
+youtube.com/user/RedHatVideos
+facebook.com/redhatinc
+twitter.com/RedHat
+30
+Thank you
+Red Hat is the world’s leading provider of enterprise 
+open source software solutions. Award-winning support, 
+training, and consulting services make Red Hat a trusted 
+adviser to the Fortune 500.
+
+## PDF Text: container_hardening_transcript.pdf
+--- PDF: container_hardening_transcript.pdf | Page: 1 ---
+Note
+Thu, May 14, 2026 12:06PM
+21:02
+SUMMARY KEYWORDS
+OpenShift, command line, production, pipelining, architecture lab, CDE chain, security, zero risk profile,
+hardened images, project honey bird, software factory, RPMs, dependency trees, automation, API.
+SPEAKERS
+Speaker 1, Speaker 12, Speaker 6, Speaker 5, Speaker 4, Speaker 7, Speaker 8, Speaker 2, Speaker 11,
+Speaker 10, Speaker 3, Speaker 9
+Speaker 1 00:00
+Some command line things. We also have an entire section on how to bring this into OpenShift
+and do a little more pipelining things and some production stuff that you might do with
+OpenShift cluster. My name is Matt, my senior. We also have with us today the man, the myth,
+the legend, the product manager for our pages. Ben Green Art,
+Speaker 2 00:22
+I'm the guy who gets yelled at you
+Speaker 1 00:24
+and the author of our section,
+Speaker 3 00:28
+come on. Come on. Our
+S
+S
+S
+S
+
+--- PDF: container_hardening_transcript.pdf | Page: 2 ---
+Speaker 1 00:31
+architecture lab itself. Here to hear about. So this is something that really give you a little
+background. This is the sort of things our teams are facing, before Methos, before all these
+weird AI things the CDE chain. CDE reporting has been accelerating. The flood is just now
+bigger. The sheer volume of things, developer, security, team, platform teams need to keep on
+top of will not stop growing from here. This report, reported something on the order of a 400%
+increase in reports in the past two years. More reports last year than we're sorry it was last
+quarter than the year before. Something It's whatever
+Speaker 4 01:37
+you think it
+Speaker 1 01:38
+is. It's worse. On top of all of this inbound information, we also have a very different zero risk
+profile getting pushed down on top of us from organizations. People are no longer satisfied with
+a long list of exemptions. They want a long list of nothing. So getting pushed harder and
+harder, harder to completely clear that national which means you're spending all of these
+cycles that should be spent on features and your customers and your application on trying to
+figure out who to blame for a package you didn't install on a container image you don't know.
+That's what we would like to try and solve. Enter redheaded images. This is a set of distro list.
+Shelves hold no shells, just that. The only thing they need is before that, whatever purpose it is,
+a runtime, a language, a server as small as we can possibly make them, built correctly in a
+hardened environment by Linux experts, available across the board wherever you want to use
+them at no cost, and delivered by folks who know how to deliver secure Linux rpms. These are
+the guiding principles we had during the project. Right minimization only. The Essentials is do
+the thing it needs to do. Make sure that we're doing all the right things. We're hardening. They
+come out of the gate in a state that is a step ahead for you. But none of this works if the
+developers won't use it. The more groups you put in front of people, make them secure, the
+less secure you'll actually end
+Speaker 4 03:29
+up write that down.
+Speaker 5 03:31
+Good security is simple security.
+S
+k
+1 03 34
+S
+S
+S
+S
+S
+S
+
+--- PDF: container_hardening_transcript.pdf | Page: 3 ---
+Speaker 1 03:34
+So in order to do these things, we need to make changes around the way we deliver software.
+This is not real. We cannot operate at this pace and continue to live in the same way that we
+deliver rel which means we're doing this by tracking upstream much, much, much more closely
+in order to get that extremely close window between publication of fix and delivery of new
+image. And we also want to make sure that you can do all of this and verify that it was done
+correctly, and that when you have this thing we said we built, when we say hard main, we're
+talking about everywhere from the very pipeline we use, which is a relatively new salsa, three
+highly automated thing that we automated even more we're doing all the things we've learned
+over 25 years of building software and packages with green compiler options by taking all the
+latest and greatest work that came Before us on what a distress image should be and which
+version of that we agreed with as the best approach to give the best experience, and then
+adding to that, the ability to create starting points for profiles that you all need in various
+different regulatory environments. So that way, we're starting with the most secure baseline
+that you can use that gets you the farthest ahead. Anybody can read the same bolt at the 100
+meter dash, if I start you at 99 meters, and that's what I want to do. So the core of this is
+something we call we call project honey bird. We announced in November of last year. This is
+really sort of the Software Factory, right? This is, how do we build these? And we have this idea
+for images. How do we get there? If you want images, you need RPMs, because we're Red Hat,
+we're not going to completely change the way we deliver software. That's insane, but we will
+completely change how we deliver our PMS. Think this as a the most rolling release you have
+ever seen. This is not designed for the jump to be a general purpose distribution. It was
+designed to deliver a catalog of images so the dependency trees look different than you might
+see if you use in Fedora install the same rpm, same rpm in air quotes, because we're doing
+different things, so that when DNF installs things, it's not saying, oh, right, emacs needs all of
+Qt and Xlib. So that means we get these nice little statistics, and thereby those to see the
+images wind up 80 from 85% smaller. We wind up getting images down by 60% we're updating
+our images on a 20 424 hour target. That brings us to this mythical, near zero target. When I
+say mythical, I mean, actually verifiable on the website, and then it's going to walk you through
+it. This is the actual workflow for prod sec, our product security team. I'm not going to walk you
+through it. I just want you to know that is what the security process looks like. It's complicated.
+In order to do this, we need to be able to do it as quickly as any humanly possible, because
+people can't move this. We had to automate this our level in software engineering, as well as
+with product security and partnership to make sure we deliver the images and the security CPE
+feeds that you need with this 24 hour goal that we have in mind, goal, not SLA, so that we can
+actually hit all the benchmarks that we want to be able to do, deliver these images in ways that
+make them usable for you. We also don't want to force you into another model I mentioned.
+These are free to use. We don't care where you run them. We would love you to run them in
+OpenShift and on Red Hat Enterprise Linux, because those are the things we build, and we like
+them. If you want to run them in Eks, please do if you would like to support and they get a
+show of hands. How many people here have a rel subscription somewhere cool? How many
+people have an open chip subscription somewhere? Cool, everybody who raised a hand now
+call us on a hardened image and say, hey, my Python image isn't Python if it's your code, but if
+it's our container. Now we might ask, could you run it on OCP instead of Eks, just to see if it is a
+weirdness in something we did with the container? But we're not going to save them. It also
+means you can replace components out of your stack individually, and not have to try to re
+architect your entire application just to start taking advantage of these new images. So here's
+what you can go through, managing the walking through the new way we present all of this
+branding information. Go through usability, available some security workflows. How do you do?
+Build automation, secure pipelines, loaded two modules after you hear them talk. They are
+similar, but they do not build on each other. If you feel like you only want to see the OCP things,
+S
+
+--- PDF: container_hardening_transcript.pdf | Page: 4 ---
+jump to module two, just do that. Have a good day. Catch your light if you want to just do the
+CLI, pop, man, REL, stuff. Module One, do them in any order. Concepts build on each other, but
+there's no hard requirement to do them in any either particular order. Just do the steps in the
+module in the right order. Just pick one or the other. This is how you will get to it. This should
+be the homepage on your browser on all of your laptops you look for 2865 somewhere probably
+near the bottom,
+Speaker 6 09:46
+because
+Speaker 1 09:46
+that's a high number. Once you log in, you'll see our Red Hat images. Click on that access to
+lab, you'll be asked for your email, the email that used to
+Speaker 5 09:57
+register
+Speaker 1 09:57
+some of these little work here and today's password. Today's password is 00, 10. Once you get
+that, you'll see a interface that has some instructions on one side a bunch of tabs. Go ahead
+and navigate across the tabs. There'll be a thing that says around 100 pages that will bring you
+to our new page that is also just a web page. If you feel more comfortable just opening a new
+tab in your browser, you can do that. You go to red.hd/i word images, do Red Hat com, as you
+get ready, I'm going to pass the mic to them. You
+Speaker 4 10:43
+something, hey, so these images are built. We have human interfaces, and then machine
+interfaces. So I'm going to show you the human one, right? Everybody here is human, right?
+And by the way, who can tell me where the name project hummingbird comes from? This guy
+knows I don't just get it. When we were having discussions around the name, there was one we
+couldn't figure it out for more time. I liked him, and there's one voice of wisdom in the room.
+They said, why don't we call it project? This guy right here. Thank you, man, yeah, you can.
+S
+S
+S
+S
+S
+
+--- PDF: container_hardening_transcript.pdf | Page: 5 ---
+Speaker 1 11:28
+You don't
+Speaker 4 11:28
+have to definitely get and we do have stickers. If you want stickers, the T shirts are awesome,
+by the way. Thank you. Thank you. Thank you. Okay, so if you go to images that calm, and this
+is a race, so go to images.com zero. Hero 10, zero. Hero, one, zero. It's a little binary joke for
+you guys.
+Speaker 7 12:07
+There are 10 types of people. What are we supposed to use for the email?
+Speaker 4 12:11
+For the email should
+Speaker 1 12:12
+be the one that you registered with, so whatever your email that you gave us, when you said
+Speaker 4 12:17
+no spam at hotmail,
+Speaker 1 12:20
+that's Yeah,
+S
+S
+S
+S
+S
+S
+S
+
+--- PDF: container_hardening_transcript.pdf | Page: 6 ---
+Speaker 4 12:21
+we all the same one. Okay, so I want you to find these things. Where's my full command? Count
+CBDs, count the variants. Find the s BOM and variant, right. Ready? Is everybody on the
+website. Nobody's on website. That's okay. Go to the website. One guy's nodding. One guy's on
+site. Yes. Do you guys have internet at home? Your computer? Come with dinner? Yeah. Okay.
+Got
+Speaker 8 12:55
+an AOL CD.
+Speaker 4 12:56
+AOL CD. You got some minutes? Yeah. Oh my god, the world has changed.
+Speaker 1 13:01
+Okay,
+Speaker 4 13:02
+look it up for Maria DB with the latest tag CDs. Oh yeah, there's the bottom part. What's the
+number of CVS was first? I saw you? Second, yeah, third, fourth, yeah, how many variants?
+Two, four, here's the next slide, all right. Show
+Speaker 1 13:43
+them how to find it.
+S
+S
+S
+S
+S
+S
+
+--- PDF: container_hardening_transcript.pdf | Page: 7 ---
+Speaker 4 13:44
+So on the beautiful website, you can see, all right, first thing I look at is my streams. These are
+the major versions that we packaged up. And then the very end, which is the image type.
+Default is like your small, minimal, digital list, one the builder, one has more utilities. It's all the
+same hardening, but you have a package manager if you need DNF install or to build to be able
+to debug. Use that. Here's your pull command and the current CVE count. This number will
+change over time. That's a good thing, right? This is accurate. All right, ready for another one?
+Real quick. Same thing, core runtime, FIPS and match the tag. Yes. One, CV, zero. Who's right?
+I hear zero and one is that. 10? Are we doing more binary jokes? Seven, total.
+Speaker 9 15:00
+The that tag is different. You did
+Speaker 10 15:08
+open SSL. There's one. Product
+Speaker 1 15:32
+I'm trying to help people.
+Speaker 4 15:43
+Why does core runtime showing open SSL? Because there's a version with and without open
+SSL. Great question. Core runtime is a weird image. Sometimes you feel like in that sometimes,
+yeah, yeah, there's no non, there's no Yeah, right. You need, you need cryptography, enforce,
+right? Yeah, good question. Okay, you all want to do more. Are we having fun? I'm having fun.
+I've never done this before, so thank you for your patience. Okay, all right, one more open JDK,
+find 21 run time, number of CVS and streams, not very streams. You're He's fast. Yes, I know. I
+know you're right. Yeah, this guy's good. This guy gets a free sticker. Okay, now, do you want
+to hear the coolest thing about the website, all the data that populates this is an API that is
+open and everybody can access. It's all machine readable. It just populates the UI. This is for
+humans. It pains me to say this, but after writing, after a decade of writing 1000s of container
+files, I no longer write container files. Can I admit that? Is this a safe place? I say for unit files, I
+don't write those either from scratch, I do generate them now with Claude, cursor, whatever,
+and then I go proofread and tailor and tweak and customize. So if you go, if you'll notice, on the
+top is this, in the lab the skills,
+S
+S
+S
+S
+S
+
+--- PDF: container_hardening_transcript.pdf | Page: 8 ---
+Speaker 1 17:34
+if it's on the page, it's on the skills, all right,
+Speaker 4 17:37
+there's a link on the top for skills. You can point whatever at, and it will generate using our APIs
+and all the best practices that are in the docs, which is
+Speaker 11 17:56
+amazing Anyway,
+Speaker 1 17:59
+where is Jeff done? So one thing Ben didn't say, which is actually my favorite
+Speaker 4 18:04
+thing.
+S
+S
+S
+S
+S
+
+--- PDF: container_hardening_transcript.pdf | Page: 9 ---
+Speaker 1 18:05
+If you go to the CBE feed, you'll see two numbers on the left hand side of that page. That's
+actually my favorite page we got that shows the last time we built an image and pushed it to
+the registry, and every time I opened that page, that number is different, I've caught it hasn't
+been under three hours since Monday. So this is proof of life, right? This is we are actually
+honest to goodness building. As soon as we see changes in projects as soon as we can get that
+code through the pipeline, it's getting the page. Our average build time still stays, staying
+under an hour exactly where we want it to be. Okay? So the rest of today will be done in that
+web interface. If you haven't logged in, I'll show you that again. If you have we'll move on. So
+the way this lays out right we've got tabs across the top here that will say things like kernel
+console instructions pane on the left hand side, things in the little highlighted boxes are usually
+commands to run, copy them out, type them by hand, or they might just be files we would like
+you to read, but it might be a little bit easier to read a snippet there that would be on the
+journal. Here you can look around do what you want to do. Modules are listed up the top, if you
+put that little amber looking thing next to the house. That's where you can select module one
+versus module two. If you want to jump ahead to module two and then go back to module one,
+just do whatever it tells you to do. Tosin myself and Josh will be around. If you have questions,
+raise a hand and let
+Speaker 4 19:57
+me know. If you want stickers. These are all that's left on planet Earth. Okay, thank you. Sure
+two of
+Speaker 1 20:05
+each. Well, as
+Speaker 8 20:06
+long as there's plenty for everyone, yes, we'll do one of each real quick. Make sure
+Speaker 12 20:11
+we have enough.
+S
+S
+S
+S
+S
+
+--- PDF: container_hardening_transcript.pdf | Page: 10 ---
+Speaker 6 20:28
+Sorry, front bias in a pinch, I
+Speaker 8 20:50
+day replication, container development.
+S
+S

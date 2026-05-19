@@ -1,0 +1,3 @@
+This lab has a lab link here, https://rhpds.github.io/agentops-in-prod-showroom/modules/index.html that you can use for increased richness off the summary.
+
+This highlight the use of MLflow to have auditable tracing of Agentic operations in Language Model interactions. It also highlights the use of grafana for agent metrics. please do your best to highlight and summerize their importance.

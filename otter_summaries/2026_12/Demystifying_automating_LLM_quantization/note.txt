@@ -1,0 +1,3 @@
+I had to skip this talk entirely to make it to another building for a lab that started at 3:30PM EDT to 5:00PM EDT"Deploy an agentic AI DevOps assistant: Augmenting incident response with Red Hat OpenShift AI""
+
+That said feel free to try and provide a summary from the provided pdf in this folder. Additionally ensure to mention a disclaimer near the top that the summary is an estimation as I could not phsyically attend this session.

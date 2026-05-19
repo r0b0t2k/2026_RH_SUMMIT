@@ -1,0 +1,180 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_12/Demystifying_automating_LLM_quantization
+
+## Session Datetime
+this talk occured on 2026-05-12 at 3:10PM-3:30PM EDT
+
+## Session Notes
+I had to skip this talk entirely to make it to another building for a lab that started at 3:30PM EDT to 5:00PM EDT"Deploy an agentic AI DevOps assistant: Augmenting incident response with Red Hat OpenShift AI""
+
+That said feel free to try and provide a summary from the provided pdf in this folder. Additionally ensure to mention a disclaimer near the top that the summary is an estimation as I could not phsyically attend this session.
+
+## PDF Text: Demystifying Quantization_1778257807246001XVQA.pdf
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 1 ---
+Demystifying Quantization
+Brian Dellabetta
+Senior Machine Learning 
+Engineer
+Red Hat AI 
+Kyle Sayers
+Senior Machine Learning 
+Engineer
+Red Hat AI
+Accelerating LLM inference with Red Hat AI
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 2 ---
+The AI Scaling Challenge
+2
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 3 ---
+The AI Scaling Challenge
+3
+💰 GPUs and Infrastructure
+-
+GPU hardware costs
+-
+Multi-GPU/ node deployment
+⚡ Energy and Carbon Footprint
+-
+Increased power consumption
+-
+Increased data center land and water 
+usage
+📉 Tradeoffs in User Experience
+-
+Response latency
+-
+Request throughput
+-
+Context length (KV cache)
+❗ Risk of Model Obsolescence
+-
+Larger models require more investment
+Costs and Risks Grow with Larger Models
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 4 ---
+How can AI 
+providers address 
+the risks and costs 
+of AI at scale?
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 5 ---
+Large Language Model Optimization
+5
+Quantization & Sparsiﬁcation
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 6 ---
+Quantization, Sparsiﬁcation, and Compression
+6
+▸
+Quantization: Reduces model memory by representing weights and activations (i.e model layer 
+inputs/outputs) using a lower bit representation (e.g int8). Allows models to use less storage. To quantize 
+values to their new, low precision range:
+▸
+Sparsiﬁcation: Certain model weight values are zeroed out. This can be done in a particular pattern, such 
+as 2 of 4 where 2 out of every 4 values within a model weight tensor are set to 0.
+▸
+Compression: Saving the model in a reduced size (with minimal impact to model accuracy)
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 7 ---
+Why Optimize LLMs?
+7
+Reduced hardware requirements!
+Optimization
+Params size (GB)
+GPUs
+BFloat16
+ 109B * 2 bytes ~= 220GB
+3 x 80GB
+INT8/FP8
+ 109B * 1 byte ~= 109GB (-50%)
+2 x 80GB
+INT4/FP4
+109B * 0.5 byte ~= 55GB (-75%)
+1 x 80GB
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 8 ---
+Inference Improvements
+8
+Performance! (Throughput and latency)
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 9 ---
+Impact on Model Accuracy
+9
+Minimal impact in most cases
+Kurtić, E., et al. (2025). "Quantized DeepSeek-R1 Models: Deployment-Ready Reasoning Models."
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 10 ---
+How can I create 
+my own optimized 
+model?
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 11 ---
+LLM Compressor
+11
+https://github.com/vllm-project/llm-compressor
+LLM Compressor is an open-source framework for applying SoTA research algorithms to 
+optimize models for inference in vLLM
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 12 ---
+12
+https://github.com/vllm-project/llm-compressor
+LLM Compressor
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 13 ---
+LLM Compressor
+13
+User Summary
+▸
+For practitioners: off-the-shelf validated models for use with vLLM
+▸
+For developers: easy to use recipes with optimized default conﬁgurations for all 
+quantization formats supported in vLLM 
+▸
+For researchers: ﬁne-grained control
+･
+per-channel, per-tensor, per-group
+･
+symmetric/asymmetric
+･
+data-free and calibrated ﬂows
+･
+activation reordering
+･
+dynamic/static activation quantization across precisions
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 14 ---
+How to use LLM 
+Compressor with 
+vLLM - Demo and 
+Walkthrough
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 15 ---
+Where do I start?
+Optimize your own models!
+pip install llm-compressor
+Use Red Hat optimized models!
+huggingface.co/RedHatAI
+Ask Questions!
+Ask questions about LLM Compressor and model optimization
+https://vllm-dev.slack.com/archives/C08MSER5NJ0
+Get involved!
+Check for issues with the good first issue  label
+https://github.com/vllm-project/llm-compressor/issues
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 16 ---
+The Red Hat AI team 
+wants to hear from you!
+Scan the QR code or go to: 
+red.ht/uxfeedback
+Let us know your thoughts on Red Hat AI by 
+signing up to participate in research opportunities!
+Have additional questions about [this product]?
+Visit us at the Red Hat AI Booth
+
+--- PDF: Demystifying Quantization_1778257807246001XVQA.pdf | Page: 17 ---
+linkedin.com/company/red-hat
+youtube.com/user/RedHatVideos
+facebook.com/redhatinc
+twitter.com/RedHat
+Thank you

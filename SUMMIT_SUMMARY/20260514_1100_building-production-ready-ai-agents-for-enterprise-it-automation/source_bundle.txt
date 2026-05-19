@@ -1,0 +1,526 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_14/building_production_ready_ai_agents_for_enterprise_IT_automation_with_RHOAI
+
+## Session Datetime
+this talk occured on 2026-05-14 at 11:00AM - 11:40AM
+
+## PDF Text: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 1 ---
+Note
+Thu, May 14, 2026 10:00AM
+37:08
+SUMMARY KEYWORDS
+AI quick start, IT self-service agent, Red Hat, tutorials, documentation, production ready, NASA,
+communication channels, ServiceNow, OpenShift, Lamasack, observability, safety shields, evaluations,
+knowledge bases.
+SPEAKERS
+Speaker 1, Speaker 2, Speaker 6, Speaker 3, Speaker 7, Speaker 4, Speaker 5
+Speaker 1 00:00
+Everyone giving you an introduction to AI quick starts. I'm going to then get a dive into the
+details of one of those quick starts, which is the focus of the it self service agent. And then
+finally, Wes is going to close it in for us. So take it away.
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 2 ---
+Speaker 2 00:13
+Thank you very much. Okay, so what you're going to hear today from Michael is an example of
+an AI quick stop. But what is an AI quick start? And I don't know if you've met any red hatters,
+but at Red Hat we tend to like to talk about the tech some might say too much, kind of an
+inside joke. You ask a red Hatter what time it is, and he'll spend 25 minutes telling you you
+should have containerized your watch or something. So within my team, we felt like, Okay, we
+we can talk the talk on tech, definitely. But sometimes we're not talking to an IT person.
+Sometimes we're talking to somebody from HR, somebody from sales, and they're, you know,
+they're not looking to analyze logs. They're looking for AI to help with their danger, which is not
+it. So the way I tend to think about this is, yes, there is the tech, then there's the tutorials, but
+ultimately, there's the target, right? And these are proxies for the documentation, right? You
+get software from Red Hat. Documentation comes with it. Then there's the tutorials. So those
+are going to be the blogs, the YouTube videos, the tiktoks Nowadays, I guess. But what's the
+target like? Within my team, we felt like we need something that really illustrates what the end
+goal is. Why did we do all of this work? And so this is why we decided to create AI quick starts.
+Now I'm going to answer the first question right away. There is a difference between AI,
+Quickstart and production. Let's be clear. Okay, if you pour jet fuel engine into a plastic Lego
+thing, bad things will happen. We call them AI, quick start. We did not call them AI, whole nine
+yards or AI. We guessed what production means to you. We can't guess what production means
+to you, and it means something different for every customer, but with a quick start, at least, we
+have ways of showing the art of the possible. Now it just so happens we had NASA on stage. I
+promise it wasn't. I couldn't have planned it better. But you might say, well, what if I'm not into
+aerospace? What if my business is not going to the moon? So the idea of Quick Start is that
+they were going to have multiple ones that illustrate different businesses. So whether you work
+in government, whether you work in construction, in sports, media, agriculture, art, we're going
+to have different examples that explain how an AI application could be useful for different
+people. So quick, frequently asked questions, are the quick start production ready? All right?
+Any guesses? No, no, they're not production ready. We call them. That was all the AI, quick
+start to support. It can I call tech support and say, Hey, that quick start, you know, doesn't work
+for me. No, these are examples. We're going to do our best so that they keep working, so that
+they're easy to deploy in your environment, so that you can kick the tires. If something doesn't
+work, you can open a GitHub issue. We're going to look at it. We're going to try to fix them. But
+these are not part of the product, right? These are made by teams of volunteers at Red Hat and
+with our partners to illustrate what can be done. Do the quick start. Replace everything else,
+blogs, videos, tutorials, docs.
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 3 ---
+Speaker 3 04:10
+No, they
+Speaker 2 04:11
+do not okay. I, for the last six months, half my inbox is I was thinking about writing a blog post,
+but now, should I make a quick start write the blog post. It's okay to talk about the tech, it's
+okay to go into the depth of LMD and why you should, but we also need the counterbalance to
+that. So no, we are going to keep doing blogs. We are going to keep doing videos and all that.
+Last question, Will Red Hat build my idea for an AI? Quick Start.
+Speaker 3 04:41
+No,
+S
+S
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 4 ---
+Speaker 2 04:44
+somebody must have cheated and taken a sneak peek at my slides, maybe. So we have, within
+the Quick Start organization, there is a way for you to submit ideas like, hey, it would be really
+cool to have a quick start that would show, I don't know an AI application for lawyers, right? We
+do look at this, and if we like the idea, we might build it, or maybe a partner will say, You know
+what, our software is, perfect for lawyers. So we're going to do a quick start on that. But we are
+trying to keep things fail, right? Once we have like 17 quick starts about banking, if you have
+yet another idea about banking, we might say, Okay, pass on that. We're going to focus on
+healthcare or something else. All right. So this is the front page of the AI Quickstart along. So
+this screenshot is a bit out of date. Things move fast. I forgot the exact count. Count is going to
+be mad at me. So these are kind of the top of the quick starts. These are the ones that we've
+tested them. We like them. They get published on the public facing catalog on Red Hat com.
+And behind the scenes, we have a GitHub organization, which is this one with quick explanation
+of what a Quick Start is. So there are way more in the catalog, but they are different levels of
+complexity, different levels of readiness, only the dream of the prop makes it to the public
+facing catalog. Next steps, please try out our quickst
+Speaker 1 06:30
+Please give us feedback and come and help us build more. So you'll see in the organization.
+There we go. So you'll see in the organization, there are ways for you to contribute. You can
+send pull requests to existing quickstarts if you want. You can submit ideas and you can give us
+S
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 5 ---
+feedback on that, all right. And so as an illustration of that, now, Michael over to you and the it
+laptop, QuickSight, great. Thank you very much. So first of all, Irwin mentioned that our quick
+starts are focused on showing you an implementation of a business solution, so not just delving
+into the tech, but saying, like, I want to solve this problem. So which problem does the it self
+service? Quick Start target? Well, at the general level, it targets automating it processes. We all
+have it processes, and some of them could probably benefit by being automated using agents.
+We hope that that helps reduce the time it takes for our employees to get through the process
+achieve higher compliance, because if they've got more help along the way, once the request
+comes in, it should be in better shape. We should have to reject fewer requests which are which
+are quite frustrating, and finally, we hope to end up with a shorter time to close the ticket. So
+that's sort of the general business case. But in this particular one, we go into the laptop refresh
+process as the specific business problem that we're trying to solve. Everybody has likely, within
+your organization a process for doing that. So I think most people can relate some of the key
+principles as we got into the Quick Start were we don't want to create another chatbot interface
+that your employees have to find you already have communication channels with your
+employees, so you have maybe you slack, maybe use teams. Everybody's likely got email. So
+let's integrate with those existing communication channels and bring AI to where your
+employees already are. The other thing we recognize is you've already got existing systems
+like ServiceNow. So if I'm going to actually get to the end point where I need to procure that
+laptop that's probably managed through ServiceNow, so we want to integrate the closure of the
+process where it's going to create a ticket, maybe it also looks up your information from
+ServiceNow in terms of your existing laptop information. So those, those were a couple of our
+key principles. So what do you get with the Quickstart? Well, first of all, you get a working
+laptop refresh implementation. You get a working deployment in Kubernetes. It's basically like
+a make install, and it will deploy the entire system for you, which is great. But then you also get
+expendable components. If you look at this and say, Yeah, that's that's something that's quite
+interested in. I want to implement an IT process, but I want to do a different one. Hopefully
+we've got some components here that you could build upon to have a quick start in doing your
+own work as well. So taking a quick look at the top level architecture on the left hand side, we
+see we integrate with a number of communication channels, so we implemented iterations with
+Slack, email, we talked we also have a command line interface, which I don't think anybody
+would use in a real implementation, but we I'll talk about why that's really important later on,
+and we built it as a generic Request Manager that normalizes those requests, so we don't care
+whether you're communicating with us through slack or through email, that Request Manager
+will maintain a long running conversation, and will even let you communicate through multiple
+communication channels. So you can start your request through slack, and then you can get
+responses through email, and you can follow up and so forth. Once the request manager gets
+the messages, it then passes them on to a rooting agent. We currently have a rooting agent
+that just understands one thing, which is that the there's a laptop refresh specialist agent that
+knows that particular process. But you can imagine, once you implement a number of
+processes, once your employees come in, you would have that rooting agent that could route
+them to one or many other specialist agents. And then we have the agent. Service itself is
+implemented on lamastack, and it supports many things you probably heard people talking
+about this week in terms of things like MCP to make calls and have integration into ServiceNow
+it includes knowledge bases where we can load in documents that have our laptop refresh
+policies, how often can we refresh and what are the available laptops and stuff like that. When
+you deploy it, this is a picture of what it might look like if you're familiar with your OpenShift
+console, you know, one click Deploy, but you end up with a whole bunch of pods that are
+communicating together, and it uses a number of the technologies available within OpenShift,
+AI, and we've got landstack here that's been renamed OGX just last week, that gives us
+inference. It gives us the responses API, which lets us build it doesn't give us like an agent API,
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 6 ---
+but it gives us all the pieces that you need to build your own agents. It supports model contact
+protocol, MCP, for giving the agent additional tools that it can call. We ingest the rag knowledge
+basis so that you can get that information about your laptop. Refresh process we can host we
+tested it with hosted Lemma 70 B, sketch 17 B, Gemini, so it can host your models for you.
+We've included things like safety shields through Lama guard and prompt guard, and, of
+course, integrates with existing things with an open shift for observability. Like observability is
+very important, so we integrate with open telemetry, and then we use some things like Apache
+Kafka and K native eventing to get sort of durable conversations, we also pull in some best of
+breeds, so things like land graph, Postgres, PT vector for a vector database language Again, for
+more observability, and then DP valve for evaluations as well. So before we dive into the
+components in a bit more detail, let's look at what a conversation actually looks like, because
+that's important to understand what's going on behind the scenes. So when you first connect
+through slack, you can say, like, Hey, I'd like to refresh my laptop. And you get greeted by the
+routing agent. The routing agent says, Ah, well, you want to go to the laptop refresh specialist.
+So basically, transparently, forwards you on to the, you know, the specialist agents. That agent
+does, uses MCP to do a lookup and get your laptop information from the ServiceNow instance.
+So it says, Hey, okay, I know you are. In this case, it's Isabella Mueller. This is your existing
+laptop. It's three years old. It then also does, it does knowledge based lookups to say, like,
+Okay, well, what is our refresh policy? How often can we refresh? And it gives a summary. It
+says, Okay, well, your laptop's about four years old. The policies are three years yes, you're
+eligible. So do you want to continue? The user then is like, yeah, okay, that's great. I'll refresh
+my laptop. So it does another knowledge base. Look up that says, like I saw from the
+information I got from ServiceNow, you're in EMEA, therefore I'm going to look up and find what
+the laptops are in that particular geo the user can select one of those. I've only shown one
+because I couldn't fit it on the screen. He says, I'd like to select a particular one. Now we've
+actually got a business policy that says, like, even if the user said, Yeah, I'll take number three,
+please create me a ticket. The agent always needs to validate with the user that you know this
+is a laptop you've selected, and so we see it say, yes, okay, you selected this laptop. Would you
+like to proceed? At that point, it's going to go back. It's going to make another MCP call to
+actually create the ticket in the MC in service now, sort of closing the loop, and it's helped the
+user get through that whole process using the tools and information that are available to make
+the help the user make the right choice. So let's see this in action. I'm just going to start it up
+go full screen. So in this case, we've we're showing the Slack integration. So you as part of the
+quick start, it helps you build or connect to your own personal developer. Instance, the slack
+you can see, I'm basically going through that conversation where I connect to say, yes, I'd like
+to, you know, I'd like to let refresh my laptop. Here's your information. It's now showing me that
+the options I could choose from. I'm going to choose a particular option, and then it's going to
+say, like, yes, do you want to go forward? And then we can see that it closes out with it actually
+creating that ticket for me. And this is an example of, like, instead of a new user interface,
+we're just integrating with your existing Slack teams or what other communication channels
+that you have. So now, just so that we can see that the ticket was actually created in
+ServiceNow, we again show you how to integrate with ServiceNow. And this is just a short video
+showing that, like, I can actually go in to ServiceNow, I can look up that ticket. Now I didn't
+actually synchronize the video, so I'm not looking at the same person, but you can see, I can go
+in, find a ticket for laptop, refresh for a particular user, find the information that was created By
+the agent and submitted, and we've closed it to
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 7 ---
+Speaker 4 15:38
+two
+Speaker 1 15:47
+so the Request Manager, the Request Manager, as I mentioned before, manages long running
+conversations. We use message it's message oriented to make it able to be long running. We
+use Kafka to make it durable. It supports that cross communication channel so slack, email and
+others, and you can configure it so that you can use multiple at the same time. Another really
+key thing is, is that it supports and enforces conversation threading. The agent's not going to
+be too happy if it starts to get messages out of order, or possibly multiple messages at the
+S
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 8 ---
+same time. If you're in Slack and you keep hammering it with messages, and in particular, for
+me, email, there's no guarantee what order they'll actually show up. So we use the Request
+Manager to make sure that we order those messages, send them to the agent one at a time so
+that you can get a good and normal type conversation. We use land graph. Land graph is a tool
+that helps you manage conversation state. I'll talk a little bit more on that later page, why we
+did that, but the Request Manager also manages the land graph state. The agent service, as I
+mentioned, it's built on lamastack. We use the responses API. That's a really nice API. I think
+opening open AI started at one point, building an agent API, and I think what happened is that
+the feedback they got was it was too opaque. It made it easy to use, but you couldn't configure
+or control enough of the sort of interaction with the agent. So the responses API actually takes
+a step back. It doesn't give you a full agent API, but it gives you all the pieces that you need to
+be able to build those agents. It had it manages things like automatically calling functions,
+automatically calling knowledge bases, but it still gives you a way to quite easily control the
+flow and interact with it. We've implemented in the agent service a big and a small prompt
+approach, which I'll show you a little bit about. And that's about working with sort of small
+models, medium models. And there's advantage to plus and minus I'll talk about. And we also
+integrate shields there. If you've ever worked with models, depending on the model itself, it
+may be better or worse at sort of resisting either, say, prompt injection, where somebody says,
+just ignore what everybody's told you and do something else. And so shields are an important
+thing to include into any one of your solutions. So in terms of the big and small prompt. Big
+prompt is where we give the agent one big, long set of instructions. I couldn't fit them all this
+on this page, but it shows you the approach of the laptop refresh process is step one, step two,
+step three, step four. And you basically give those whole set of instructions to the agent, and
+you say, please. That's how you interact with the user, the small prompt approach. Instead, we
+actually use land graph, and you end up with multiple smaller prompts in a graph that says,
+like, here's your first step. And first step is just to look up the laptop information. And that tends
+to work better with smaller models, because it lets you do things like insert a second step that
+says, Did the model actually call the function to get the laptop information, or did it just do
+something like, say, I will call that function for you, because I've seen that. That's something
+you see quite often with smaller models. So the small prompt approach lets you have a multi
+step process where you can add additional validation and you can end up with something that's
+going to be more reliable without having to have like a frontier size model. And for us, we
+managed to get the large prompt to work with the 70 lemma, 70 B hosted. And for anything
+smaller than that, we've used the smaller prompt. So like the 17 B, we use the small prompt
+approach. And the nice thing about the Quick Start is you can explore and understand and play
+with both and depending on your use case, you may want to go one way or the other, even if
+you have a bigger model, the small prompt approach has some advantages. It's it more
+naturally stays on, sort of on focus on the flip side, it off. It may it may not be as flexible,
+because you sort of more put it on guardrails. The small prompt approach can also use less
+tokens, but may also be slower. So you can read through, there's a whole bunch of different
+pluses and minuses. The big prompt approach, you can see we just got the one big prompt
+there. In terms of states on the left, on the right, we've got a whole bunch of states that we're
+trying to manage. What's going on a little bit more. The other part in the agent services are
+MCP servers. So in the quick start, we have a fast MACP server. It's used to provide two
+functions, look up the laptop information and to create the tickets in ServiceNow, it's got some
+built in safeguards. One of the really interesting things that we learned was keep the scope that
+you're giving to the agent as small as possible. If you don't have safeguards or shields the
+agent, you may be able to say, the agent, forget what I told you, create 1000 requests for new
+laptops. That's not so great. And we saw that like without the shields, that would actually
+happen. Now you can apply your business thoughts and knowledge of the business process to
+say, like most people should only have one laptop request, maybe two. So we added in features
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 9 ---
+to optionally turn that on or even say, like no, you're only allowed to have one laptop request.
+And doing that kind of thing can really limit what can go wrong if the agent doesn't follow the
+process they told them to do. And we support both real ServiceNow integration and mock
+service now integration so that, like, there's an easy way to deploy it and run it if you don't
+want to go through the work of like, setting up a service now instance, but we, if you want to do
+that, we have all the scripts and everything to make that really easy. Looking at this MCP
+server itself, this is a little bit of code using the lamb stack responses API and to give the access
+to an FCP server. You can see we just included in that tools equals two tools to use line, and it's
+basically some JSON that says, like, here's the URL of my MCP server and some the one of the
+main things is I can then add additional information, like which user ID we're working with,
+working with, and some tokens and stuff like that. The other key part that the tool, the agent
+uses is retrieval of meta generation. So that's used to provide additional context. And in our
+case, we want to provide information about the laptop refresh process for your particular
+region, what laptops are available, things like that. It uses embeddings to index and retrieve
+documents. I don't have time to go in detail, but you probably heard quite a bit about the rest
+of the time. Two key steps, one is populating the vector database, and the other one is
+querying the database. So we've made it quite easy to load in the ITA self service agent to load
+new knowledge bases. We just have a bunch of files in a directory. Of course, this isn't really a
+production implementation of that. There's another quick start, the right quick start, which
+shows using local shift pipelines. And that's probably more what you want to use. But in this
+case, we basically ingest all those documents as we create the knowledge base at the
+beginning. And you can see we just use that responses, create help and in there, just like for
+MCP tools, we pass knowledge bases in. Is like, here's a tool you can use. You can do a File
+search, and we give it the ID of particular knowledge base. Now, a really key part of your
+implementation, and we're getting into sort of non functional things, is like, how do you know
+that your agent is actually doing what it's supposed to do. We built evaluations in right from the
+beginning, and we use that command line interface, because what we found is it's not good
+enough to run once twice. It's not deterministic. We actually run evaluations every night. We
+run like 80 conversations. We don't expect them all to pass. Is like, if you want to have 100%
+pass rate in a genetic you're you're going to have a hard time getting there. You're going to
+have to say, like, I'm okay with 95% 98% and so we run and we track those, and we can see,
+like, how well are we doing. So evaluations are very important part. We use TP Val for
+evaluations. And basically we have a nice script which will very easily go through a cleanup
+phase where it like things of files, then it'll run known conversations. So we have a bunch of
+predefined conversations where, like we act as the user. We then use the DP valve generator,
+so we can generate some more random conversations. And then we use DP valve, which has
+prompts to evaluate against 15 different metrics to say, like in that multi turn conversation, did
+the agent do the right thing? And then finally, we summarize the results and show that to me
+easily. So what does one of our evaluations look like? Well, it ends up being another prompt,
+because we're using the LLM as a judge. And the interesting thing is, often you have to tell it
+what to look for, but also what not to look for. Half of our work in these in these metrics, was
+like, Don't fail because of this. Don't fail because of that. Like, we don't care about those
+particular pieces because the agent has a lot of its own context, but it says, Oh no, that doesn't
+look right. You're like, no, that's fine. And in the end, so, like, we end up with some very nice
+results where we can see we've got 15 metrics on the slide there. The one on the right shows
+us running like, our 20 conversations along with our pre flying conversations. And then we use
+it because it's an open source. It's GitHub, as everyone said, easy earlier, and we can run
+nightly conversations through GitHub actions every night and see what's going on. The
+question I always get when I show the burnout evaluation, so what about production? So we
+included a script in the Quick Start that lets you do post run evaluations, and it will say, like,
+give me a random subset, or give me 10. There's a bunch of options, but like, give me a
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 10 ---
+sampling of what ran last night, pulls them out, puts them into the same format that we use for
+the evaluations. And you could run that say like, okay, every night, I'm going to do an audit and
+get some results on how well the actual conversations are doing in terms of safety safety
+shields. As I mentioned earlier, if you don't have safety shields, you could do things like ignore
+previous instructions and the agent will do something you didn't expect. The limiting stand is a
+really good example of using guardrails to be able to prevent that from happening. And so
+again, the quits guard includes integration with safety shields based on lamstack We were
+using. We show using prompt guard and lamoguard. And we've actually got us a to do, but
+we're already starting to integrate using the NEMO guardrails, which is what is supported
+through trusty AI going forward. And those help you avoid things like those jailbreaks, where
+you get the agent to do something shouldn't, or you can also put in things like hate speech or
+harm. The only thing I'd caution is if you're working on something like an IT, internal IT service,
+we saw those default agents like Lama, guard flag, things like PII, it's like, Hey, you're showing
+the user laptop information. That personal information is like, Well, we actually need to do that
+for our flow. So you may need to look at the models that you use to do your safety checks.
+Because, like, the ones that are appropriate for the like talking to the outside world aren't
+necessarily the ones you're going to want to use for your internal IT processes. Observability is
+key. I think we've seen people talk about a lot about that OTEL. So open cemetery is basically
+the fact of standard. Good thing is an AI world that seems to have been the standard that's
+adopted as well. We've gone through the it self service agent and enabled OTEL, and it went all
+the way from inlamas or OGs. It was easy to enable. We just turned on a flag in some of the
+core services we built, there was auto instrumentation. That's a really nice thing about OTEL, is
+that there's libraries to automatically instrument for you. And then in our MCP servers, we
+didn't find auto instrumentation, fast MCP, so we actually had to do a manual implementation
+there. So it's the quick start, will give you like a flavor of doing it in all those different ways. And
+the end result is you can get some very nice traces here, and you can drill down to see like
+what happened on particular request from the user in response. We also have ability in the
+quick start to turn online fuse. That is another observability tool that lets you connect the
+conversation across requests. So this will let you see the whole conversation, and I can drill
+down and see that whole multi tiered conversation. I can see individual requests from the
+users, the responses. And so if something's going wrong, that really lets me dive down much,
+much deeper. So just wrapping up, what do you get with the it self service agent? Well, you get
+a configurable set of components. So the Request Manager, the event service, you get
+integration with existing systems like service now slack, at least examples, it gives you what I
+think are really important, the key non functional components, like evaluations. A lot of people
+today, I think, sort of play at the seat of the pants. We hope, looking at this evaluation
+implementation, we can convince you that no you can actually do some more rigorous testing,
+and give you some ideas how to do that, of course, includes observability of safety shields. And
+then I think our readme is a really nice learning journey, like, it starts out very quickly with that
+one quick install chat with the agent, but then it takes you through like, okay, I can do the
+integrations with these existing systems. I can turn on safety shields. I can turn on observability
+and so forth. And if you want to run, learn more about what we learned along the way, there's a
+great multi part blog post series where we tell you, sort of the behind the scenes learning that
+our team. And with that, I'm going to hand it over to Wes to close us out on how to leverage
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 11 ---
+Speaker 5 29:00
+these things. That is a great demo. And as you're going, I'm thinking about the demo I just did
+yesterday. So much so there's quite a few quick starts, as I mentioned earlier, and you can
+leverage any of those on top of AI factory. This is the slide you probably seen a bunch of times,
+or that AI factory with Nvidia. What I like to say is that if you have this stack, if you have the AI
+factory, you've already bought your on prem hardware, you've got a cloud instance, and you've
+got the AI platform now you're about 80% of the way there, and getting your AI solution off the
+ground, that's still a long way from production. So covering the next few percent. I think that AI
+quick starts in my mind, get us at about 95% so you just saw a really cool set of workflows, and
+hopefully that's kind of getting the wheels turning on. Maybe you don't have a laptop refresh
+use case, but you probably have a telemetry use case or observability. Mine yesterday was
+evaluations the hard way. So, you know, take from each of these, and there's tons of them, and
+they're growing like this. With this slide is out of date. There's, I think the next slide goes into
+some more of them. There are so many of these. One interesting use case and kind of a meta
+sort of way, somebody asked me yesterday if they could take this pattern and turn it into
+something internal. They have internal, like, what would be proprietary, quick starts from, like,
+builder teams that are building agentic workflows inside of a company. Yeah, sure, it's all open
+source. Just go download it. Do this inside your your environment. If you have something that
+you want to share with the world, put it out here. But there are so many of them out there.
+They cover a lot of use cases. Last year, Red Hat had a challenge internally. We wanted to do
+1000 proof of concept projects globally, and nearly every one of those would have gone a lot
+faster. I mentioned that 80% 95% I could have gotten, you know, a six week project, not in two
+days, just going with the quick start. And a lot of the projects that I did last year were exactly
+aligned to what these are. And
+Speaker 4 30:59
+so
+S
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 12 ---
+Speaker 5 30:59
+that, what's that what's that next 5% right? So you start with your solid AI platform, build on it
+with quick starts. We have validated patterns that are also something if you go to validated
+patterns of IO, Nvidia has blueprints the same thing as a quick start. So if you have the joint
+stack with Nvidia and Red Hat, we get access to that. And then focus on the 5% there's actually
+still a whole lot of work. So if you're a private company, or if you're a startup, wherever you are,
+think about, Okay, do I want to spend all of my time, all of my budget, doing the 95% that Red
+Hat already can do for me? Or just want to focus on that, even if you focus on the 5% your
+chances of getting to production are still kind of low compared if you look at like the studies,
+right? A lot of studies are saying that it's pretty hard to get a real agentic workflow in
+production and actually delivering value. But you start from these launching points, you stand a
+way better chance of doing that. So let's grab that QR code, get out there and get started until
+it's missing. Open minds, open ears, open keyboard. Any questions
+Speaker 3 32:00
+right here. So it looks like, based on if this was made clear, I apologize, but from what I saw
+from those quick starts, this doesn't require Red Hat OpenShift AI to get started with these. You
+can just get started with these without Red Hat OpenShift
+S
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 13 ---
+Speaker 1 32:13
+AI. They do have some Red Hat OpenShift AI dependencies. Oh, they do. For example, they use
+some of the workbooks, or, like, the work, yeah, the workbooks. In our case, we use Lamas
+back and so, like, there may be some that you don't need to have open chip AI, but the idea is
+for us to be illustrating how you use the open chip AI components.
+Speaker 5 32:33
+Yeah, it would be probably possible to get a little bit done without it. A lot simpler. What
+Speaker 3 32:39
+about the one you just showed us?
+Speaker 5 32:40
+Was it?
+Speaker 3 32:40
+What about the one you just showed us?
+Speaker 6 32:42
+You would probably need open shift AI to I'm
+Speaker 1 32:45
+gonna say today, you can deploy it on its own. But like for example, we use lemon stack OGX
+that just became supported in OpenShift. So we're going to be moving to using a CRD
+deployment through OpenShift AI. Before that, we actually pull the container. So, like, today,
+you don't actually need it, but, you know, so if you want to try it now, you could, but I'm just
+warning you that, like, the goal is to show open shift AI, and the visas, and, you know,
+S
+S
+S
+S
+S
+S
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 14 ---
+Speaker 2 33:12
+I think for the for the majority of them, they're going to require an LLM, so they're going to
+assume you have open shift. AI, they're going to call the CRBs of OpenShift. Ai, like, hey, I need
+Lama Scout to be deployed. If you don't have open shift AI in your environment, that's just
+going to fail. So you would have to kind of fill the gap in there and say, okay, don't, don't use,
+don't deploy. Instead, go and hit another model somewhere else.
+Speaker 5 33:35
+Understand, be able to do with a lot of them is go out to developers.com you don't have access
+today to the budget AI cluster. You can sign up for an account and get a sandbox. You won't get
+a GPU out there. So all of the GPU dependent work, you won't be able to get it to actually go
+you might be able to point to an external.
+Speaker 1 33:52
+Most of the Quick Starts do support. Like, I know the it self service, one for sure, we can point
+to an external. And like, because, in my mind, in a lot of our organizations, you're going to end
+up using OpenShift AI to deploy mas, and through mas, your organization will share models
+with the rest of the employees. So in a lot of cases, we want to make sure you can point to the
+MAS. And so the quick starts, one of
+Speaker 5 34:14
+these quick starts actually is helping you get models as a service, instead of see if it's one of
+these I have on the side.
+Speaker 2 34:21
+So one of the things we're trying to do is to have, for each quick start, to have different levels.
+So I just want to see it. We're going to have an arcade and animated demo where you just click
+through a pre recorded path that's like, I just want to see if I'm even interested in this one,
+right? If you have your own open shift AI environment. We're trying to make it as simple as we
+can, like, I'm a user, new project, laptop. Deploy the laptop. Refresh, quick start, kind of paddle.
+What we're trying to do moving forward in the next six months is, if you don't have your own
+environment yet, we want to tie it back to our table platform, where you can, say, deploy this
+quick start on Red Hat's level platform. Let me look at it for two three hours in an environment
+hosted at Red Hat, and then I can decide if I want to deploy it in house or not. That's not there
+yet. It's on the roadmap.
+S
+S
+S
+S
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 15 ---
+Speaker 1 35:15
+Yeah, we're sort of partially part of the way on the journey. If you went to lightning labs
+yesterday, there were three of these quick starts on in the lightning labs for the it self service.
+One, it's actually quite a decent journey. So we have, like, I called the teaser where it started. It
+installed, it got the agent. You could chat through webmail interface, so that you know we're
+already, we're already down that path, is kind of what I wanted to
+Speaker 5 35:41
+say. Other questions, yes, the especially the small
+Speaker 7 35:44
+prompt that we saw earlier, I noticed a lot of words were emphasized with all caps. Is that going
+to be picked up by the agent, or is that just for the benefit of humans?
+Speaker 1 35:56
+No, no, that's definitely required agents. So like, I would say, like I said, we even with the big
+prompt, you would notice quite a bit of that. And it comes down to when you're using smaller or
+mid sized models, they really need a lot of emphasis. And I would say, like, 70 B might have
+been on the edge of what would actually work with that larger prompt. And so it did take a
+significant amount of you must do this. Do not ignore us. Please do not ignore us. Absolutely.
+Never do anything else. And and, like, if anything, if you look at the big one, there's even more
+of that. But that carried through to our smaller prompt and well, and that we built up over time
+in terms of, like, we would run the evaluations, oh, we're seeing like, five failures out of 20.
+Okay, what do we do to actually make that go down and like those things will help actually, the
+model and LLM see like, yeah, I guess I won't ignore what they told me to
+Speaker 4 36:52
+do. Yeah. Other
+Speaker 5 36:52
+questions, okay.
+S
+S
+S
+S
+S
+S
+
+--- PDF: building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai.pdf | Page: 16 ---
+Speaker 1 36:59
+Well, thank you very much for coming.
+Speaker 4 37:07
+You.
+S
+S

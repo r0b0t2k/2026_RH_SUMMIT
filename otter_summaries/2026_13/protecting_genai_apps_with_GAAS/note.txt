@@ -1,0 +1,5 @@
+I attended this lab, which was an interactive walkthrough of adding TrustyAI guardrails as a service to a fake Peachy LLM chat bot so that it does nothing else but talk about peaches. It walked me walkthrough using the LLM without guardrails as well as enabling them to witness the behavoiral changes with the LLM chatbot experience.
+
+in this directory are several pictures plus a transcript of the introduction. the lab was based on the following git repo 
+
+https://github.com/rh-ai-quickstart/lemonade-stand-assistant use this repo to provide more richness to the summary.

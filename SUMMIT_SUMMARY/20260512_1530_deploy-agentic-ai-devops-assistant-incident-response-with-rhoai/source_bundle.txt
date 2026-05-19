@@ -1,0 +1,212 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_12/Deploy_agentic_AiDevOps_assistant_augmenting_incident_response_with_RHOAI
+
+## Session Datetime
+this talk occured on 2026-05-12 at 3:30PM to 5:00PM EDT
+
+## Session Notes
+This was a lab so the transcript was not very long. feel free to use the lab documentation posted here https://rhpds.github.io/agentic-aiops-showroom/modules/index.html to add richness to this summary. I went through the lab in person.
+
+## PDF Text: agentic_ai_devops_augmenting_incident_response_with_rhoai.pdf
+--- PDF: agentic_ai_devops_augmenting_incident_response_with_rhoai.pdf | Page: 1 ---
+Note
+Tue, May 12, 2026 2:32PM
+11:35
+SUMMARY KEYWORDS
+AI automation, ops manager, VMs management, Ansible automation, root cause analysis, AI agent,
+developer experience, IT ops experience, ticketing system, model as a service, context engineering,
+agent skills, Kira, Rocketchat, DevOps.
+SPEAKERS
+Speaker 5, Speaker 4, Speaker 1, Speaker 3, Speaker 6, Speaker 8, Speaker 7, Speaker 2
+Speaker 1 00:20
+Get the party started.
+Speaker 2 00:27
+Okay, thank you. Thank you for choosing this session. We're going to kick it off. You'll be very
+glad to know that we really only have one slide for you. Everything's in the lab, but it will be
+interactive. And you know, we can pull stuff up our pathway through if there's lots of questions.
+So my name is Tony Kay. I'm an AI leader at for a group called portfolio technology, which
+probably doesn't mean a lot to you, but we're the people who are actually running this event.
+So we actually run the infrastructure and we cover the whole portfolio.
+Speaker 3 01:00
+So that's what I do. My
+S
+S
+S
+
+--- PDF: agentic_ai_devops_augmenting_incident_response_with_rhoai.pdf | Page: 2 ---
+Speaker 4 01:02
+name is Bert Sutter, and I focus primarily at Red Hat on developer experience. And this is not
+that sort of layout here. We're going to be focusing on IT ops experience, which I'm actually
+very, very excited to be part of, because you guys teach me a ton of things based on having
+that perspective. Right? What does it mean to be on the upside house receiving those hand
+grenades from the development team and have you basically automate things that might make
+your life easier and better, because that's what this is all about.
+Speaker 5 01:31
+My name is Ragu. I'm part of North America tech sales. Ai specialist. I say I focus on FSI
+customers, banks, insurance. I'm glad to support you all and enjoy the lab.
+Speaker 2 01:47
+And we have a mystery guest. We have brought along a real ops manager, because this is an
+ops centric AI, magenta cloud, but it's about ops. So we brought along an ops manager. We're
+lucky to have him, because right now he's responsible for somewhere in the region of 8000 to
+10,000 VMs, which are running this event, everything you do, everything you're doing now, and
+that's not including the AWS stuff. You can probably tell that he owns the entire O'Reilly Carl
+publications of the 20th century. We don't hold that against it. Called free lab.
+Speaker 4 02:28
+Now I'm not gonna play the game of you know, how many VMs you manage? Anything, ladies,
+anyone got more than 8000 VMs to manage. We have some customers like that. Okay,
+fantastic, right? We got some big numbers out there. How many people more in that 100 to 500
+range between VMs and containers to manage? Okay, that's the kind of the majority group. And
+then how many people really beyond you know that 5000 let's say 500 to 2000 range. How
+many people in that range? Okay, all right. That gives me a feel for what folks are doing. And
+the reason I asked that basic question is, often, come to Summit, and I will ask that question of
+people that I meet at Summit, and I have to say, 10 years ago, it often the number was often
+I've got 200 for my entire business, or I've got 300 for my entire enterprise. And now we're
+starting to see numbers that are often greater than 1000 and that's one operations with a fleet
+of 1000 things to operate. Let's say, hopefully that kind of sinks out with what you guys are
+thinking. Also, is that fair coming from you?
+S
+S
+S
+S
+
+--- PDF: agentic_ai_devops_augmenting_incident_response_with_rhoai.pdf | Page: 3 ---
+Speaker 6 03:31
+How many of you build and delete 6000 plus VMs in a day? Okay, you and I can probably talk,
+because that's the kind of stuff that we have to do to make this event work. How many of you
+are less than 100 VM changes in a day? How about less than 1000 try to figure the ranges.
+We're okay. So you got people more than that? Bert, wow. I
+Speaker 4 03:56
+want to ask you guys a couple other questions, if you guys want to indulge me, because, again,
+I come from the Development The development side of the house, and I'm trying to understand
+the world view that you guys have. There's going to be a lot of people, I imagine, that are trying
+to sell you an AI agent at this point. As matter of fact, we're not trying to sell you one. We're
+giving you one that's part of the workshop. It's free and it's open source, and you're going to
+get a chance to actually spend some time with it. But how many people have already looked at
+the pitch, if you will, from your service now, from your Atlassian, from your data dog, etc, etc,
+have been pitched an AI agent that help you automate things. How many people seen that sort
+of thing already that at least that sales pitch? Okay, how many people have actually purchased
+one of these automatic, automatic agent, things to help them. Wow, there's not that many.
+Okay, I think that's interesting by itself,
+Speaker 6 04:48
+from an ops perspective. It scares the crap out of me. He
+Speaker 4 04:54
+already gave us that feedback about our demo agent. Also, Tony, what do you think about
+Speaker 2 05:01
+that, about what
+S
+S
+S
+S
+S
+
+--- PDF: agentic_ai_devops_augmenting_incident_response_with_rhoai.pdf | Page: 4 ---
+Speaker 4 05:02
+the use of agents in ops?
+Speaker 2 05:04
+So I think that all of you want to quadruple the number of tickets. You have to close and you're
+going to be thanking us, because we're going to generate you so many tickets, but they are
+going to be root
+Speaker 4 05:17
+caused.
+Speaker 2 05:18
+I think that's good news, because then you can quadruple your productivity.
+Speaker 4 05:22
+Yeah. So if you look at the diagram here, just so you guys understand the nature of the lab, it's
+going to start with Ansible automation, controller automation platform, right? So in other words,
+a job in there that fails becomes a trigger, the triggering event. It's look for failed jobs within
+Ansible, it's going to run Athena, in this case, which is the custom agent that's created. You're
+going to have a chance to mess with and modify yourself. And it's just a little open source
+thing. It's an agent built with Markdown. Might be a way to think of it, right? So it's not
+something you have to write a lot of code for. It's an agent built with Markdown, which is a new
+way of building agents in 2026 and then from there, it's going to basically do the root cause
+analysis, trying to figure out what to do with this thing. And has a team of sub agents. Sub
+agents, which you guys got a chance to see, and then it's route that to the ticketing system
+update you on rocket chat. So what we've done is we didn't have slack for everybody, but we
+have rocket chat to simulate that chat ops experience, having to interact with something. Is
+that cool? Is that fair? How many people here on Slack already, though? Okay, not everybody.
+What other chat systems are you guys using for your
+Speaker 6 06:27
+zoom? What's that? Zoom,
+S
+S
+S
+S
+S
+S
+
+--- PDF: agentic_ai_devops_augmenting_incident_response_with_rhoai.pdf | Page: 5 ---
+Speaker 4 06:28
+zoom,
+Speaker 1 06:29
+okay,
+Speaker 5 06:30
+yeah, so
+Speaker 4 06:32
+it seems like there's quite a variety in this case. All right, our ticketing system is not JIRA. You
+guys notice the name change there Kira? Well, that would have been too hard to integrate
+everyone into our JIRA. We run massive JIRA at Red Hat, but in this case, how about a five
+coded Kira? It's got a cooler name. It's batter, it's batter, and Tony is the creator of Kira. So you
+guys are gonna get a chance to work with that also, there's also a model as a service that
+you're gonna get chance to interact to interact with, because we are going to be using AI
+models extensively throughout the little workshop you were working on, including the changing
+of models on the fly, just so you can see different models and how their behavior changes the
+application, in this case, the agent, and how it's troubleshooting tickets. But the models
+actually run on a model as a service that basically is running on top of ownership. Ai,
+S
+S
+S
+S
+
+--- PDF: agentic_ai_devops_augmenting_incident_response_with_rhoai.pdf | Page: 6 ---
+Speaker 2 07:23
+okay, there's one other thing I did say, only one slide, but also one diagram, just so you know
+what happened. So Byron introduced that and just so so. AP, two controller is just a metaphor.
+It could be it could be Argo CD it could be multiple Argo CDs. It could be whatever runs your
+TerraForm, their sources, sources of errors. And what happens is, when the deep agents team
+gets deployed, you don't have to change your infrastructure. What it does is it hooks in, in the
+case of automation controller, how many of you run for lists, okay, so it just hooks in and says,
+whenever you have an error, tell me about it. You don't have to give me the error. You just give
+me the job number and tell me. And then the web hook fires the deep agent. There's only one
+deep agent, the ops manager. It's called catches that classifies it, and once he classifies it.
+When he catches it, he retrieves it, all the artifacts, error logs, what we call projects, what we
+call templates, etc. He pulls all that in. He has a very tight, beautiful context. And this is
+something important. We don't have a lot of time to study the context, but if you give a really
+good context to a great open source model, you will get a good result. If you give an awful
+context, you will not so context engineering is a thing, and so classifies it and then creates
+dynamically an SRE stop aging with skills. How many people have heard of agent skills?
+Anthropic skills? Okay, right? So these agents, that's where they get their ability. They have
+skills, and their skills include two things, how do I debug SSH? How do I debug DNF? But they
+also include institutional or tribal knowledge. If you do something strange in your environment
+like we do, you can capture that in the skill pertaining to that thing, and that will help the LLM.
+It will give it a huge clue, because it knows, not only are you using SSH, but you do it slightly
+differently from everybody else. Then they generate a root cause analysis. They create a ticket
+in Kira and they inform your Slack channel, or rocket chat, in our case. So that is all you really
+need to know. Everything else is in the lab. We're probably going to interrupt you at various
+times to get feedback and whether this is good, whether this is bad, whether it's valid, whether
+it relates to your world. And here is the lab, basically. Some of them are calm on your laptops.
+We'll leave this slide up. This slide is going to be up for quite a bit. We might throw some other
+slides up. You're going to select yours. It might not be at that particular point in the grid, lb,
+2645, agentic, DevOps, and your password is DevOps, three. Okay, so you would you, and then
+that would take you straight into the mouth. I'm
+Speaker 6 10:39
+sorry. Would you say for email address?
+Speaker 4 10:41
+Yeah, your your normal
+Speaker 6 10:42
+mind?
+S
+S
+S
+S
+
+--- PDF: agentic_ai_devops_augmenting_incident_response_with_rhoai.pdf | Page: 7 ---
+Speaker 4 10:43
+Yeah. It's just your normal email address. That's the unique identifier, so we know who you are,
+logged in and a DevOps three, normal three should get You right in anyone's
+Speaker 7 11:00
+having issues, let us know. Publish,
+Speaker 8 11:13
+option, move into what.
+S
+S
+S

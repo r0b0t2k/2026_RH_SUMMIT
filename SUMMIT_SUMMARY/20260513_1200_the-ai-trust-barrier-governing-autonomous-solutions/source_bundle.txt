@@ -1,0 +1,208 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_13/AI_Trust_barrier_how_enterprises_must_govern_autonomous_solutions
+
+## Session Datetime
+this talk occured on 2026-05-13 at 12:00PM EDT
+
+## Session Notes
+I had to skip this talk to get lunch, however I have added the PDF presentation you can also use the following links to increase richness of the summary, remember to add a disclaimer up top that I did not physically attend this session and the summary is without a transcript highlighting the presenters perspective.
+
+AIOps overview: redhat.com/automation-aiops
+
+Market research paper: red.ht/futurum_redhat_aiops
+
+The State of AI security report(Cisco) https://www.cisco.com/c/en/us/products/security/state-of-ai-security.html
+
+## PDF Text: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 1 ---
+The AI trust barrier: Why and how enterprises 
+must govern autonomous solutions
+Anshul Behl
+Principal Technical Marketing Manager
+Red Hat Ansible
+Ruchika Pandey
+Principal Software Engineer
+Cisco
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 2 ---
+What you’ll walk away with
+1.
+2.
+3.
+How enterprises can adopt AI with conﬁdence by closing the 
+trust gap
+How Cisco AI Defense and Ansible Automation Platform work 
+together to enable governed AI
+The governing principle: separate AI intelligence from AI execution
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 3 ---
+AI is accelerating faster than governance can keep up
+The capability is here
+>
+Chatbots (2023). RAG (2024). Agentic AI 
+(2025+). Each generation grants AI more 
+autonomy over enterprise systems.
+>
+1.9M+ models on HuggingFace. 450K+ 
+datasets. A growing ecosystem of MCP servers. 
+The AI supply chain is largely unvetted.
+>
+Every layer of an AI application introduces new 
+risk: prompt injection, data poisoning, agent 
+goal hijacking, supply chain compromise, and 
+compliance failures.
+But governance is not keeping pace
+CISOs and compliance teams are asking questions 
+that demand answers:
+▸“Who approved that action?”
+▸“Can we audit this decision?”
+▸“What happens when the AI is wrong?”
+Consequences of unmanaged AI risk: ﬁnancial 
+damages, litigation, reputational harm, 
+noncompliance, IP leakage.
+EU AI Act 2024 mandates external audits of generative AI 
+systems throughout their lifecycle.
+83% plan to deploy agentic AI          29% feel prepared to do so securely          State of AI Security 2026, Cisco
+3
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 4 ---
+AI decides what to do. 
+Automation governs how it gets done. 
+Trust requires securing both layers independently.
+Separate AI intelligence 
+from AI execution
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 5 ---
+Cisco AI Defense: Coverage across the AI lifecycle
+Discovery                     
+AI Cloud Visibility
+Identify AI assets
+Inventory the AI models, 
+agents, and connected data 
+sources across distributed 
+environments to understand 
+usage and gauge risk.
+AI Supply Chain Risk 
+Management
+Scan for threats
+Scan model ﬁles, repos, and MCP 
+servers to proactively block 
+malicious or unsafe AI assets 
+before operations are impacted.
+AI Model & App 
+Validation
+Detect the vulnerabilities
+Identify safety and security 
+vulnerabilities across models at 
+scale with algorithmic red 
+teaming technology.
+AI Runtime Protection
+Mitigate threats in real time
+Protect production AI apps and 
+agents with guardrails 
+embedded in the network. Block 
+attacks and harmful responses in 
+real time.
+Why this matters: AI applications are complex and non-deterministic. Each layer (User, Application, Model/Agent, 
+Data, Infrastructure) introduces new risk vectors: business and reputational harm, data security and privacy breaches, 
+supply chain vulnerabilities, cyber attacks, and compliance failures.
+Uniﬁed management with Cisco Security Cloud Control. Backed by Cisco AI Security and Safety Framework: 20+ 
+objectives, 150+ techniques, mapped to OWASP, MITRE ATLAS, and NIST.
+5
+Detection
+Protection
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 6 ---
+DEMO
+Cisco AI Defense
+●LLM Security:  https://leaderboard.aidefense.cisco.com
+●Algorithmic Red Teaming:  https://explorer.aidefense.cisco.com
+●Open Source Tools: https://github.com/cisco-ai-defense
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 7 ---
+In the AI era, agents will 
+need a “menu” of 
+approved actions. 
+Your automation library IS 
+that menu! 
+Your automation 
+library is also your 
+security boundary. 
+It should deﬁne what AI 
+is - and isn’t - allowed 
+to do. 
+Your automation library
+One security boundary, one audit trail, one source of truth
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 8 ---
+Red Hat Ansible Automation 
+Platform 
+RBAC  ･  Approval Gates   ･  Auditing ･  Content Signing   ･  Credential Management
+IT infrastructure
+Uniﬁed governance across IT operations
+The trusted execution layer for AI-driven IT operations
+Operational Data
+Observability ･ Monitoring  ･  
+Analytics  ･ Event streams
+Operational Knowledge
+Scripts - Playbooks - Runbooks
+AI / Inference
+Predictive analytics   ･  Agents   ･  
+Natural Language Processing 
+Event-driven
+Task-based
+  AI-driven
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 9 ---
+✓
+AAP plugin framework for MCP to enable task-driven 
+automation for MCP actions
+✓
+Red Hat Ansible Automation Platform MCP Servers that 
+enable event-driven AI Ops automation 
+✓
+New automation workﬂow tooling that enables AI-driven 
+automation to be orchestrated in concert with task and 
+event-driven automation. 
+> Side-by-side execution of multiple automation modes
+> Context ﬂows across modalities 
+✓
+Current AAP agent-driven investments establish a 
+framework where the future combines the guardrails and 
+compliance standards of AAP with fully autonomous 
+agents.
+The governance infrastructure AI needs is already running in production 
+Red Hat Ansible Automation Platform delivers the complete stack
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 10 ---
+DEMO
+AI-Driven Incident Response
+Agents + MCP + Ansible Automation Platform
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 11 ---
+Key takeaways
+Intelligence without execution is just a recommendation.
+Cisco AI Defense secures the intelligence layer. 
+Ansible Automation Platform turns AI decisions 
+into governed, auditable actions.
+Your automation library is your governance boundary.
+AI agents interact through MCP with only the 
+playbooks they are authorized to use. Every 
+action is deterministic, repeatable, and fully 
+auditable.
+Cisco AI Defense validates and protects AI 
+applications. Ansible governs what they are 
+allowed to do. Together: from cautious skepticism 
+to conﬁdent, governed deployment.
+Separate intelligence from execution to build trust.
+
+--- PDF: LT1438 _ The AI trust barrier_ Why and how enterprises must govern autonomous solutions for adoption _ Red Hat Summit 2026 (1)_1778552309572001DTwE.pdf | Page: 12 ---
+Get started today
+>
+AIOps overview: redhat.com/automation-aiops 
+>
+Market research paper: red.ht/futurum_redhat_aiops 
+>
+The State of AI security report(Cisco)
+>
+Cisco AI Defense repo- Apache 2.0 (Clone it today)

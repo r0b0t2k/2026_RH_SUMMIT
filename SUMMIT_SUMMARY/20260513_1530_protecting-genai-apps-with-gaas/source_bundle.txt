@@ -1,0 +1,154 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_13/protecting_genai_apps_with_GAAS
+
+## Session Datetime
+this talk occured on 2026-05-13 at 3:30PM to 5:00PM
+
+## Session Notes
+I attended this lab, which was an interactive walkthrough of adding TrustyAI guardrails as a service to a fake Peachy LLM chat bot so that it does nothing else but talk about peaches. It walked me walkthrough using the LLM without guardrails as well as enabling them to witness the behavoiral changes with the LLM chatbot experience.
+
+in this directory are several pictures plus a transcript of the introduction. the lab was based on the following git repo 
+
+https://github.com/rh-ai-quickstart/lemonade-stand-assistant use this repo to provide more richness to the summary.
+
+## PDF Text: protecting_genai_apps_with_GAAS_transcript.pdf
+--- PDF: protecting_genai_apps_with_GAAS_transcript.pdf | Page: 1 ---
+Note
+Wed, May 13, 2026 2:31PM
+9:10
+SUMMARY KEYWORDS
+AI platform architect, trust AI project, guardrails, FMS orchestration, keynote demo, chatbot assistant,
+zero trust policy, input detectors, hate and abusive detector, prompt injection detector,
+language detector, peach assistance, brand protection, security layers, lab deployment.
+SPEAKERS
+Speaker 4, Speaker 1, Speaker 6, Speaker 5, Speaker 2, Speaker 7, Speaker 3
+Speaker 1 00:00
+We should start, since the time is time has come. So let us begin. Welcome to What is I would
+say, subjectively, the cook list lab in Summit. Can everyone hear me? If I'm not using a
+microphone? Yeah. Otherwise, shout. My name is Salamander. I'm a senior AI platform architect
+at Red Hat, and I have the joy of doing this lab together to shine. I have also with me. Matt,
+Speaker 2 00:36
+thank you, Sarah. I'm Matt. I'm one of the engineers in the trust AI project, and I'll be working
+on the guard railing side of things, so working on FMS, orchestrating more recently.
+Speaker 3 00:50
+My name is Jacob,
+S
+S
+S
+
+--- PDF: protecting_genai_apps_with_GAAS_transcript.pdf | Page: 2 ---
+Speaker 1 00:59
+and what we'll do today, we will have some a quick introductory theory. We do the awesome
+lab, and then we'll do a summary wrap up session. Why are we talking about God red? If you
+were at the keynote demo this morning, there were some examples to split on the TVs, but
+we're talking about them because these type of news are not uncommon to see. If you have
+seen this before, I was called this a classic. It was one of the most earlier examples that was
+brought up because it also was viral, and they basically spread these four little bots access
+everywhere, and basically anyone could ask this boss about anything. So people were using it
+for, like, homework, getting python script because they had attached it to they have subscribed
+to chat, GPT, paid services, but they didn't go away. So people were like, Why should I pay for
+this? I can just use them sheaverly As instead, actually. And it quite quickly wrapped up a quite
+a hefty B and decided realize quickly they couldn't do this anymore. This was, as you can see,
+2023, so that's three, kind of like three years ago now. But then you have one from a US
+company that was basically in the beginning, no in the end of last year, and recently, last week,
+there was a fast food, fast food vendor that experienced the same thing. So we might think that
+this problem is should be fixed by now, but they're still they're not so story time, if you saw the
+lemonade stand that in this keynote earlier this morning, it was an AI powered chatbot
+assistant. Today you are going to or this lab, you're going to be on the other side. So if you this
+morning were scanning the QR code and swearing at this portal box, you will now be the one
+setting up the guardrails. When we built this demo to be run here, we had several concerns,
+and you were going to face these concerns in the lab. It was about, of course, cost every off
+topic question that doesn't those who belong to this drives cost, because this is not what it was
+meant to do. We were also concerned about someone abusing our service maliciously, and we
+were also concerned about saying things that we don't actually stand behind, either ethically,
+morally or as a company, even within the demo you so saw actually this morning. So we
+needed to implement the guardrails around our system. So basically, this is the law. This is the
+short summary you shall not pass if you do not go through this process. Everyone loves
+ordering
+Speaker 4 04:00
+this.
+S
+S
+
+--- PDF: protecting_genai_apps_with_GAAS_transcript.pdf | Page: 3 ---
+Speaker 1 04:01
+So very simplistically, this is what we did. We're putting input detectors, because in this
+concept, we are following a zero trust policy. So the user, in this case, trust us, so we validate
+all the input coming to the LM. You cannot assume that anyone who interacts with it will do it
+from good intentions. And then the LLM is also considered like an untrusted entity, so we will
+validate all its output as well. Because it's a non deterministic system, it goes on probability of
+the next word. Therefore it's not evil or good, it is just predicting what might come next. So this
+is us trying to make it easy to do right and hard to do wrong. So what's in the box? In the box
+that you are going to open, we have, of course, the trust area orchestrator that Matt mentioned
+upon we have an hate and abusive and profane profanity detector. So we're trying to block
+things that are offensive and things like this. We have a prompt injection detector to try to
+detect malicious attempt to get LLM to bypass its system instructions. And we have a Language
+Detector because many prompt injection models and cap models are language specific. You
+can probably assume that what is considered hateful or abusive or perfaving differs from
+languages and from cultures, so we need to contain that. And then, if you are worthy, you will
+arrive to the LLM with your prompt. Now is your turn. So the story is, because we're in Atlanta,
+you will go, you will have peach hat. This is the peach assistance for peach happens produce
+php. So there have been Yes, thank you. They are the Atlanta's biggest peach producer since
+1955 and they decided to build an AI system to help with everything peachy. But it hasn't been
+going particularly peachy, actually, because it's a hit and users love it, but only 40% of the
+conversation is actually about peaches. It's a problem. The monthly GPU bill is climbing, and
+marketing is not abused, because they're seeing some strange things out on social media. And
+this is where your adventure will start. Everyone with us. So your mission today is you need to
+lock down peach PAL to its intended topic, which is PGS and only PGS, you need to build a layer
+defense using system prompts, regex and AI powered bar rates. You need to protect the triple
+B, the brand budget and bot. You made that up, trademarking it, and you might collect some
+experience points. We will be here at all times in this room. You also saw some lemonade.
+Please help yourselves. If you have any questions, don't hesitate to raise your hands. We'll do a
+little wrap up in an hour, we'll summarize what you achieved if you have any questions, and
+then we'll discuss what other security layers you could introduce, because within this time
+frame, we will not be able to cover everything. There are things that protect the box that is
+outside of the garden area. So in your laptops, this is the time, the supreme time you should
+choose. If you have it in front of you, there's
+Speaker 3 07:39
+something called in the list. There's something called Security general applications. Find that
+click that it will
+Speaker 5 07:56
+come to an email and a password. Okay, everyone. Find the
+S
+S
+S
+
+--- PDF: protecting_genai_apps_with_GAAS_transcript.pdf | Page: 4 ---
+Speaker 6 08:00
+time enter
+Speaker 1 08:02
+the email
+Speaker 7 08:02
+you register
+Speaker 4 08:03
+with,
+Speaker 3 08:03
+and then the workshop password. But yeah, an email invited email, anyways, input
+Speaker 5 08:16
+something
+Speaker 7 08:16
+that.
+Speaker 1 08:21
+Anyways, input something.
+S
+S
+S
+S
+S
+S
+S
+S
+
+--- PDF: protecting_genai_apps_with_GAAS_transcript.pdf | Page: 5 ---
+Speaker 3 08:24
+Everybody solve the PHP. Is everybody okay that if you play some music, some thematical
+music in the back while you guys are going to do the lab cool. So that's it. I guess. Let's do right
+and now,
+Speaker 1 08:46
+yes, if you get stuck on the first step in the lab, reach your hands up, because we saw
+something that has to do with the lab deployments. So if you get, like, a very, very long error
+message out of the front then at the first step, raise your hand.
+09:02
+I.
+S
+S

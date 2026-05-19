@@ -101,6 +101,7 @@ def build_bundle(talk_dir: Path, output_dir: Path) -> None:
     txt_files = sorted(talk_dir.glob("*.txt"))
     pdf_files = sorted(talk_dir.glob("*.pdf"))
     datetime_file = talk_dir / "datetime.txt"
+    note_file = talk_dir / "note.txt"
 
     bundle_parts: list[str] = []
 
@@ -118,7 +119,19 @@ def build_bundle(talk_dir: Path, output_dir: Path) -> None:
             ]
         )
 
-    transcript_files = [p for p in txt_files if p.name.lower() != "datetime.txt"]
+    if note_file.exists():
+        note_text = normalize_bom_terms(read_text_file(note_file).strip())
+        bundle_parts.extend(
+            [
+                "## Session Notes",
+                note_text,
+                "",
+            ]
+        )
+
+    transcript_files = [
+        p for p in txt_files if p.name.lower() not in {"datetime.txt", "note.txt"}
+    ]
 
     for txt_path in transcript_files:
         text = normalize_bom_terms(read_text_file(txt_path))

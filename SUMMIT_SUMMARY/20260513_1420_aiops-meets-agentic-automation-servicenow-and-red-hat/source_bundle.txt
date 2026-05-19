@@ -1,0 +1,771 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_13/AIOps_meets_agentic_automation_servicenow_and_redhat
+
+## Session Datetime
+this talk occured on 2026-05-13 between 2:20PM to 2:50PM EDT
+
+## PDF Text: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 1 ---
+Note
+Wed, May 13, 2026 1:15PM
+30:54
+SUMMARY KEYWORDS
+ServiceNow, Ansible, AI Ops, automation, incident management, playbooks, governance, integration,
+incident resolution, deterministic outcomes, ROI, zero-touch automation, event-driven architecture,
+ServiceNow LEAP, Red Hat.
+SPEAKERS
+Speaker 5, Speaker 3, Speaker 7, Speaker 1, Speaker 2, Speaker 4, Speaker 6
+Speaker 1 00:00
+The fun backstory to how we got connected. So Red Hat is the partner with ServiceNow, as you
+all are well aware, and have extensive integration to service now for years, from an icon
+perspective in AI ops. So Sri came across a blog that I had written late last year, and reached
+out on LinkedIn, and we got anyway, got connected, and he said to me last week, he said, Look
+at us. Now. We're on stage together. So we have a lot of like, we're really excited about
+solution. We're glad y'all are here. And I should ask too, how many of you were had an
+opportunity to be at the spotlight session yesterday for Ansible there were people so you saw
+Sri on the panel. So that's awesome. We really excited about that. So yeah, so we will jump in.
+So first slide is just what we hope that you will walk away with today is how ServiceNow leap
+and Ansible actually connect AI power discovery to govern execution. We'll also be sharing
+some use cases. So we want you to walk away with those
+Speaker 2 01:01
+real quick thing here. So I assume everybody here uses ServiceNow. Is that correct in some
+way, fashion or form, right? Who here uses ITSM for service now? We here uses Itom for
+ServiceNow. So it's a little bit smaller, just out of curiosity. And of those in the Itom space, are
+you guys utilizing any AI ops capability within that or no? Anybody know what AI Ops is? That's
+a better
+S
+S
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 2 ---
+Speaker 3 01:31
+question. Just start.
+Speaker 2 01:34
+Just start. So we're gonna, you're gonna, we're gonna learn about a little bit of what AI Ops is in
+the session, and we're going to go through a pretty long demo around the service medley.
+Speaker 1 01:46
+Yeah, definitely. And then so we'll get into how a apps is helping to bridge the gap between
+automation and service management teams. So he kind of ran through this already, what we're
+going to cover today, so we're going to cover that again. But this is just an overview to show.
+Hey, as you all know, we have extensive integrations with ServiceNow and where we are going
+to be focusing today, in this AI apps realm, and specifically in the iTunes realm, with the LEAP
+solution that we're going to show history here. By now, you've heard, heard the term certainly.
+But I know there are many definitions of the term out there in the market, but we are
+specifically talking about turning operational insight into intelligent, automated outcomes and
+then so these are this industry, and I have talked a lot about this in terms of the different
+personas, right? I think a common challenge that we hear frequently from customers is your
+automation teams and ServiceNow teams often sit in different parts of the organization, which
+presents a number of challenges that we're excited to help address with this joint solution, one
+of those being operational costs and potentially duplicating automation across platforms, not
+being able To utilize what already exists, again, that leads into underutilized investments. And
+then, of course, lower incident resolution is a challenge in terms of some of the manual handoff
+and then the trust barriers. We talked a lot about trust and deterministic outcomes, and I'll
+cover that in the Ansible section in just a minute. You've heard me talk about it extensively,
+probably yesterday, in the spotlight if you were in that session, and then coordination as well
+between what can often be siloed teams within the organization. So a quick overview here. This
+is Ansible specific to aiops. So again, accelerating incident response, right, but reducing
+meantime resolution, producing consistent automation. We talk a lot here in the in the
+deterministic realm, and something that is very, you know, appealing and helpful is having a
+pre tested, reusable playbooks, right that are going to execute the same, the same, proven
+things every time, and then governing the AI execution. So AI recommends what you're it's
+within the boundaries of what your team defines, what you have built in with Ansible, already
+built in with a platform with role based access control, audit trails, approval
+Speaker 4 04:08
+gates,
+S
+S
+S
+S
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 3 ---
+Speaker 1 04:09
+and then again, another key benefit, and I'll go into this in just in the next slide, which is
+remediating across domains, so having the ability to automate across leading to the next slide,
+network, operating system, cloud, virtualization, security. So this is just a few samples of the
+ecosystem partners that we integrate with across the board, but just really beneficial. Ansible is
+not designed to work in isolation. So really, really great benefit there. And then I'll have a
+couple slides here, just really emphasizing the importance of the foundation of automation, and
+especially as you are looking at getting into aiops and agentic. So again, what are the benefits
+that, as well, can help with right translation of operational SME into reusable, testable, human
+readable code, as well as documentation of the approved processes with the auditable trail,
+and then, of course, creating consistent, scalable, reliable policy enforcement as well. And you
+may have heard me talk about this yesterday, but the key benefit right of this automation
+library is it really is your security boundary. We'll talk a little bit about MCP integration with this
+joint solution, and, you know, giving AI models and agents an interface to interact with Ansible
+but it's they can discover and execute existing automation, right? It's your existing already
+approved, already you know, you have that trust mirror, you've got the RBAC, you've got the
+audit trails as well. So you're not giving AI an ability to go rope and create things ad hoc, and
+then these are our core kind of values. With this at the top is, the more, the more you
+automate, the better. The more you actually have in that foundation of automation, the better,
+especially as you get into again, as you get into AI ops and agentic, the more you have
+automated again, across your whole infrastructure, the better you're going to be to be ready
+for the next, next round here, I'm going to pass it over to Sri to give an overview of me, and
+then we'll get into the demo right after that.
+Speaker 5 06:13
+That's awesome. So firstly, let's congratulate Red Hat to put a fantastic no show, because they
+really deserve it. Deserve. Second appreciation is for the people in the first rows. Because if
+you think about nostalgic moments, nobody wants to sit in the first
+Speaker 4 06:32
+row.
+S
+S
+S
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 4 ---
+Speaker 5 06:32
+We have some brave souls here. Thank you. So my name is Srinivas. I go by Sri ID, the item
+product line of business for nine years with ServiceNow, prior to this, products in HP and
+Walmart, when you think about AI ops, right, the term AI Ops is again, used in multiple
+dimensions. But let me give you a 32nd pitch on why this is this really matters. Most of you
+service management. You use incident, prod, no problem. Change. You need the incident no
+tickets to be created from your monitoring tools. But when you think about your monitoring
+stack, there's so many monitoring tools out there in the market. We have infrastructure
+monitoring, service monitoring, synthetic monitoring, your APM tools like Dynatrace, APPD, New
+Relic. There's enough tools there, but the place where you need aiops or event intelligence
+platform, it is in the correlation you need to connect all those event signals, metrics, logs, you
+correlate, you bind it with your service context so that we can create meaningful context, rich
+incidents, right? Then there's another problem. Okay, I've created an incident, but the story
+doesn't end. I don't want to send a ticket to somebody or, like, manually troubleshoot this. And
+this is exactly the place no leap comes in. Leap stands for learning enhance automation
+platform. I'm going to, like explain the concept in nobody with these two hats. Okay, so firstly,
+I'm going to wear an Ansible hat. Now I'm an Ansible automation architect, have the best
+automation platform now in the industry, I can automate anything, but the problem I have is I
+don't know what to automate. I You need to look at like Incident Management stream to
+understand, okay, where the problem lies, so that I can first understand, discover the
+automation opportunities, right? And then, like, I can work on those automation candidates. The
+second problem that we solve for an civil automation architects, it's like, what is the value ROI
+you create? Because you guys are awesome. You guys are technologists. You guys can create
+playbooks. But is those playbooks generating value to the business, right? I don't want to
+create a playbook that can delete a core file, disk space. These are all plumbing work
+technology layer, but you need to attack know the playbooks that really matters for the
+business, right? Onboarding, orchestration, right, making sure the changes right can fully be
+automated. So ROI, measuring ROI and identifying the right automation opportunity is the place
+where no visa. Let me put a service now hand, right so now, as a service now, guy like we can
+always say that, okay, service now is an incident management or no orchestration layer in a
+solid last mile automation tool, right where we can connect.
+S
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 5 ---
+Speaker 3 09:22
+And
+Speaker 5 09:23
+the problem is these two worlds are fragmented, service management world and automation
+world. They don't talk to each other, right? Service now has all the intelligence knows exactly
+where the problem is, but we need that like powerful automation story with no answerable like
+platform. So that's exactly where NEAP comes in. Because what leap does is like, firstly, it
+performs and clustering analysis of all your incident data for the last six months. You might
+have created like 100,000 decades, but let ai do the thinking. AI is thinking what to automate,
+although this is probabilistic in nature, the thinking aspect
+Speaker 6 10:00
+of AI is very powerful, right? And
+Speaker 5 10:02
+you have heard repeatedly that you need deterministic, action oriented playbooks that will do
+the last mile automation. Right now, we are converting the thinking aspect, you are having a
+workflow aspect, and then you have an automation that is deterministic flow that's doing the
+last mile automation. So the AI specialist, the AI experiences that we have built, it will tell you
+what to automate, what is ROI for automation, and secondly, leap can also help you in other
+dimensions, like you can generate knowledge based article help you in Problem Management,
+like most of the customers, like when knowledge based articles are all used as the first level of
+incident deflection. This is all great, but the real power comes when you connect these two
+powerful platforms together, the service management platform, we believe that, like we have
+built the best in class, unified data model on top of it, Incident, Problem, change, security risk,
+all those products are using. Know the service now, task, workflow based experiences, and now
+we need to connect to the answerable world to first understand what kind of playbooks
+someone has created, if no leap is telling you what to automate, and if you don't have know
+those playbooks, can we inform automation engineers saying, Hey, here's the ROI that comes
+for the business. If you know, work on this top 10 incident categories, which are all repeatable.
+But the cool thing is, like, leap can also tell you how humans have resolved that category of
+incident. It's not just like, Oh, I haven't no 1000 tickets in one cluster you need to automate.
+But it will tell you, like, how the operations team have troubleshooted, triage that category of
+incident. The AI creates a problem, a set of library, a set of steps, standard operating
+procedure, which can further be sent to the Ansible automation team to build, to curate, know
+those labels. So we want to share, like some practical use cases I'm going to invite so my good
+friend will tell you that some of the no use cases where you can apply this today,
+S
+S
+S
+S
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 6 ---
+
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 7 ---
+Speaker 2 12:14
+who here has been any of my sessions earlier this conference, and you will all know that I have
+talked about AI ops and practical use cases, some of these use cases you may have heard
+before, because those are very low hanging fruit and very common in the IT realm. So let's go
+ahead and get started. We're going to be talking today in basically four Well, there's four areas
+that connect to the Ansible, but we're going to be talking gonna be talking about today is from
+an MCP standpoint, right? This is a true AI type of interface where we also have a tie in to event
+driven Ansible through event driven architecture. Who here uses the VA? I see three hands all
+right. Now, there we go. And then we also have connections with API. This is where most people
+come in. Who you hear is the API within. There we go. And then we also have the web UI
+through our platform and controller. Is that correct? Right? Everybody does that at some point.
+But what we're going to be talking about today is those use cases that MCP can really, really
+help out with the Ansible and talking with, say, ServiceNow. So how it works? So you have
+basically get an automation discovery with Red Hat Ansible. You're going to get an AI detection
+of the actual automation opportunity from ServiceNow, and then that agent is going to connect
+the Ansible MCP server to basically find what Ansible playbooks are that are out there in
+wherever you have it at, whether that's in your private automation hub or your GitHub, or
+wherever it may be, or in the future portal, anybody's going to Use portal. And then it provides
+the available Ansible automation back to lead. And what ends up happening is that automation
+architect is going to connect Ansible playbooks to the automation opportunities basically put it
+putting a push pin in there to basically connect them. Right this bottom screen is just basically
+an example of what you're going to see from an Ansible standpoint, and also from a
+ServiceNow standpoint. And you will be this process is going to go through the entire process of
+applying that zero touch fix to automation. Now I would like to stress here, guys, is that you can
+absolutely do zero touch fix, or you can build as much community approval action that you
+want in there, right? I have said this in all my sessions, and this has really hit home with
+everybody. You may or may not be comfortable putting AI in charge of your production
+environment straight away, you can put human approval in there is not a no brainer that's still
+an AI op situation that still absolutely has service now leave, and still absolutely adds Ansible
+provides you a little bit of a protection layer and maybe a little bit of ease of mind, right? So
+essentially, we get the event alert from where you're alerting from, in this case, ServiceNow,
+and you're going to get AI Ops is going to collect that event, right, and it's going to correlate
+and trigger incident workflows with the service now an AI agent flows that recommends the AI
+platform, and the AI automation is run on the IT infrastructure based on your choices of what
+playbooks, modules, workflows, job templates that you have out there, right? And this can hit
+any type of endpoint that you have. Who here has a Windows environment that you're
+automating with Ansible? Who here has the networking environment you're automating? Who
+here knows about our certified content for all these things? And where does that sit? Not
+Speaker 3 16:00
+my compliment,
+S
+S
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 8 ---
+Speaker 2 16:01
+someone else's problem. It, where do we download certified content from? Not the right
+answer. That's correct. Galaxy is not supported. Galaxy is wild, wild west, just as an FYI. Now
+that's not to say that there's not certified content out there. If you only want certified content,
+automation hub is the only place to go. I just want to clear that a lot of people think galaxy is
+the end all be all. We love galaxy. I even have a repo that's out there under my name, if you
+can find it good job. But certified content that you're going to be utilizing automation from that
+is supported by Red Hat is always going to be an automation. And then what ends up
+happening is we remediate the issue, and we can close the alert and the incident within
+ServiceNow. All throughout this process, this can also be tied back into your ITSM so we know
+ticket can be opened, ticket can be updated, ticket can be closed, and whatnot. I'm happy,
+right? So with that, I'm going to start the demo, and I'm going to hand it off to Sri to cover the
+service analysis side of the demo, and we will get started if you have any questions after where
+we'll take questions after the demo and through, Michelle will be going through with a
+microphone to with any questions you might have. So, all right. So who here is familiar with the
+screen? All right, so this is the Automate automation platform GUI screen, and we're going to
+basically start here by connecting to the Ansible automation platform. And we're going to select
+Access Management. I'm going to go through this pretty quickly, because you guys really don't
+care about how to set up Ansible, but I just want to show you that it is very simple to be to get
+connected to an head, to serves now, and all this process is done once period. Once it's set up,
+you're good to go. You're basically going to create an API token for your account, and then
+you're going to go over to service now,
+Speaker 5 18:26
+okay, awesome. Once you have got your API keys, that's the keys your kingdom, right? So as
+an automation architect, sitting in service now, so you will go to leave, leave stands for learning
+enhance automation platform, right? As I said, the screen that you are witnessing is showing all
+the automation opportunities, right? This is coming from your data. AI is analyzing the last six
+month incident categories and coming out with automation opportunities. Let's say that once
+you have it like the most important thing for your leaders, it's like, I want zero touch
+automation powered by Ansible automation platform. So as an admin, you will have a
+connected to red Ansible so you'll say that, hey, I'm just giving you the API key and the MCP
+server to connect to AP, right? You save it now the connection is established, right? Now you
+have connected two powerful platforms that can exchange information about what to
+automate. If you have playbooks, then those playbooks can also be recommended by the AI
+agents from ServiceNow. So we talked about this use case. The first use case is all about
+finding the right automation opportunities and looking for a potential playbook from the Ansible
+site. And we need to connect and bind these two categories together. And for that like the idea
+is like, yeah, ServiceNow will call the MCP server. The MCP server will return us the potential
+playbooks, and you're going to see how that match happens in ServiceNow with the learning
+enhance automation platform. So if I am in the automation architect looking for potential
+automation discovery jobs, I can open a category. And what you see here the generated
+resolution nodes, the resolution notes in incident management is the place where humans
+interact with incidents. So you have lot of your operations team, your server team, your
+middleware team, your application team, going to constantly update incident resolution notes,
+saying, Yeah, I looked at that category of incident, and I've like, given you step one, step one,
+step three. And AI is analyzing and bringing those steps for the purpose of automation. And
+S
+S
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 9 ---
+then if any of those steps where it finds a potential playbook, the AI agent will automatically
+map the playbook to the incident resolution steps. This is step number one, because now you
+have identified the opportunity. Now you have identified how humans have interacted with this
+category of incidents, and you have identified the steps. And for each steps, AI agent is now
+looking for a potential playbook that is already available in Ansible. Now you're going to, like,
+just connect and bind right? The step two is like, if you don't have a playbook, that is a place
+where now the service now architect team, I told you about these two caps. These two caps
+have to merge right in your like organization. If you your team and ServiceNow team is not
+talking to each other, please use this leap and MCP integration as the opportunity to know
+blend and come out with no better ROI solutions. Let's say that you have built a playbook you
+automatically match all those steps. So now the magic happens, because as an automation
+team, you have connected two powerful platforms together. But then comes the next big thing,
+like for your service desk team, who are non technologists, like you have l1 operators. All they
+do is, like, look at all the map big screens and like, hey, they need tools. They need like, they
+are first responders, but they're not technologists, right? So when the next time the incident
+comes in the service operation space, like, where, if I'm a service desk analyst, able, I'm
+logging into my workspace and I have some work to do, and there's a file of incidents coming
+in. We are showing how the map automation opportunity to the playbook will be shown to able
+on the right side panel. Like here, it's an HTTP service. Some configuration change right on you
+will automatically see how Lee is able to find Hey. They are all these are all the standard
+operating procedures that you need to follow in order to troubleshoot and triage. But you know
+what? I have got a magic bullet. If you click on the magic bullet right where the AI agent from
+service. Now, very tough to answer them. Say, You are the muscle, right? You have connection
+to those servers. You can automate. You can run the playbooks. So this is how the know, the
+deterministic playbooks can be fully automated and orchestrated from ServiceNow, where the
+Service Desk team, they don't have to go and learn Ansible automation platform. You are
+making the Service Desk specialist superstars because they are able to click on that magic
+bullet. Know the playbook runs. The Playbook can perform what it always does, but once the
+playbook executes, then ServiceNow also captures ROI metrics. How many of those incident
+categories where, if the mean time to repair is two weeks, where tickets growing around
+humans? So now you are bringing automation and giving it in the hands of service desk
+specialists. This is human in the process. But Service Desk node team also has now copilot
+experiences. Service now launched something called AI specialists. And these specialists think
+like human these specialists can be a co worker, you can onboard them, and these specialists
+can also run playbooks. So we are giving both options to the customers to decide which
+pathway to choose, either you bring in service desk to trigger the playbook manually, or you
+have AI agents and AI specialists that will automatically know run those playbooks. Capture the
+ROI metrics, capture the know the power on, like whether the playbook is able to resolve that
+incident. So with that right, you can clearly see the platforms are connected. The platforms are
+no intelligent you're bringing the power of AI where AI thinks service now orchestrates, but
+Ansible automation platform that shows you the muzzle right, where the last mile automation
+happens and the zero touch automation experiences now not in marketing buzzword, but it's
+reality can happen in your estate. So with that, not like you want to finish some value
+statements.
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 10 ---
+Speaker 2 25:22
+So you may have seen this on the other screen. So what is the value of an service that lead the
+idea for everybody here is that we need to figure out what the problem is in a faster manner,
+right? We need to have a faster mean time resolution. The average mean time to get this stat
+was on my others, my other conferences to sessions to the average time to take to resolve a
+ticket is about 3537 minutes. It could range from a simple restarting service or a user needs to
+be reset. Differs in time that could be a lot quicker than others, right? But when you incorporate
+AI or even EDA, you can actually resolve that faster, and the typical Meantime, resolution drops
+to about two to three minutes when you include automation and service now. So you know,
+reuse what you build, leap, basically services, what you already have that you may not know
+about. You give it access. You can see when you give it access to AAP, it searches AP for the
+content you have you can potentially put forward and you deliver consistent outcomes. Who
+here thinks AI without governance is a great idea. I see you in the corner. He's anarchist. I like
+it. So when you with one of the one of the big things about the Ansible automation platform is
+the governance that it goes around AI, and it's consistent in everything that you do. So when
+you have the content that you've already created, great, you still provide consistency around
+that and lessening human error in those configuration changes. Oops, I accidentally set the real
+wrong VLAN for this particular account, or I opened up a public IP on an s3 bucket. Probably not
+a good idea, depending on what you want to do. You're breaking down those silos in terms of
+what your your those domains that are going to be utilizing potentially the same tool and have
+the same nomenclature. I know it's pipe dream. We've been talking about breaking down silos
+for 15 to 20 years, but I really do believe that within today's day and age, that silos will be
+breaking down, or at least blurring a bit across different organizations. And again, we're going
+to be providing those guardrails for our with our back and audibility trails and all that good jazz.
+So the key takeaways here is that you cannot have intelligence without execution, right? It's, it
+is, is just a recommendation service. Now, leap finds that automation Red Hat turns that into an
+actual executable with governance. And that's really what I want to stress here, governance,
+governance, governance, especially in today's AI world, stop reinventing when you when you
+can automate what you've already automated, what you can automate. Service now, leave
+discovers that Ansible playbook that you may have and service them directly to the service
+now, operator workflow, right, one click, no expertise required. As long as there's RBAC and
+rights to those users, they can actually kick off the automation, and aiops bridges the gap
+between the automation and the service management teams. AI can connect the teams,
+matching the pardon me, matching the detective issues to the existing remediation and in real
+time, the service now and the automation teams are working together rather than complaining
+about each other. Also, one quick thing just heads up with anything with ServiceNow, you don't
+need admin rights to service now for Ansible that had that brought up to me the other day,
+someone said, well, our ServiceNow team says we can't do Ansible automation because we've
+asked for basically God rights, and we always go by the rule of least privileged access.
+Something just needs a right. Give it a right. Doesn't need to read. Just give it a read, right? No
+pun intended there in the last comment. So one thing I do want to put this up here for a little
+bit. Please get out your camera. That's especially the first one solution. Guys, you will want to
+know this. We have a full solution guide around ServiceNow lead that you can download and
+well, it's actually a website that you can utilize and reuse and download for your uses, basically,
+architects, Gavin, best practices. We also have an AI ops overview and a market research paper
+with future I don't know if anybody saw the webinar, so with that, we're going to turn it over for
+q&a. If anybody has questions, please ask Michelle, not sure you're myself,
+S
+
+--- PDF: AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations.pdf | Page: 11 ---
+Speaker 7 30:30
+something I might have missed. Maybe Aaron just didn't fully understand. So leap is provided
+by service. Now that partner, that's the service. Now have Okay,
+Speaker 5 30:41
+not speak. We just announced lot of AI agents for this. So there's an AI agent for duplicates.
+There's an agent for stainless identify, ownership location, so there's a different AI agent
+category of me.
+S
+S
+
+## PDF Text: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 1 ---
+AIOps meets agentic automation: 
+ServiceNow and Red Hat transform IT operations
+Sree Subramaniam
+Product Management Director
+ServiceNow
+Steve Fulmer
+Product Management, Ansible
+Red Hat
+Michele Kelley
+Product Marketing, Ansible
+Red Hat
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 2 ---
+What you’ll walk away with
+1.
+2.
+3.
+Practical ServiceNow and Red Hat Ansible AIOps use cases 
+you can implement today
+How ServiceNow LEAP and Red Hat Ansible connect 
+AI-powered discovery to governed execution
+How AIOps bridges the gap between automation and service 
+management teams
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 3 ---
+Agenda
+> Red Hat Ansible + ServiceNow partnership overview
+> Common challenges for automation + service management teams
+> Red Hat Ansible’s role in AIOps
+> ServiceNow LEAP overview
+> Practical AIOps use case 
+> Demo 
+> Outcomes with Red Hat Ansible + ServiceNow LEAP
+> Next steps
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 4 ---
+Overview
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 5 ---
+5
+Red Hat Ansible for ServiceNow  
+Increase the value and efﬁciency of ServiceNow
+●
+Enable automation of ITSM / ITOM workﬂows; open, close, 
+update tickets automatically
+●
+Reduce ticketing noise and manual intervention
+●
+Ensure accuracy and establish your ServiceNow CMDB  as a 
+single-source-of-truth inventory source for compliance
+●
+Improve team productivity and system performance 
+through automated remediation to reduce MTTR
+●
+Boost efﬁciency with proactive response to events  in your 
+infrastructure or in ServiceNow with the Event-Driven 
+Ansible plug in
+●
+Maintain compliance by integrating with ServiceNow 
+ticketing to ensure traceability and audit support for 
+automation
+ITSM
+CMDB
+Conﬁguration 
+accuracy
+Process
+CMDB source of 
+truth
+ITOM
+ServiceNow LEAP
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 6 ---
+6
+AIOps | Turn operational insight into 
+intelligent, automated outcomes.
+What do we mean by “AIOps”?
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 7 ---
+Common challenges
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 8 ---
+8
+Your automation and service management live in different worlds
+Common challenges
+    Operational costs
+Duplicating automation across 
+platforms, wasting resources
+   Underutilized investments
+Existing AAP assets sit isolated and 
+unused, failing to deliver ROI within 
+ServiceNow workﬂows
+Coordination
+    Siloed teams are managing 
+resources separately with manual 
+processes that are prone to error.
+Trust barriers
+AI can suggest but action must be 
+governed, as production demands 
+deterministic outcomes
+    Slower incident resolution
+Manual handoff between 
+ServiceNow and IT infrastructure 
+teams inﬂates MTTR
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 9 ---
+Red Hat Ansible overview
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 10 ---
+Red Hat Ansible Automation Platform 
+Govern, execute, and scale your AIOps
+Reduce MTTR by connecting AI insights to automated action and 
+remediation
+Accelerate incident response
+Replace ad-hoc troubleshooting with pre-tested, repeatable playbooks 
+that execute the same proven ﬁx 
+Produce consistent automation
+AI recommends and executes automation within boundaries your team 
+deﬁnes, governed by RBAC, approval gates, and a complete audit trail
+Govern AI execution
+Remediate across domains 
+Execute automation across network, cloud, Linux, Windows, containers, 
+storage, and security from a single platform
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 11 ---
+Operating systems
+Cloud
+Virtualization
+Security
+Network
+200+ Certiﬁed Content Collections  |  80+ Certiﬁed technology partners  |  110+ Systems integrators and resellers
+Seamless integration with other mission-critical tools
+Build and operate essential workﬂows across the open hybrid cloud ecosystem
+AIOps
+11
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 12 ---
+Every workload you automate with AAP serves 3 critical roles 
+ 
+✓
+Documentation of approved process with 
+an auditable trail 
+✓
+Translation of operational SME into 
+reusable, testable, and human readable 
+code 
+✓
+Creation of a consistent, scalable and 
+reliable policy enforcement mechanism
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 13 ---
+In the AI era, agents will 
+need a “menu” of 
+approved actions. 
+Your automation library IS 
+that menu! 
+Your automation 
+library is also your 
+security boundary. 
+It should deﬁne what AI 
+is - and isn’t - allowed 
+to do. 
+Your automation library
+One security boundary, one audit trail, one source of truth
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 14 ---
+Infrastructure  |  Security  |  Networking  |  Cloud  |  Virtualization  |  ITSM  |  Applications  |  AI
+The more you automate, the better
+✓
+Efﬁciency 
+✓
+Resilience 
+✓
+Governance 
+✓
+Scale 
+All of your automation efforts today are going to pay off as you build for tomorrow
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 15 ---
+ServiceNow LEAP overview
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 16 ---
+ServiceNow LEAP 
+Now LLMs and RAG categorize incidents by pattern, discover 
+existing automation, and surface recommendations with conﬁdence 
+scores directly in the operator workﬂow
+Discover & match automation to incidents 
+AI to analyze historical incident datasets and generate automated 
+resolution steps
+Generate LEAP resolution with NowAssist
+Value dashboard tracks effectiveness and estimates savings, so teams 
+know where to expand coverage next
+Measure ROI from zero touch automation 
+Drive proactive problem management and AI 
+generated knowledge base articles
+Increase L1/L2 automation coverage, lower cost per ticket, and 
+improve consistency across shifts
+ 
+     Automation Discovery with AI  
+15% faster resolution
+11% MTTR reduction
+15% less employee time lost per incident
+*Suggested improvements are based on Forrester Total Economic Impact Report, customer references, or ServiceNow telemetry data
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 17 ---
+17
+       ServiceNow LEAP 
+ 
+     Incident deﬂection strategy with Knowledge base
+AI Specialist to auto create 
+knowledge base articles
+18.6% of tickets closed by higher-tier 
+support could have been resolved at Level 1 
+support specialist if proper KB articles had 
+been used.
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 18 ---
+18
+ServiceNow LEAP 
+Proactive problem management
+AI Specialist to auto create
+ problem records
+Proactive problem management with 
+AI shifts IT from “ﬁreﬁghting” to 
+foresight by using LLM to detect 
+patterns and resolve root causes 
+before they become incidents.
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 19 ---
+19
+ServiceNow LEAP with Red Hat Ansible
+Drive zero service outage strategy
+Active 
+playbooks
+Find relevant 
+playbooks
+MCP 
+server
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 20 ---
+Practical AIOps use case
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 21 ---
+Red Hat Ansible Automation Platform 
+Human interface
+The WebUI enables operators to 
+conﬁgure, launch, and monitor 
+automation through a role-based 
+interface.
+Application interface
+Token-based authentication 
+enables third-party tools and 
+services to securely integrate 
+with the platform using OAuth 2.
+Event interface
+An EDA plugin connects Ansible 
+to external event sources and 
+triggers automation when 
+deﬁned conditions are met.
+AI interface
+An MCP server enables AI 
+models to query Ansible 
+Automation Platform and launch 
+automation within deﬁned 
+boundaries.
+Interaction interfaces with Ansible Automation Platform
+    Web UI
+    API
+     EDA
+       MCP
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 22 ---
+How it works: Automation discovery with Red Hat Ansible
+AI agent to connect with 
+Ansible MCP to ﬁnd 
+Ansible playbooks
+AI detects automation 
+opportunities
+AI interface
+An MCP server enables AI 
+models to query Ansible 
+Automation Platform and launch 
+automation within deﬁned 
+boundaries.
+1
+Automation architect to connect 
+Ansible playbooks to automation 
+opportunities
+3
+Provides available 
+Ansible automation 
+to LEAP
+4
+       MCP
+2
+       MCP
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 23 ---
+23
+Applying the ﬁxes: Zero touch automation
+AI Agent ﬂows 
+recommend Ansible 
+automation
+AIOps: collect the event / 
+correlate and trigger 
+incident ﬂows
+Windows 
+Server
+Red Hat 
+Enterprise Linux
+Network 
+Device
+2
+Events/alerts 
+from monitoring
+Run automation on 
+IT infrastructure
+1
+3
+4
+Close alerts and 
+incidents
+5
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 24 ---
+DEMO
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 25 ---
+Value of ServiceNow LEAP and Red Hat Ansible
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 26 ---
+Value with Red Hat Ansible + ServiceNow LEAP
+Resolve faster: Eliminate redundant troubleshooting and escalations to cut 
+resolution times from hours to minutes
+Reuse what you already built: LEAP surfaces existing AAP automation at the 
+point of incident so teams stop reinventing ﬁxes
+Deliver consistent outcomes: Pre-tested playbooks produce the same result 
+every time, regardless of who triggers them
+Break down silos: Remove the visibility, skills, and trust barriers between 
+automation and service management teams
+Enforce governance at every step: Every action runs through RBAC, approval 
+workﬂows, and a full audit trail
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 27 ---
+Key takeaways
+Intelligence without execution is just a recommendation.
+ServiceNow LEAP ﬁnds the right automation. Red 
+Hat Ansible turns that recommendation into a 
+governed, auditable outcome.
+Stop reinventing what you’ve already automated. 
+ServiceNow LEAP discovers existing Ansible 
+playbooks and surfaces them directly in the 
+ServiceNow operator workﬂow. One click and no 
+expertise required.
+AI can connect teams, matching detected issues 
+to existing remediation content in real time for 
+both automation and service management teams.
+AIOps bridges the gap between automation and service 
+management teams.
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 28 ---
+Get started today
+>
+Solution guides: red.ht/aiops-solution-guides  
+  
+>
+AIOps overview: redhat.com/automation-aiops
+>
+Market research paper: red.ht/futurum_redhat_aiops
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 29 ---
+Q+A
+
+--- PDF: Summit BO1511 _ AIOps meets agentic automation_ ServiceNow and Red Hat transform IT operations _ Final 2026_1778185449516001dcIJ.pdf | Page: 30 ---
+linkedin.com/company/red-hat
+youtube.com/user/RedHatVideos
+facebook.com/redhatinc
+x.com/RedHat
+Thank you

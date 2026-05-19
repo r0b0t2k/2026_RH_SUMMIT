@@ -1,0 +1,712 @@
+# Session Source Bundle
+Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_12/redhat_lightspeed_roadmap
+
+## Session Datetime
+this talk took place on 2026-05-12 at 11:45AM - 12:25PM
+
+## PDF Text: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 1 ---
+Roadmap, Agentic Management, On-Prem 
+Connectivity, and Operational Intelligence at Scale
+The Future of Red Hat 
+Lightspeed
+Megan Meza
+Sr Manager, Product
+Rob Williams
+Sr Manager, Product
+1
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 2 ---
+What you’ll walk away with
+1.
+2.
+3.
+How I can integrate Red Hat Lightspeed into my existing 
+tools and workﬂows. 
+Why Red Hat Lightspeed is critical in today’s IT 
+environment
+An understanding of how Red Hat Lightspeed will evolve 
+over the next year.
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 3 ---
+Red Hat Insights is now 
+Red Hat Lightspeed
+3
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 4 ---
+4
+Infrastructure complexity is outpacing human 
+manual management.
+The gap: Cloud-connected agility vs. 
+on-prem/disconnected security.
+Transitioning from "Alerting" to "Actionable 
+Intelligence".
+The Modern Operational Dilemma
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 5 ---
+5
+The Operational Intelligence Lifecycle
+▸
+Identify – Continuous scanning across RHEL, 
+OpenShift, and Ansible footprints.
+▸
+Prioritize – AI-driven risk assessment tailored to 
+your speciﬁc conﬁguration and metadata.
+▸
+Resolve – Automated remediation via Ansible 
+Playbooks or Red Hat Satellite.
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 6 ---
+6
+Introducing Red Hat Lightspeed
+Formerly Red Hat Insights
+Keep systems consistent 
+and up to date.
+Monitor and
+manage costs.
+Minimize 
+troubleshooting time.
+Identify security and 
+performance risks.
+This helps you decrease the complexity of system, security, and cost management across your entire enterprise—to help 
+you optimize your operations and allow you to focus on business-critical priorities.
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 7 ---
+7
+Capabilities of Red Hat Lightspeed  include
+Advisor
+Recommendations for misconﬁgurations and best 
+practices to improve stability, performance & availability
+Vulnerability
+Identiﬁes, prioritizes and reports on known security 
+Common Vulnerabilities and Exposures (CVEs)
+Cost Management
+Provides visibility into usage and cost trends across 
+hybrid cloud environments
+Patch
+Tracks applicable Red Hat errata across environments 
+including security, bug ﬁxes and enhancement advisories
+Images
+Simpliﬁes image customization via the creation of 
+blueprints and deployment across hybrid environments.
+Subscriptions
+Delivers visibility into Red Hat subscription status, usage 
+trends and utilization across your infrastructure
+Compliance
+Monitors compliance with security baselines to report on 
+and meet regulatory requirements at scale
+Malware Detection
+Scans for known malware using a curated signature 
+database developed with IBM X-Force
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 8 ---
+8
+Recent Deliverables
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 9 ---
+9
+Recent Deliverables
+Image Builder
+AI/ML Capabilities
+Integrations
+Remediations
+Advisor
+User Access
+●MCP for Image Builder
+●.iso and PXE boot targets
+●Compliance monitoring
+●Package recs for RHEL 9.6
+●Advisor recommendations for RHEL AI
+●Insights recommendations generator
+●Incident detection for OpenShift
+●RH Lightspeed Agent  for Google Cloud
+●Crowdstrike Malware Signatures
+●EDA, ServiceNow, Splunk
+●MCP - Dev Preview
+●API Cheatsheet
+●Streamlined onboarding
+●Dependency checks
+●Performance optimization & limits
+●UX redesigned for usability
+●Ext4 bugs, CIFS deadlock
+●NFS V3 perf, Intel ICE panics
+●Systemd boot failures
+●New streamlined RHEL service roles
+○
+RHEL administrator
+○
+RHEL operator
+○
+RHEL viewer
+●Workspaces
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 10 ---
+10
+Key Roadmap Themes
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 11 ---
+11
+Analytics meet you inside your 
+favorite chat assistant, using 
+your preferred models. 
+Agentic Management
+Red Hat continues to invest in 
+the ongoing security of our 
+products, readying them for 
+PQC and certiﬁcations.
+Enhanced Security
+Analytics and security tools 
+are embedded inside your on 
+premise management tools, 
+without data transfer to Red 
+Hat
+On Premise Management
+AI gives users in-app context 
+about a recommendation, 
+limiting time needed for 
+investigation 
+Augmented Context
+Red Hat Lightspeed Roadmap
+Four Key Themes for 2026+
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 12 ---
+Agentic Management
+12
+Moving Toward Autonomous Systems
+Red Hat Lightspeed hosted and on premise data  
+will be accessible through MCP servers.
+Agent skills will remove complexity and streamline 
+token usage.  
+Red Hat will consistently test and recommend 
+models for best experience.
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 13 ---
+Augmented Context
+13
+From Findings to Understanding
+Red Hat Lightspeed will use generative AI to 
+help users understand security related 
+context for Malware found on connected 
+hosts.
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 14 ---
+On Premise Management
+14
+Secure Analytics in Restricted Environments
+Increased analytic and security features will be 
+accessible within your ﬁrewall.  
+MCP access to Red Hat Lightspeed will work 
+seamlessly alongside  your Satellite and RHEL MCPs
+Security standards like PQC will be implemented and 
+ready for the most conservative use cases.
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 15 ---
+Enhanced Security Inside and Out
+15
+Red Hat remains enterprise ready with ISO 42001 Artiﬁcial 
+Intelligence Management System (AIMS) Certiﬁcation
+Post-Quantum Cryptography (PQC)  enablement for 
+hosted and on premise solutions becomes the new standard 
+for security excellence. 
+Expanded partnerships allow joint customer to maximise 
+their coverage and minimize their false positives.
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 16 ---
+Roadmap Details
+16
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 17 ---
+17
+Red Hat Lightspeed Roadmap - OpenShift
+Cost & usage efﬁciency scores
+Cost Red Hat Dev Hub plugin
+Rightsizing Recommendations (Namespace, GPU, 
+Java)
+Pen Drive General Availability
+Q2 2026
+Cost of MaaS and AI agents
+Cost Management for OpenStack
+Cost Management on Premise
+FOCUS Import/Export
+Advisor on Premise in ACM
+2027+
+H2 2026
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 18 ---
+On-Prem Cost Management for OpenShift
+18
+Capabilities:                                                                                                             
+･
+Cost & Usage Efﬁciency Scores                                                          
+･
+Rightsizing Recommendations (Namespace, 
+GPU, Java)                                                                                                 
+･
+FOCUS Import/Export - FinOps standard 
+compliance
+･
+Cost per Service Unit - Chargeback and 
+showback
+Resource Optimization Without Data Leaving Your Site
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 19 ---
+19
+Red Hat Lightspeed Roadmap - RHEL
+RH Lightspeed MCP expanded use cases                                                                                                                                                                                      
+✅Crowdstrike YARA rules for Malware 
+Q2 2026
+ 
+Satellite Compliance (GA) + MCP                                                       
+Enhanced RH Lightspeed + AAP workﬂows 
+RH Lightspeed MCP GA                                                                                                                                                                                                        
+ISO 42001 Certiﬁcation
+Agentic Skills  
+2027+
+H2 2026
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 20 ---
+20
+▸
+Key Beneﬁts:                                                                                                                               
+･
+ GA level support for production environments
+･
+  Compliance use cases                                                                         
+･
+  Planning use cases                                                                             
+                                                                                                                                       
+▸
+  Timeline: GA 2H 2026
+Secure Analytics in Restricted Environments
+MCP Server Enhancements
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 21 ---
+21
+▸
+Capabilities:                                                                                                                               
+･
+  Advisor (GA Q2 2026) - On-premise recommendations                                                                
+･
+  Vulnerability (GA Q2 2026) - CVE analysis                                                                                            
+･
+  Compliance (GA 1H 2027) - Security compliance checks
+･
+  MCP Integration (2H 2027) - Full ofﬂine capabilities
+Bringing Red Hat Lightspeed On-Premise
+Red Hat Satellite Integration
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 22 ---
+Key takeaways
+1.
+2.
+3.
+Red Hat Lightspeed is committed to “Meeting me where I am”
+Red Hat Insights is now Red Hat Lightspeed and is critical 
+to solving today’s operational challenges. 
+Red Hat Lightspeed roadmap is expanding across RHEL 
+and OpenShift 
+Copy slide into your Summit session deck
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 23 ---
+The Red Hat Lightspeed team 
+wants to hear from you!
+We’re looking for Red Hat customers to share their feedback on future functionality and roadmap for Red Hat Lightspeed.
+No sales pitches - just your feedback. 
+User Research Panel
+●
+Participate in interviews, usability 
+tests and more
+●
+Your feedback helps inﬂuence the 
+future of Red Hat Products
+How it works:
+●
+Periodic emails inviting you to 
+participate in research that meets 
+your interests and expertise
+●
+If accepted to a study, 
+compensation for your time.
+Customer Demo Series
+●
+Provide input on features critical to 
+your organization
+●
+Have direct communication with 
+Product Managers
+●
+Open to direct customers & 
+partners; ideally RHEL Admins, 
+SecOps, and ITDM.
+How it works:
+●
+Meets virtually every 2 weeks for 
+3-4 months
+●
+Receive SWAG
+Scan the QR code or go to: 
+red.ht/userfeedback
+
+--- PDF: The Future of Red Hat Lightspeed - Summit 2026 v2_1778596734065001jyKs.pdf | Page: 24 ---
+linkedin.com/company/red-hat
+youtube.com/user/RedHatVideos
+facebook.com/redhatinc
+x.com/RedHat
+Thank you
+
+## PDF Text: redhat_lightspeed_roadmap.pdf
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 1 ---
+Note
+Tue, May 12, 2026 10:46AM
+27:20
+SUMMARY KEYWORDS
+Red Hat Light Speed, agentic management, on-prem connectivity, operational intelligence,
+Red Hat Insights, AI leverage, system administrator, talent count, automation tools,
+vulnerability management, compliance capabilities, cost management, on-prem solutions, AI workflows,
+CrowdStrike partnership.
+SPEAKERS
+Speaker 4, Speaker 2, Speaker 3, Speaker 5, Speaker 1, Speaker 6
+Speaker 1 00:00
+Hey
+Speaker 2 00:04
+everyone. My name is Megan Tobin. Well, I'm on the product team for Red Hat light speed as
+well. Thanks for being here.
+S
+S
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 2 ---
+Speaker 3 00:10
+All right, so over the next 30 minutes to do we will leave about 10 minutes again for question
+answers, if you have any. But we're gonna give you an overview next year where light speed is
+today, and also kind of drill into three themes that we have today, which is agentic
+management on prem connectivity and operational intelligence at scale that you'll see layered
+in throughout this before we get started. Is anybody going to write out I speed user today? How
+many of you are finding out about this for the first time? Okay, how many of you have known
+but just haven't been able to adopt it? So the first thing I just want to highlight, just so that we
+can get through a little bit confusion, is you may have heard of Red Hat Insights. Red Hat
+Insights is now we're going to have landscape as of this year. We did go through a rebrand, and
+really the purpose of this was to align our product with the evolution. When we launched
+insights several years back, we were really focused on just that. We were focused on insights.
+We were focused on just giving you those findings and servicing those findings. And really as
+we're trying to evolve both our tooling as well as well as our management capabilities. We're
+trying to move from this shift of just showing it's also then moving towards, how do we give you
+operational intelligence? How do we give you AI leverage management to help you identify,
+prioritize and resolve just also avoid any additional confusion. You may also hear other terms of
+light speed throughout this conference, you may have heard of a REL, light speed, open shift
+light speed. These are AI agents and AI capabilities that are embedded within those products.
+Those are a different area. Those are a different product, compared to Red Hat light speed,
+where Red Hat light speed is focused on your fleet of your Red Hat footprint, whether that's
+REL, open shift or Ansible you
+S
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 3 ---
+Speaker 1 02:00
+as well.
+Speaker 3 02:03
+So Ben and I, when we talk to a lot of our customers these days, we really see a lot of the same
+things. There's this moderate operational dilemma, which we are trying to help build
+management tooling to help you navigate this is really that problem we're building for. We
+understand that today's environments are getting more complex. We understand that those
+footprints are getting larger, whether that's on prem, whether that's the cloud, hybrid cloud,
+right, the scale of which these solutions that you're doing are getting larger. They're getting
+faster, and they're really having to keep up with the needs of the business. But if you think
+about your seasoned system administrator and how much time you're spending on the
+business needs versus all the toil that your your organization is dealing with. This matches up
+to what the research is saying. Right? If you think of your seasoned system administrator,
+there's probably spending about 60% of the time on this toil, whether that's triaging, whether
+that's patching, whether that's keeping up and keeping the lights on, right, not really where we
+want them spending the time if we're trying to monetize services. We've also realized that
+these environments continue to explode. Like I said, that footprint is getting bigger, but so does
+that surface area for you to manage, for you to keep secure, you keep on, keep reliable. And
+what we're also finding is there's a talent count, right? 90% of businesses are saying that they
+are not able to keep up with where they want their business to be going because of purely a
+talent count, whether that's the talent of the infrastructure that they're having to manage,
+whether that's just purely personnel, right? And while budgets are shrinking, you saw that
+mentioned in today's keynote, it's not able to necessarily keep up with it, right? So we're
+getting to a point where we can't just throw more humans at this. We haven't been able to for a
+while, right? We're really focused on trying to keep those lights on. We need to put
+management, we need to put automation, we need to put tools. And so this is where we are
+trying to pivot from moving just from tools that are telling you what's wrong. Really, help you
+put this into action. Help you act on it. Move on it and get going faster. And really what you'll
+see throughout this, this whole roadmap, is this operational lifecycle that we build our tooling
+and our solution for, really around these three, these three stages, which is, identify, privatize.
+When we're trying to build these, we're looking at it both in the individual runs as you might
+have a need specifically through that, whether that's the scope of your team. Might be working
+with multiple different teams to manage that, but light speed here is trying to help you
+minimize the time that takes you to go along that cycle. And so if you want to think about this
+as an additional digital senior architect on your team that can help you identify, prioritize and
+resolve, take it as an extra set of hands and just run has expertise on that in prioritization. This
+isn't necessarily what's wrong, right. You might already have a large landscape where you can't
+just identify that. You have 130 new CDs, right? Especially with AI at the in the hands of some
+of these attackers, the amount of great CDs that we're going to be seeing is going to be going
+up pretty astronomically, right? So we can't just know. Here's the problems in that landscape.
+We need to help you prioritize this right vulnerability again, all because I have a CD in my
+environment. When I put that at scale, it's going to be hard to act on, right? I need to be able to
+focus on where is the biggest threat. Where do I need to spend my time, my resources, first? I
+need to get to those other things later. But where should my focus be? Right? All because I
+have a package on the system doesn't mean it's the most vulnerable. That package might not
+S
+S
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 4 ---
+be being used. The system might not be exposed out to the internet. There might not be a
+known exploit, right? All these things can help you identify when you have tooling in place,
+where do I need to focus on first and then ultimately, that resolved, right? Once that CD is out
+in public, we know that we have clocks ticking. Oh, that's our own security teams with the SLAs
+for us to go and address critical or highs, or whether that's time for those attackers to start to
+put it on the next slide, right? So what you'll see is Megan covers our roadmap. A little bit
+further in depth is all these are going to tie to those themes that are going to be crucial to
+making you be able to get through that life cycle. And so this is where Red Hat light speed,
+formerly known as Red Hat Insights, comes into play, right? This is how our solution help you
+identify, resolve and address those life cycles across your Red Hat program, as I mentioned,
+Route, open chip, Ansible, there's various set of tools that are available to you today, and what
+you're going to find is these themes are focusing on these core values and these pillars that we
+have, right? It's going to be consistency, security, troubleshooting or cost, right? These are the
+pain points that when we talk to our customers, who continue to hear whether they're not able
+to keep up with it or they're spending too much time on it today. And really one of the
+differentiators of this is a lot of these solutions are powered by the intelligence that we have as
+Red Hat working with new customers, right? So these are data that's coming from cases or
+known problems, right? These are challenges that you all are running into, and we're trying to
+say, be right into this. Let's make it so that you're aware of this as well, right? All of this is
+included within your subscription. If you're already a rel user, if you're already an open ship
+user, it's available for you, right? A lot of this is just how you put these tools into actions. This is
+an extra thing that you need to buy. It's there. It's needed to make sure that build brand ad
+experience with our products is optimizing. Like I said, a lot of folks actually don't know that
+this is part of their subscription. Why I want to hone in on that point. And there's a whole list
+here of what I'll consider tools or services that are available you don't need to use them often,
+right? Sometimes we find there's a specific tool or specific need that helps makes your life
+easier, right? All of these are available for you to use, onboard, back, etc, whether that's
+vulnerability management, addressing, prioritizing, CDEs, whether that's advisor, which is
+looking at the Red Hat support case data to find misconfigurations within the environment,
+compliance keep up with regulatory compliance and those needs as they continue to evolve. Or
+cost management. How do you track costs, especially as it starts to deploy at scale? All this is
+available to you within our hybrid cloud, console or console, but also, as of last year, we do
+have a on prem solution via satellite. As we know, some customers are not able to adopt SaaS.
+Want to keep things in their environment, whether that's disconnected, whether that's due to
+regulatory whether that's due to geographical nature. You're trying to make sure that you have
+the intelligence from Vice speakers in the solutions. So before we dive a little bit deeper into
+where we're going, I just want to highlight a few things specifically that we released over this
+past year that may be of interest. Here. We have an image developer service that you probably
+saw on that previous slide that's really helping you build a footprint for you be able to deploy
+relevant faster cloud. We understand that compliance needs continue to grow, so we've
+brought a lot of those compliance capabilities into inflows that you from the beginning, can
+start to track and make sure that that aligns to that regulatory AI ML is a pretty popular topic
+right now, as customers are starting to adopt AI workflows, and we've released an MCP
+capability that you can see actually on the Jacob Hall as well as we have a few labs that are
+received to get hands on. So now you can start to build that into your AI workflows. Or if you're
+adopting agents, give agents access to this tool. We also understand that customers don't
+necessarily want to adopt yet another tool, right? Sometimes that can be a pretty burden, a
+pretty large burden to adopt. Sometimes that can also be a pain to get through your security
+approvals. So you might already be using things like ServiceNow, we're continuing this theme
+of, how do we get data out of all our tooling into your workflows so you can actually go and
+operational etc? One remediations, as I mentioned that those core pillars, one of those is act.
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 5 ---
+We have a whole capability that's focused on, how do we make it easy for you to go and
+actually put these into action, whether that's through cancel automation platform, satellite, we
+understand sometimes navigating these can be a challenge, and we spend a lot of time
+building the tooling to make it easy for you to get going and act on these. And the last area
+here is workspaces, right? Especially as you start to use an end to next scale, you have a lot of
+systems organizing those systems can be kind of done. So how do we make sure that you have
+the controls, whether that's organizational buckets, whether that's our back, so that your team
+can really focus on the areas that they need to be focusing on so they get accurate results in
+those areas. I'll pass it over.
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 6 ---
+Speaker 2 11:08
+All right. Thanks, Rob. All right. Let's talk a little bit about the themes that we are going to
+address over the next few years. So we'll be talking over 2026, 2027 really core, four core
+things, agentic management. We're moving from a world where you are piecemealing your
+response to you're really conversationally crafting the response to incidents and efficiency
+gains augmented context. So not only are we allowing you to interact with our tools via AI, but
+we also want to help you within the tools themselves, get more context about an issue that we
+found or security vulnerability that we found. On Premise management will continue to be a
+huge theme for us. We were here last year at Summit. We talked about our first iteration of
+insights going on premise with advisor. You'll see here in a minute, we have a full roadmap of
+more tools going on premise and then finally, enhanced security. We know that the world is
+ever changing. Our products are changing with it, both on the inside as well as the products
+that we offer to you. So let's start with the theme of agentic management. Just quick poll of the
+room. I'm curious how many of you are using MCPE or something like that to connect, even if
+it's not to write out those connect to tools to help sort of fuel your operations today. How many
+of you are starting to use AI for businesses, just for basic efficiency, helping you write Word
+documents, helping you write emails, that sort of thing. How many of you are avoiding AI like
+the plague? I feel like that. Answer me. I probably would have got a few more hands last year.
+So that's good. We want to meet you where you are when it comes to AI. We know that the
+world is changing. We know that you may not, in the future, be coming to console or to satellite
+when you start to navigate your problems. You may be going to Gemini, you may be going to
+cloud code. And so it's important for us that we make the valuable data that we have in Red
+Hat light speed available to you via MCP servers. So we will continue to invest in that, not only
+if you're using our hosted solutions, but if you're using our on premise solutions via satellite,
+S
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 7 ---
+you'll also be able to get information from our MCP servers. Agent skills will help remove
+complexity and streamline token usage. So right now, if you go just a very basic MCP server,
+you really just wrap the API. But what if the model is not using that API in the most efficient
+way? That is where you get tons of token usage start to run up your bills. Skills are going to
+help your models use our tools in the most efficient way. That not only means that you will be
+using the right tool for the job, but that you will be downgrading that token usage and hopefully
+some of those bills. And then finally, we at Rednet are committed to testing and sort of
+recommending which models to use with our different tools. What we hear from our customers
+time and time again is that they want our advice on these types of things. This is a new world
+for all of us. As you saw on the keynote today, Red Hat has jumped both feet into this pool.
+We've done a ton of this investigation internally, and so we will continue to advise and sort of
+test these models with our solutions to make sure they're working efficiently, and tell you which
+ones we think you should use augmented context. So I mentioned a little bit earlier about how
+we want to use AI within the product itself. One important example here is that Red Hat lights
+youth is using generative AI. This is coming out in the next couple of weeks when you get a
+malware hit, chances are you are not a malware expert. How can we use AI? And we will be
+using AI to give you more information about that malware. What is it? Where did it come from?
+How much is it being exploited? How much do you need to worry about this. We know that the
+vast majority of our customers are system administrators, but they're getting very security,
+security oriented results from us or our vulnerability and our malware services. How can we
+help you understand those and understand the criticality of them a bit better? We'll be using AI
+to help us do that. Another huge theme, as I mentioned, is on premise management. We will be
+increasing the analytics and security features that are going into our on premise tools, both on
+the REL side and the OpenShift side. I'm curious how many of you are rel admins in this room,
+or rel focused in this room? How many of you are OpenShift focused? I think I would have got a
+different answer last different answer. Last year, too good to know. So on the REL side, we have
+really focused on satellite. If you want to use our services on premises, you already have a
+premium trailer in which to do it. On the open chip side, we'll be introducing our on premise
+services via ACM, so your ACM user is going to work stronger, better, faster within that tool.
+Again, we want MCP access to work seamlessly alongside those tools. So today, we have MCP
+server for our hosted Red Hat light speed services. We're going to expand that to work on
+premise as well, and then specifically, really all over the business we were tackling. PQC, we're
+doing a ton of this, if you sat in a satellite session over the next six months within satellite
+specifically, but we understand that our on premise users are some of our most conservative
+users, and we have a dedication to making sure that's safe and secure. This rolls mostly into
+my next slide. So any given security inside and out, we'll be pursuing some certifications that
+will hopefully help our customers scoop ill at night. So the ISO 42,001 artificial intelligence
+system management certification, this is just a nod that we know that your compliance
+standards are going to change. We want to keep up with them. We're going to be doing a ton of
+investment in post quantum cryptology, cryptographic sorry, over the next year, both are
+hosted and on solutions. We'll be doing all of the things under the covers so that we are PQC
+ready. And then this screenshot that I have here is actually showing a partnership that we have
+with CrowdStrike, so released just last week or the week before. If you're a CrowdStrike
+customer and you're a Red Hat Lightspeed vulnerability users, you can see those results
+alongside each other. What we hear again and again from our customers is that I'm getting a
+ton of alerts I come to Red Hat light speed to help me understand, is this really impacting my
+host, or do I have something closed that makes me not run? Awarded this so soon, you'll be
+able to see CrowdStrike malware hits right alongside your IBM exports malware hits. We're
+going to continue to work with partnerships like this, where we know we had a ton of crossover
+in our customers. Okay, so those were the themes of the roadmap. Let's take these sort of let's
+double click on some of these, look at them on a timeline and dig into some of them. So we sort
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 8 ---
+of split up this conversation in terms of Red Hat OpenShift and Red Hat. Red Hat, Enterprise
+Linux for our OpenShift customers, this one's for you. Tons of focus on our cost management
+tool. Anybody here using our cost management tool and OpenShift, what we hear from our
+customers is that, you know, things have changed. I no longer have a centralized IT department
+that controls all the costs for my business. These are my application teams. Each of my project
+teams are sort of racking up their own bills. I need a way to charge back, look back on those
+costs, and that's what our cost management solution is doing. So in cost management, we will
+be doing efficiency scores. They'll do a plugin within Red Hat developer hub that will show your
+developers who are making some of those pod level allocations. It will show them what type of
+cost decisions they're making so that they can be more responsible upfront. We also have
+something that we're referring to as pen drive. So pin drive is for our telco customers who are
+truly disconnected. They're working on far away cell phone towers. Getting diagnostics out of
+those tools is incredibly important to them. So working on that, I'm going to double click on a
+little these specifically cost management so on prem cost management for OpenShift. This will
+be coming on prem. Until now, you have had to sort of send your data to our hosted solution for
+us to process that data. We will be doing a self managed or an on prem solution. This is sort of
+launching this summer. You will be able to control your costs, view your costs, view your
+resource organizations without sending any data. This will also have integration into ACM, so
+down the road, you'll be able to use this type of information alongside things in ACM, like
+policies and quotas to help sort of mirror all of those concepts together. We'll also be doing
+focus import and export, which is a finops standard for compliance, so getting data out of the
+system in a way that works for your business, and then obviously charge back and show back
+at the service unit level. Okay, let's talk a little bit about the REL roadmap for Red Hat light
+speed. We're hat light speed. Red Hat light speed. Expanded use cases, as we talked about,
+agentic management will continue to be a huge area of focus for us. We just released the
+CrowdStrike rules so you can now see CrowdStrike VR recommendations for malware alongside
+our IBM exports recommendations in the second half, our NCP server will go into GA. This
+brings you all the good things of GA. We'll talk about that a little bit. And compliance in early 27
+will be coming into satellite. So for my satellite users in the room, you will now get the benefits
+of Red Hat light speed compliance within satellite in an offline mode or connected mode, if you
+prefer so. Let's double click on a couple of these MCP server enhancements. The big news here
+is that you will get GA level supportability on these we are now saying that this is ready for
+your production environments. We launched this in fall of last year under developer preview,
+sort of just gaging our customers interest in it, but we are now fully staffed, fully supportable.
+We are also adding when it comes to use cases, we're adding the compliance use case. So let's
+say that we're in the chat with Jim and I understand all of the servers that are in and out of
+compliance with the different business risk is you can now have that all in a conversation with
+Gemini or chat GPT or whatever your model of choice is a client of choices by using our MCP,
+we'll also be adding our planning use case. So this is the our Red Hat light speed planning tool
+is what tells you which of your packages are in and out of support. So you'll be able to have all
+those conversations through your favorite AI experience as well. All right, Red Hat Satellite
+integration, again, we talked a ton about insights on
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 9 ---
+
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 10 ---
+
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 11 ---
+Speaker 4 23:00
+premise.
+Speaker 2 23:03
+Or ran at light speed on premise, sorry, through satellite advisory GA in around this time last
+year, vulnerability is going GA right now. We just released satellite 619, compliance will be into
+availability this time next year, and NCP integration will be into GA this time next year as well.
+So we will be not only will we add in compliance, but we will continue to sort of go down the
+roadmap and add more and more of our app LT capabilities into satellite. So the main thing
+that we want to take away from this session here, we know that you have very complex
+operational dilemmas that you're dealing with. Your world is getting much bigger. It's getting
+much more diverse. You have assets in cloud. You have assets on prem, Red Hat. Lightspeed is
+here to reduce the complexity of those things help you prioritize the thing out of there. And Red
+Hat Lightspeed is really committed to meeting you where you are. If you want a conversational
+experience through an AI tool like Gemini or any of your other ones, we've got MCP servers
+value if you are married to satellite or ACM and really want to experience Red Hat through
+there. We are coming to those tools to meet you where you are. And we also have tons of
+integrations with Quantum Service now, and teams and all these other things as well. And then
+finally, Red Hat, right speed loaded now is expanding across rel and OpenShift. So whether
+you're a rel user and OpenShift user. We have tons of stuff coming this year that it's going to
+be great value. Okay, last thing I want to talk about, every year, we invite folks in our room to
+join us for feedback. We would love for you to be in what we refer to as our Demo Series, or
+part of our user research panel, we maintain a group of maybe, I think, 10 or 12 customers
+whenever we're developing something. These are the customers who here. At first, they tell us
+if it's a dud or if it's something that we like. So this is a way to really shape the roadmap of Red
+Hat Insights. If you're interested, we would absolutely love to have you, no matter if you're a
+ground user or internship user, or if you're looking for just a very quick bit of feedback, you can
+also be on our user research panel, which is a little bit more short. I'll leave this up here, but I'll
+go ahead and open up the open up the stage for questions. Stage for
+S
+S
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 12 ---
+Speaker 5 25:46
+questions. Any questions? Yes, please. The MCP stuff on the second half of the year, the light, I
+guess, the question I had, and I'm trying to remember now the hosting of it. Is it, where? How,
+where will that MCP server live? And how do I get connected to it? I guess so. That's
+Speaker 2 26:03
+a container that you will download and run on your laptop or your own environment. We do not
+have a hosted NCP server that we host for you to connect
+Speaker 5 26:13
+to. Okay, but how does it get then, how does it get back to the light speed the light speed
+insights? Basically, you'll enter
+Speaker 2 26:18
+your credentials via a service account, and that will access one side inside, so as long as that
+server or laptop or whatever has a public internet
+S
+S
+S
+S
+
+--- PDF: redhat_lightspeed_roadmap.pdf | Page: 13 ---
+Speaker 5 26:33
+connection, and I guess my existing OpenShift deployments, like Azure Red Hat OpenShift or
+Rosa. Those are already providing the telemetry to insights today. So then, I guess once this
+happens, then I can do all of that. Yeah, this is really just
+Speaker 1 26:51
+about
+Speaker 2 26:51
+taking that data, that Red Hat Insights we already has, and making it available to you through a
+different interface. So you don't want to come to the portal, you don't want to use it for other
+integrations, you can use the chatting experience. Yes,
+Speaker 6 27:07
+please. Is there a way to I'm not sure if it's so. Problem is I need to, I guess.
+S
+S
+S
+S

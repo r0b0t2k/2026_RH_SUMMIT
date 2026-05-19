@@ -1,0 +1,5 @@
+For this talk I attended it at the DevZone theater but was unable to record a transcript. I will let AI try to fill in the summary of this talk.
+
+This talk was based on the following gitrepo https://github.com/log-analyzer/logan
+
+It is my understanding from what i remember from the talk is it uses highlytrained small models to template out logs and only retrieve what matters. Feel free to use the repo README.md and any other documentation to help with a summary here.
