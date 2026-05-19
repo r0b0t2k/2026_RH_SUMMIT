@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-12, 11:45 AM - 12:25 PM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_12/redhat_lightspeed_roadmap
+- Source Archive Ref: 2026_12/redhat_lightspeed_roadmap
 
 ## Overview
 This session presents Red Hat Lightspeed as the evolution of Red Hat Insights from a mostly diagnostic toolset into a broader operational-intelligence platform. The speakers frame the problem as one of scale: infrastructure complexity is rising faster than humans can investigate alerts, prioritize action, and safely remediate issues by hand.

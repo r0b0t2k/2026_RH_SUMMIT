@@ -1,5 +1,5 @@
 # Session Source Bundle
-Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_14/building_production_ready_ai_agents_for_enterprise_IT_automation_with_RHOAI
+Source archive ref: 2026_14/building_production_ready_ai_agents_for_enterprise_IT_automation_with_RHOAI
 
 ## Session Datetime
 this talk occured on 2026-05-14 at 11:00AM - 11:40AM

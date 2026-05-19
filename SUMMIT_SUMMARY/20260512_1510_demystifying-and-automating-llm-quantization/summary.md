@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-12, 3:10 PM - 3:30 PM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_12/Demystifying_automating_LLM_quantization
+- Source Archive Ref: 2026_12/Demystifying_automating_LLM_quantization
 - Disclaimer: This summary is an estimation based on the slide deck and session notes because the attendee did not physically attend this session.
 
 ## Overview

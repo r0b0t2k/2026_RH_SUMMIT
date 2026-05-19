@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-13, 2:20 PM - 2:50 PM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_13/AIOps_meets_agentic_automation_servicenow_and_redhat
+- Source Archive Ref: 2026_13/AIOps_meets_agentic_automation_servicenow_and_redhat
 
 ## Overview
 This session is a joint Red Hat and ServiceNow story about closing the gap between AI-driven incident discovery and governed remediation. The repeated message from both sides is that many organizations already have monitoring, service management, and automation platforms, but those systems remain organizationally and operationally disconnected.

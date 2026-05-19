@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-12, 3:30 PM - 3:50 PM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_12/chain_of_trust_hidden_system_behind_validated_and_benchmarked_ai_models
+- Source Archive Ref: 2026_12/chain_of_trust_hidden_system_behind_validated_and_benchmarked_ai_models
 
 ## Overview
 This session explains the model-validation pipeline Red Hat is building to turn fast-moving upstream models into deployable enterprise assets. The core problem is simple: there are now millions of open models available, but enterprises still need defensible answers on hardware fit, performance, cost, and supply-chain integrity before they can move a model into production.

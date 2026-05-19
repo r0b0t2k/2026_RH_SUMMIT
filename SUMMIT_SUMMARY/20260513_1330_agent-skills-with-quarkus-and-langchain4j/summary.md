@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-13, 1:30 PM - 1:50 PM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_13/agent_skills_with_quarkus_and_langchain4j_module
+- Source Archive Ref: 2026_13/agent_skills_with_quarkus_and_langchain4j_module
 
 ## Overview
 This talk uses the newly emerging skills pattern to address a very practical LLM problem: context overload. Instead of trying to fix unreliable outputs by endlessly expanding prompts, the speaker argues for packaging reusable, domain-specific instructions as skills that can be discovered, activated, and executed only when relevant.

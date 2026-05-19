@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-11, 4:15 PM - 4:30 PM
 - Session Type: Community Day Session
-- Source Folder: otter_summaries/2026_11/benching_AImodels_GuideLLM
+- Source Archive Ref: 2026_11/benching_AImodels_GuideLLM
 
 ## Overview
 This session presents GuideLLM as a practical benchmarking tool for local model-serving performance, focused on system-level metrics such as time-to-first-token, inter-token latency, and throughput. The speaker positions benchmarking as a recurring operational activity across model selection, capacity planning, and regression analysis, not a one-time launch task.

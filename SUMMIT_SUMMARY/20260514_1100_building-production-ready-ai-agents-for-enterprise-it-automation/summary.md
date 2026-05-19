@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-14, 11:00 AM - 11:40 AM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_14/building_production_ready_ai_agents_for_enterprise_IT_automation_with_RHOAI
+- Source Archive Ref: 2026_14/building_production_ready_ai_agents_for_enterprise_IT_automation_with_RHOAI
 
 ## Overview
 This talk uses Red Hat AI Quick Starts to show how teams can move from a business use case to a deployable agent architecture without pretending that a demo is already production. That distinction is central to the presentation: a Quick Start is meant to show the art of the possible and provide reusable components, but it is not a finished product and it is not a substitute for a customer's own production requirements.

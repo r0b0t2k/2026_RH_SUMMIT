@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-14, 9:45 AM - 10:25 AM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_14/autorag_automl
+- Source Archive Ref: 2026_14/autorag_automl
 - Context Note: This summary reflects the talk the attendee actually chose at this time slot, which was the AutoRAG session rather than the originally scheduled MCP talk associated with this source folder.
 
 ## Overview

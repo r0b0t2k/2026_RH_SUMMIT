@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-12, 2:00 PM - 2:20 PM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_12/logs_to_logic_agentic_ai_transforms_RCA_logAN_lunino
+- Source Archive Ref: 2026_12/logs_to_logic_agentic_ai_transforms_RCA_logAN_lunino
 - Source Quality Note: No local transcript or slide deck was captured for this session. This summary combines the attendee's recollection with the LogAn project documentation referenced in the session notes.
 
 ## Overview

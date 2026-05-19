@@ -48,6 +48,18 @@ def normalize_for_matching(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", value.lower()).strip("_")
 
 
+def source_archive_ref(talk_dir: Path) -> str:
+    parts = list(talk_dir.parts)
+
+    if "otter_summaries" in parts:
+        anchor = parts.index("otter_summaries") + 1
+        relative_parts = parts[anchor:]
+        if relative_parts:
+            return "/".join(relative_parts)
+
+    return talk_dir.name
+
+
 def is_transcript_like_pdf(pdf_path: Path, talk_dir: Path) -> bool:
     normalized_stem = normalize_for_matching(pdf_path.stem)
     normalized_talk_name = normalize_for_matching(talk_dir.name)
@@ -181,7 +193,7 @@ def build_bundle(talk_dir: Path, output_dir: Path) -> None:
     bundle_parts: list[str] = []
 
     bundle_parts.append("# Session Source Bundle")
-    bundle_parts.append(f"Source directory: {talk_dir}")
+    bundle_parts.append(f"Source archive ref: {source_archive_ref(talk_dir)}")
     bundle_parts.append("")
 
     if datetime_file.exists():

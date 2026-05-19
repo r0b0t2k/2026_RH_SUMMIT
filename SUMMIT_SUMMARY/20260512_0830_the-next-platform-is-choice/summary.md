@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-12, 8:30 AM - 10:00 AM
 - Session Type: Keynote
-- Source Folder: otter_summaries/2026_12/RH_SUMMIT_DAY2_KEYNOTE_1
+- Source Archive Ref: 2026_12/RH_SUMMIT_DAY2_KEYNOTE_1
 - YouTube: https://www.youtube.com/watch?v=PgMSUGL4N5o
 
 ## Overview

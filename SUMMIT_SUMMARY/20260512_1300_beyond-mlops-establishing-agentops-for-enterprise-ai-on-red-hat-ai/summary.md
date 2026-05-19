@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-12, 1:00 PM - 1:40 PM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_12/Beyond_MLOps_agentOps_for_enterpriseAI_RHOAI
+- Source Archive Ref: 2026_12/Beyond_MLOps_agentOps_for_enterpriseAI_RHOAI
 
 ## Overview
 This talk argues that the operational problem for enterprise AI has shifted. MLOps is still necessary for models, but once organizations move from chatbots to autonomous or semi-autonomous agents, the real challenge becomes AgentOps: securing, tracing, evaluating, and governing systems that can make decisions and take actions across production infrastructure.

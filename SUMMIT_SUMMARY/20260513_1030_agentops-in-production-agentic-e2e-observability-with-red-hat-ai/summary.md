@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-13, 10:30 AM - 12:00 PM
 - Session Type: Lab
-- Source Folder: otter_summaries/2026_13/agentops_in_prod_agentic_e2e_observability_with_RHOAI
+- Source Archive Ref: 2026_13/agentops_in_prod_agentic_e2e_observability_with_RHOAI
 
 ## Overview
 This lab focuses on one of the least glamorous but most important parts of enterprise agentic systems: making them observable enough to debug, evaluate, and trust in production. Instead of treating multi-agent behavior as a black box, the session shows how Red Hat AI can combine metrics, traces, and evaluations so teams can inspect what happened, why it happened, and whether the output quality is holding over time.

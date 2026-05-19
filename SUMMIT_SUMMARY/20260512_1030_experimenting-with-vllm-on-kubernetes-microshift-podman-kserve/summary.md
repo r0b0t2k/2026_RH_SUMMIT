@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-12, 10:30 AM - 10:50 AM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_12/experiment_vLLM_kube_microshift_podman
+- Source Archive Ref: 2026_12/experiment_vLLM_kube_microshift_podman
 
 ## Overview
 This talk shows how to build a realistic local inference stack for LLM experimentation without jumping straight to a GPU-heavy cluster. The presenter positions MicroShift, Podman Desktop, KServe, and vLLM as a practical bridge between laptop prototyping and production-grade Red Hat OpenShift AI deployments.

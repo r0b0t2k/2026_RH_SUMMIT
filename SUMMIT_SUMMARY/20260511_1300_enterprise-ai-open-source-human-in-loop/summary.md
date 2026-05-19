@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-11, 1:00 PM - 2:00 PM
 - Session Type: Community Day Session
-- Source Folder: otter_summaries/2026_11/enterpriseAI_OS_HumanInLoop
+- Source Archive Ref: 2026_11/enterpriseAI_OS_HumanInLoop
 
 ## Overview
 This session argues that open source is becoming foundational to enterprise AI in the same way it previously became foundational to Linux and Kubernetes adoption. Speakers from Red Hat frame the current AI era as an ecosystem problem, not just a model-quality competition, and emphasize that open standards, transparent development, and multi-party governance will determine long-term enterprise outcomes.

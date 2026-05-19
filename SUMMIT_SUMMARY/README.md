@@ -1,11 +1,11 @@
 # Red Hat Summit 2026 - Session Summaries
 
-<p><img src="../otter_summaries/me_summit_2026.jpg" alt="Red Hat Summit 2026" width="280"></p>
+<p><img src="assets/me_summit_2026.jpg" alt="Red Hat Summit 2026" width="280"></p>
 
 This folder contains cleaned, structured summaries generated from transcript exports and optional PDF artifacts.
 
 - Timezone convention: EDT
-- Source root: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries
+- Source archive references: sanitized for portability
 - Current status: All currently captured Day 1 through Day 4 sessions, labs, and keynotes processed
 
 ## Timeline

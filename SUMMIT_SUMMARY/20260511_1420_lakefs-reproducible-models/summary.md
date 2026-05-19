@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-11, 2:20 PM - 2:40 PM
 - Session Type: Community Day Session
-- Source Folder: otter_summaries/2026_11/lakefs
+- Source Archive Ref: 2026_11/lakefs
 
 ## Overview
 This talk focuses on a reproducibility gap in enterprise ML systems: code and environment are often well tracked, but dataset state and lineage are not. The presenter argues that many compliance and debugging failures occur because teams cannot reconstruct the exact data state used to produce a model.

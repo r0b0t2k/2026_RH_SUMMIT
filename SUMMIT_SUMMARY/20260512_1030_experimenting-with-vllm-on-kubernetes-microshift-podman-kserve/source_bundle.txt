@@ -1,5 +1,5 @@
 # Session Source Bundle
-Source directory: /home/robot/gitrepos/2026_RH_SUMMIT/otter_summaries/2026_12/experiment_vLLM_kube_microshift_podman
+Source archive ref: 2026_12/experiment_vLLM_kube_microshift_podman
 
 ## Session Datetime
 This talk took place on 2026-05-12 10:30AM - 10:50AM

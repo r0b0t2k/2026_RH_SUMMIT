@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-11, 4:40 PM - 5:00 PM
 - Session Type: Community Day Session
-- Source Folder: otter_summaries/2026_11/guess_and_check_speculative_decoding_accelerates_inference
+- Source Archive Ref: 2026_11/guess_and_check_speculative_decoding_accelerates_inference
 
 ## Overview
 This session explains speculative decoding as a practical method to speed large language model inference by pairing a large verifier model with a smaller draft model. The draft proposes tokens quickly, and the verifier accepts/rejects them through a controlled sampling process. The central claim is that this method is lossless in output-quality distribution relative to standard decoding while improving latency and throughput.

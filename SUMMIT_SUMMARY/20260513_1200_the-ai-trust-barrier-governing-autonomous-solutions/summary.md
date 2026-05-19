@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-13, 12:00 PM
 - Session Type: Session
-- Source Folder: otter_summaries/2026_13/AI_Trust_barrier_how_enterprises_must_govern_autonomous_solutions
+- Source Archive Ref: 2026_13/AI_Trust_barrier_how_enterprises_must_govern_autonomous_solutions
 - Disclaimer: This summary is an estimation based on the slide deck and note file because the attendee did not physically attend this session and no transcript was available.
 
 ## Overview

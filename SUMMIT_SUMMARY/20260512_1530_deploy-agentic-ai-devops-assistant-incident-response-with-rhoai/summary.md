@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-12, 3:30 PM - 5:00 PM
 - Session Type: Lab
-- Source Folder: otter_summaries/2026_12/Deploy_agentic_AiDevOps_assistant_augmenting_incident_response_with_RHOAI
+- Source Archive Ref: 2026_12/Deploy_agentic_AiDevOps_assistant_augmenting_incident_response_with_RHOAI
 
 ## Overview
 This lab is a hands-on walkthrough of an agentic incident-response assistant built for real operations teams rather than a generic chatbot demo. The scenario centers on failed automation jobs, ticket creation, chat notifications, model-backed triage, and audit-ready incident handling. The user's note that they completed the lab in person matches the source material: the emphasis is on interactive workflows and operational tradeoffs, not just a presentation deck.

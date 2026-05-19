@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-13, 3:30 PM - 5:00 PM
 - Session Type: Lab
-- Source Folder: otter_summaries/2026_13/protecting_genai_apps_with_GAAS
+- Source Archive Ref: 2026_13/protecting_genai_apps_with_GAAS
 
 ## Overview
 This lab turns AI safety into something concrete and visible. Instead of discussing guardrails abstractly, participants work through a themed chatbot example and see how a loosely constrained assistant behaves before and after TrustyAI guardrails are added. The user's note captures the hands-on purpose well: the lab focused on constraining a peach-themed customer-service bot so it would stay on topic and behave within explicit boundaries.

@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-11, 3:40 PM - 4:00 PM
 - Session Type: Community Day Session
-- Source Folder: otter_summaries/2026_11/graphRAG_agentic_pipelines_on_RHOAI
+- Source Archive Ref: 2026_11/graphRAG_agentic_pipelines_on_RHOAI
 
 ## Overview
 This session argues that traditional flat-vector RAG is often insufficient for enterprise reasoning tasks that depend on relationships across systems, ownership, policy, and operational dependencies. The speaker proposes GraphRAG as a better retrieval strategy for complex enterprise data, especially when paired with multi-agent orchestration.

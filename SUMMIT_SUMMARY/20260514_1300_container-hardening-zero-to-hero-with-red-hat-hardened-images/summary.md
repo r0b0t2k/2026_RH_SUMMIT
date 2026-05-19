@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-14, 1:00 PM - 2:30 PM
 - Session Type: Lab
-- Source Folder: otter_summaries/2026_14/container_hardening_from_zero_to_hero_with_redhat_hardend_images
+- Source Archive Ref: 2026_14/container_hardening_from_zero_to_hero_with_redhat_hardend_images
 
 ## Overview
 This closing lab makes a direct argument for treating container base images as a major part of the software-security problem rather than as a passive dependency. The speakers position Red Hat Hardened Images as a way to reduce vulnerability-management toil by starting from minimal, hardened, verifiable images that are continuously rebuilt and quickly remediated when upstream fixes land.

@@ -3,6 +3,7 @@
 **Session**: LT3001 (DevZone)  
 **Date/Time**: May 12, 2026, 11:15 AM – 11:35 AM EDT  
 **Presenter**: William Caban, Sr Principal Product Manager, Red Hat AI  
+**Source Archive Ref**: 2026_12/eval_driven_development_AI_apps_that_dont_lie  
 **Format**: Live-coding demonstration with visual slides (37 images)
 
 ---

@@ -2,7 +2,7 @@
 
 - Date/Time (EDT): 2026-05-11, 2:40 PM - 3:00 PM
 - Session Type: Community Day Session
-- Source Folder: otter_summaries/2026_11/mitigating_AI_new_risk_frontier
+- Source Archive Ref: 2026_11/mitigating_AI_new_risk_frontier
 
 ## Overview
 This session separates two frequently conflated domains: AI security and AI safety. Speakers position AI security in the traditional confidentiality-integrity-availability framework, while treating AI safety as behavior alignment, harmful output reduction, and trustworthiness management. The central recommendation is to integrate both domains into existing enterprise security governance rather than launching separate, isolated AI-specific teams.
