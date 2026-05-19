@@ -55,3 +55,9 @@ The talk is especially strong because it does not pretend CVEs can be wished awa
 2. Minimal images help most when they are paired with fast remediation and strong provenance.
 3. SBOMs and verification data are becoming table stakes for enterprise container trust.
 4. The lab presents hardened images as a way to buy back engineering time, not just a way to shrink image size.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/container_hardening_transcript_p001_img01.jpeg)
+- ![Representative visual 2](img/container_hardening_transcript_p001_img02.jpeg)

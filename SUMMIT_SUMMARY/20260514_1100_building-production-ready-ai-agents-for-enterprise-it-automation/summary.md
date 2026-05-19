@@ -58,3 +58,11 @@ The featured example is an IT self-service laptop-refresh agent. That example is
 2. The most reusable asset is the architecture pattern, not the specific laptop-refresh workflow.
 3. Existing communication channels and systems of record should remain in the loop for enterprise agents.
 4. Prompt design, tool wiring, and observability are all part of production readiness, not later refinements.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai_p002_img01.jpeg)
+- ![Representative visual 2](img/building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai_p003_img01.jpeg)
+- ![Representative visual 3](img/building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai_p004_img01.jpeg)
+- ![Representative visual 4](img/building_production_ready_ai_agents_for_enterprise_it_automation_with_rhoai_p006_img01.jpeg)

@@ -56,3 +56,11 @@ The extracted introduction and the supporting `lemonade-stand-assistant` reposit
 2. Treating both users and LLMs as untrusted is a strong mental model for production GenAI apps.
 3. Layered controls work better than relying on one safety model to do everything.
 4. The lab's strongest value is experiential: participants can see guardrails change behavior rather than only hear about policy.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/PXL_20260513_134633186.jpg)
+- ![Representative visual 2](img/PXL_20260513_134703038.jpg)
+- ![Representative visual 3](img/PXL_20260513_134745263.jpg)
+- ![Representative visual 4](img/PXL_20260513_134745375.jpg)

@@ -58,3 +58,11 @@ The roadmap centers on four themes: agentic management, augmented context, on-pr
 2. Red Hat is explicitly designing AI and analytics features for disconnected and regulated environments.
 3. MCP and agentic workflows are becoming part of mainstream enterprise management rather than side experiments.
 4. The roadmap balances AI assistance with conservative security priorities such as auditability, on-prem deployment, and PQC readiness.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/redhat_lightspeed_roadmap_p002_img01.jpeg)
+- ![Representative visual 2](img/redhat_lightspeed_roadmap_p005_img01.jpeg)
+- ![Representative visual 3](img/redhat_lightspeed_roadmap_p006_img01.jpeg)
+- ![Representative visual 4](img/redhat_lightspeed_roadmap_p008_img01.jpeg)

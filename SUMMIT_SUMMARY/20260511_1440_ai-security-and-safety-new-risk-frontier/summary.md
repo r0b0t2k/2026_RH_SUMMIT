@@ -46,11 +46,6 @@ The talk emphasizes that safety issues often differ from software vulnerabilitie
 | NIST AI RMF (referenced contextually) | Risk management framework | Discussed in governance/risk mapping context |
 | AI BOM / Agent BOM | Governance artifact | Proposed for model/component provenance and traceability |
 
-## Extracted Visuals (From PDF)
-- ![Risk incident examples](img/AI_Safety_Security_-_Summit_2026-1_1778220869372001tWY8_p003_img01.jpeg)
-- ![Why AI security and safety matter](img/AI_Safety_Security_-_Summit_2026-1_1778220869372001tWY8_p004_img01.jpeg)
-- ![Security vs safety framing](img/AI_Safety_Security_-_Summit_2026-1_1778220869372001tWY8_p005_img01.jpeg)
-
 ## Notable Takeaways
 1. AI risk programs need both classic security engineering and safety engineering disciplines.
 2. Safety management is iterative and measurement-driven rather than purely patch-driven.

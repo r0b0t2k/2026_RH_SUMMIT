@@ -55,3 +55,9 @@ The emphasis is not on claiming that a laptop CPU suddenly becomes a production 
 2. vLLM's memory and batching optimizations become more meaningful as concurrency rises.
 3. KServe reduces friction when swapping models or moving from local to cluster deployments.
 4. Local validation on a production-shaped platform lowers the risk of later OpenShift AI rollouts.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/experimenting_with_vLLM_on_k8s_using_microshift_podman_kserve_p001_img01.jpeg)
+- ![Representative visual 2](img/experimenting_with_vLLM_on_k8s_using_microshift_podman_kserve_p001_img02.jpeg)

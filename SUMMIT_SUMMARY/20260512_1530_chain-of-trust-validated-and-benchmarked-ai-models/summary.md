@@ -55,3 +55,11 @@ The speakers position Red Hat AI Model Validation as that missing middle layer. 
 2. Benchmark numbers only matter when customers can reproduce the environment and methodology.
 3. Red Hat is treating performance, quality, and supply-chain assurance as one integrated pipeline.
 4. The roadmap points toward a future where validated models come with both deployment data and security posture data.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/chain_of_trust_hidden_system_behind_validated_and_benchmarked_ai_models_p002_img01.jpeg)
+- ![Representative visual 2](img/chain_of_trust_hidden_system_behind_validated_and_benchmarked_ai_models_p003_img01.jpeg)
+- ![Representative visual 3](img/chain_of_trust_hidden_system_behind_validated_and_benchmarked_ai_models_p004_img01.jpeg)
+- ![Representative visual 4](img/chain_of_trust_hidden_system_behind_validated_and_benchmarked_ai_models_p006_img01.jpeg)

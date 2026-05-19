@@ -56,3 +56,11 @@ The user's note captures the key emphasis correctly: MLflow is used for auditabl
 2. MLflow is doing more than experiment tracking here; it becomes a forensic record of agent behavior.
 3. Grafana matters because platform teams need agent metrics in the same operational language as the rest of the stack.
 4. Production AI quality failures are often evaluation problems, not only uptime problems.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/agentops_in_production_transcript_p002_img01.jpeg)
+- ![Representative visual 2](img/agentops_in_production_transcript_p003_img01.jpeg)
+- ![Representative visual 3](img/agentops_in_production_transcript_p004_img01.jpeg)
+- ![Representative visual 4](img/agentops_in_production_transcript_p005_img01.jpeg)

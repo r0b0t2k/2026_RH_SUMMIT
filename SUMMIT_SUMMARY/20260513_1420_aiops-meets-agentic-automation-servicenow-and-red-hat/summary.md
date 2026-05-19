@@ -56,3 +56,11 @@ The proposed bridge is a combination of ServiceNow LEAP and Red Hat Ansible Auto
 2. LEAP's value proposition is less about replacing engineers and more about finding where automation should pay off first.
 3. MCP becomes useful here because it helps AI systems discover approved playbooks rather than invent remediation from scratch.
 4. Human approvals remain an entirely valid part of an AIOps operating model.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations_p004_img01.jpeg)
+- ![Representative visual 2](img/AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations_p006_img01.jpeg)
+- ![Representative visual 3](img/AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations_p011_img01.jpeg)
+- ![Representative visual 4](img/AIOps_meets_agentic_automation_servicenow_redhat_transform_IT_operations_p001_img03.jpeg)

@@ -56,3 +56,11 @@ Instead of hand-tuning chunking strategies, embedding models, vector stores, and
 2. Leaderboards and explicit metrics make retrieval-system decisions easier to defend.
 3. AutoRAG is valuable because it systematizes experimentation, not because it removes engineering judgment entirely.
 4. The talk treats evaluation as part of the product, which is the right direction for enterprise RAG.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/autorag_automl_p003_img01.jpeg)
+- ![Representative visual 2](img/autorag_automl_p004_img01.jpeg)
+- ![Representative visual 3](img/autorag_automl_p005_img01.jpeg)
+- ![Representative visual 4](img/autorag_automl_p006_img01.jpeg)

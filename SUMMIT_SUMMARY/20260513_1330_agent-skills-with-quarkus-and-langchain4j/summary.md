@@ -54,3 +54,11 @@ Quarkus and LangChain4j are then presented as a Java-native implementation path 
 2. Progressive disclosure is the practical mechanism that keeps skills from bloating the main context window.
 3. The Quarkus and LangChain4j implementation makes the skills pattern approachable for Java teams.
 4. Portable skills are only safe when their tool access is tightly constrained.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/agent_skills_with_quarkus_and_langchain4j_skills_module_p002_img01.jpeg)
+- ![Representative visual 2](img/agent_skills_with_quarkus_and_langchain4j_skills_module_p003_img01.jpeg)
+- ![Representative visual 3](img/agent_skills_with_quarkus_and_langchain4j_skills_module_p005_img01.jpeg)
+- ![Representative visual 4](img/agent_skills_with_quarkus_and_langchain4j_skills_module_p006_img01.jpeg)

@@ -55,3 +55,11 @@ The key design idea is that the assistant augments SRE workflows by gathering co
 2. Context engineering and skills are what turn an LLM into something useful for SRE work.
 3. Compliance-ready audit output is a first-class requirement for enterprise incident-response agents.
 4. The lab's strongest claim is not autonomy for its own sake, but faster, more disciplined incident handling with humans still in control.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/agentic_ai_devops_augmenting_incident_response_with_rhoai_p002_img01.jpeg)
+- ![Representative visual 2](img/agentic_ai_devops_augmenting_incident_response_with_rhoai_p003_img01.jpeg)
+- ![Representative visual 3](img/agentic_ai_devops_augmenting_incident_response_with_rhoai_p001_img03.jpeg)
+- ![Representative visual 4](img/agentic_ai_devops_augmenting_incident_response_with_rhoai_p001_img01.jpeg)

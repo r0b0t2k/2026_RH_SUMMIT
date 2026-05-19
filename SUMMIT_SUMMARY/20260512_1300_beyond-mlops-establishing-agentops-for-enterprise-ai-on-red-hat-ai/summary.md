@@ -58,3 +58,11 @@ The presenters position Red Hat AI as a platform for closing the gap between imp
 2. Agent identity and sandboxing are foundational, not optional add-ons.
 3. Observability must include decisions, tool calls, and evaluation signals, not only infrastructure metrics.
 4. AgentOps is the governance layer that turns bring-your-own-agent experimentation into something an enterprise can actually run.
+
+## Representative Visuals
+Representative visuals retained from transcript-style PDFs or source photos:
+
+- ![Representative visual 1](img/BeyonMLOps_agentOps_for_enterprise_IA_transcript_p002_img01.jpeg)
+- ![Representative visual 2](img/BeyonMLOps_agentOps_for_enterprise_IA_transcript_p003_img01.jpeg)
+- ![Representative visual 3](img/BeyonMLOps_agentOps_for_enterprise_IA_transcript_p005_img01.jpeg)
+- ![Representative visual 4](img/BeyonMLOps_agentOps_for_enterprise_IA_transcript_p006_img01.jpeg)
